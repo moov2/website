@@ -8,11 +8,6 @@ module.exports = function(grunt) {
          * Directory containing CSS.
          */
         styles: './Styles',
-        
-        /**
-         * Directory containing the style guide for the theme.
-         */
-        styleguide: './Styleguide',
 
         /**
          * Directory containing JavaScript.
@@ -244,7 +239,6 @@ module.exports = function(grunt) {
             dev: {
                 files: {
                     '<%= config.styles %>/Critical.css': '<%= config.styles %>/Critical.scss',
-                    '<%= config.styles %>/Guide.css': '<%= config.styles %>/Guide.scss',
                     '<%= config.styles %>/Site.css': '<%= config.styles %>/Site.scss'
                 }
             },
@@ -256,7 +250,6 @@ module.exports = function(grunt) {
                 options: { outputStyle: 'compressed' },
                 files: {
                     '<%= config.dist %>/Styles/Critical.css': '<%= config.styles %>/Critical.scss',
-                    '<%= config.dist %>/Styles/Guide.css': '<%= config.styles %>/Guide.scss',
                     '<%= config.dist %>/Styles/Site-<%= config.hash %>.css': '<%= config.styles %>/Site.scss'
                 }
             }
