@@ -1,0 +1,58 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $SECTION
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Sections should be used in content to define the width of the content.
+ */
+
+section,
+.section {
+	@include clearfix();
+	@include rem(margin-bottom, $spacing-large);
+	@include rem(padding, 0 $spacing-base);
+
+	box-sizing: border-box;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $content-width;
+	width: 100%;
+}
+
+.section--xtra-wide,
+.section--fill {
+	padding: 0;
+}
+
+.section--wide { max-width: $content-width-large; }
+.section--xtra-wide { max-width: $content-width-x-large; }
+.section--fill { max-width: none; }
+
+.section--primary {
+	@include rem(padding, $spacing-base);
+
+	background-color: $color-primary;
+	color: $color-white;
+}
+
+.section--spaced { @include rem(padding, $spacing-large); }
+
+.section--fable {
+	@include rem(padding, $spacing-gigantic 0);
+
+	background-image: url(#{$url-images}section-bg-fable.jpg);
+	background-position: 0 0;
+	background-size: cover;
+	color: $color-white;
+	position: relative;
+}
+
+.section--pink {
+	@include rem(padding, $spacing-gigantic 0);
+
+	background-color: $color-pink;
+	color: $color-white;
+}

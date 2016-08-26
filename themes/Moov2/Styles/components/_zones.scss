@@ -1,0 +1,66 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $ZONES
+ * -----------------------------------------------------------------------------
+ */
+ 
+/**
+ * Zones are containers in Orchard that hold various UI elements (e.g. shapes).
+ * CSS classes for a zone are determined by the Orchard core.
+ */
+ 
+.zone-logo,
+.zone-navigation {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.zone-logo { 
+	width: 60%; 
+	
+	@media all and (min-width: $bp-nav-toggle) {
+		width: 20%;
+	}
+}
+
+.zone-navigation {
+	text-align: right;
+	width: 40%;
+	
+	@media all and (min-width: $bp-nav-toggle) {
+		width: 80%;
+	}
+}
+
+@if ($is-critical != true) {
+	.zone-footer-primary {
+		@include rem(margin-bottom, $spacing-base);
+	}
+	
+	.zone-footer-primary,
+	.zone-footer-secondary {
+		text-align: center;
+		
+		display: block;
+		width: 100%;
+	}
+	
+	@media all and (min-width: $bp-footer-stack) {
+		.zone-footer-primary,
+		.zone-footer-secondary {
+			display: table-cell;
+			margin-bottom: 0;
+			vertical-align: top;
+		}
+		
+		.zone-footer-primary {
+			text-align: left;
+			width: 60%;
+		}
+		
+		.zone-footer-secondary {
+			text-align: right;
+			width: 40%;
+		}
+	}
+}

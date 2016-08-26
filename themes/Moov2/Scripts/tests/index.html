@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Theme JavaScript Test Suite</title>
+        <link href="../../node_modules/mocha/mocha.css" rel="stylesheet" type="text/css" />
+		
+		<style>
+			sandbox {
+				left: -100%;
+				position: absolute;
+				top: 0;
+				width: 100%;
+			}
+		</style>
+    </head>
+    <body>
+		<div id="mocha"></div>
+		<div class="sandbox js-sandbox"></div>
+
+		<script src="../../node_modules/mocha/mocha.js"></script>
+		<script>
+			mocha.setup('tdd');
+		</script>
+		<script src="tests.js"></script>
+		<script>
+		if (navigator.userAgent.indexOf('PhantomJS') < 0) {
+        	mocha.run();
+    	}
+		</script>
+    </body>
+</html>

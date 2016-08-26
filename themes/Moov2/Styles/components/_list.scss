@@ -1,0 +1,155 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $LIST
+ * -----------------------------------------------------------------------------
+ */
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .list__item {
+        position: relative;
+
+        .list--spaced & {
+            @include rem(margin-bottom, $spacing-large);
+        }
+
+        .list--separated & {
+           @include rem(padding-bottom, $spacing-large);
+
+           border-bottom: 1px solid $color-grey-light;
+
+            &:last-child {
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+
+/**
+ * Displays items adjacent to each other.
+ *
+    <ul class="list list--horizontal">
+        <li class="list__item">
+            First List Item
+        </li><li class="list__item">
+            Second List Item
+        </li>
+        ...
+    </ul>
+ *
+ */
+
+.list--horizontal {
+    display: inline-block;
+
+    .list__item {
+        box-sizing: border-box;
+        display: inline-block;
+        vertical-align: top;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/**
+ * Displays a two items in a horizontal list.
+ *
+    <ul class="list list--horizontal list-horizontal--double">
+        <li class="list__item">
+            Left List Item
+        </li><li class="list__item">
+            Right List Item
+        </li>
+    </ul>
+ *
+ */
+
+.list--horizontal-double {
+    margin-left: 0;
+    width: 100%;
+
+    /**
+     * 1. Lines the left hand edge up with the rest of the content.
+     */
+    .list__item {    }
+}
+
+.list--horizontal-double-spaced {
+    .list__item {
+        padding-left: 0;
+        padding-right: 0;
+
+        &:first-child { @include rem(padding-right, $spacing-large); }
+        &:last-child { @include rem(padding-left, $spacing-large); }
+    }
+}
+
+/**
+ * Displays a triple horizontal list list of links to sections of the site.
+ *
+    <ul class="list list--horizontal list-horizontal--triple">
+        <li class="list__item">
+            Left List Item
+        </li><li class="list__item">
+            Center List Item
+        </li><li class="list__item">
+            Right List Item
+        </li>
+    </ul>
+ *
+ */
+
+.list--horizontal-triple {
+    width: 100%;
+
+    .list__item {
+        @include rem(padding-left, $spacing-large);
+        @include rem(padding-right, $spacing-large);
+
+        width: 33.3%;
+    }
+}
+
+.list--events {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+}
+
+/**
+ * Items should stack due to limited viewport width.
+ */
+@media all and (max-width: $bp-tiles-stack-default) {
+    .list--horizontal:not(.list--never-stack) {
+        margin-left: 0;
+        text-align: left;
+
+        .list__item {
+            @include rem(margin-bottom, $spacing-large);
+
+            display: block;
+            padding-left: 0;
+            padding-right: 0;
+            width: 100%;
+
+            &:first-child { padding-right: 0; }
+            &:last-child { padding-left: 0; }
+        }
+
+        .list__item--stacked-centered {
+            text-align: center;
+        }
+    }
+
+    .list--events {
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+}

@@ -1,0 +1,99 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $PROMO
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Promotes a piece of content.
+ */
+
+.promo {
+	border-bottom: 0;
+
+	display: block;
+	min-height: $promo-min-height;
+	position: relative;
+	width: 100%;
+}
+
+.promo--small {
+	display: inline-block;
+	min-height: none;
+	width: auto;
+}
+
+	.promo__image,
+	.promo__title {
+		box-sizing: border-box;
+		display: block;
+	}
+
+	.promo__image {
+		display: block;
+	}
+
+	.promo__content {
+		@include rem(left, $spacing-base);
+
+		text-align: center;
+
+		bottom: 5%;
+		position: absolute;
+
+		.promo--small & {
+			@include rem(right, $spacing-large);
+
+			bottom: 10%;
+			top: auto;
+		}
+
+		@media all and (min-width: $bp-promo-small) {
+			@include rem(left, $spacing-large);
+
+			text-align: left;
+
+			position: absolute;
+			top: 30%;
+
+			.promo--reverse & {
+				left: 55%;
+				width: 30%;
+			}
+		}
+	}
+
+		.promo__description,
+		.promo__title {
+			color: $color-white;
+		}
+
+		.promo__title {
+			@include heading();
+			@include rem(margin-bottom, $spacing-default);
+
+			.promo--small & {
+				@include rem(font-size, $font-size-large);
+				@include rem(line-height, $line-height-default);
+
+				text-align: center;
+			}
+		}
+
+		p.promo__description,
+		.promo__description {
+			@include rem(font-size, $font-size-large);
+			@include rem(line-height, $font-size-large + $line-height-addition);
+			@include rem(max-width, $promo-description-width);
+
+			margin-left: 0;
+			padding-left: 0;
+		}
+
+		.promo__btn {
+			@include rem(font-size, $font-size-large);
+			@include rem(width, $promo-btn-width);
+
+			font-weight: $font-weight-bold;
+			text-transform: uppercase;
+		}

@@ -1,0 +1,34 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $SPACING
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Utility classes for dictating margin or padding.
+ */
+
+.margin--bottom-none { margin-bottom: 0; }
+.margin--bottom-small { @include rem(margin-bottom, $spacing-small); }
+.margin--bottom-large { @include rem(margin-bottom, $spacing-large); }
+
+.margin--left-none { margin-left: 0; }
+.margin--left-small { @include rem(margin-left, $spacing-small); }
+.margin--left-large { @include rem(margin-left, $spacing-large); }
+
+.padding--large { @include rem(padding, $spacing-large); }
+.padding--gigantic { @include rem(padding, $spacing-gigantic); }
+
+.padding--top { @include rem(padding-top, $spacing-base); }
+.padding--top-large { @include rem(padding-top, $spacing-large); }
+
+.padding--left-none { padding-left: 0; }
+.padding--left-small { @include rem(padding-left, $spacing-small); }
+.padding--left-large { @include rem(padding-left, $spacing-large); }
+
+.padding--horizontal { @include rem(padding, 0 $spacing-default); }
+.padding--horizontal-large { @include rem(padding, 0 $spacing-large); }
+.padding--horizontal-gigantic { @include rem(padding, 0 $spacing-gigantic); }
+
+.padding--vertical { @include rem(padding, $spacing-default 0); }
+.padding--vertical-large { @include rem(padding, $spacing-large 0); }

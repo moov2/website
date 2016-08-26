@@ -1,0 +1,15 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $LEGEND
+ * -----------------------------------------------------------------------------
+ */
+ 
+/** 
+ * Styles for the `legend` element.
+ */
+ 
+legend {
+	@include rem(margin-bottom, $spacing-base);
+	
+	font-weight: $font-weight-bold;
+}

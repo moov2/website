@@ -1,0 +1,24 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $INPUT
+ * -----------------------------------------------------------------------------
+ */
+ 
+/** 
+ * Styles for the `input` element.
+ */
+ 
+input {
+	font-weight: $font-weight-default;
+	
+	box-sizing: border-box;
+}
+
+input[type=checkbox] {
+	@include rem(margin-right, $spacing-base);
+}
+
+input[type=password],
+input[type=text] {
+	@include rem(padding, $spacing-small);
+}

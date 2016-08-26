@@ -1,0 +1,59 @@
+﻿@using Orchard.Utility.Extensions
+@using Orchard.ContentManagement
+@using Orchard.MediaLibrary.Fields
+
+@{
+    if (Model.Title != null) {
+        Layout.Title = Model.Title;
+    }
+
+    Model.Classes.Add("content-item post--summary");
+    
+    var contentTypeClassName = ((string)Model.ContentItem.ContentType).HtmlClassify();
+    Model.Classes.Add(contentTypeClassName);
+    
+    var tag = Tag(Model, "article");
+    
+    string thumbnailUrl = string.Empty;
+    
+    if (Model.ContentItem.ThumbnailPart != null) {
+        ContentPart thumbnailPart = Model.ContentItem.ThumbnailPart as ContentPart;
+        
+        if (thumbnailPart != null) {
+            var thumbnailField = thumbnailPart.Fields.Where(x => x.DisplayName == "Thumbnail").FirstOrDefault();
+                
+            if (thumbnailField != null) {
+                thumbnailUrl = (thumbnailField as MediaLibraryPickerField).FirstMediaUrl;
+            }
+        }
+    }
+
+}
+@tag.StartElement
+    <div class="media media--align-top margin--bottom-none">
+        <div class="media__object">
+            @if (!string.IsNullOrEmpty(thumbnailUrl)) {
+            <img src="@thumbnailUrl" class="post__thumbnail" />
+            } else {
+            <div class="post__thumbnail post__thumbnail--empty"></div>
+            }
+        </div>
+        
+        <div class="media__body">
+            <header>
+                @Display(Model.Header)
+                @if (Model.Meta != null) {
+                    <div class="post__meta metadata">
+                        @Display(Model.Meta)
+                    </div>
+                }
+            </header>
+            @Display(Model.Content)
+            @if(Model.Footer != null) {
+                <footer>
+                    @Display(Model.Footer)
+                </footer>
+            }
+        </div>
+    </div>
+@tag.EndElement

@@ -1,0 +1,113 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $ICON
+ * -----------------------------------------------------------------------------
+ */
+ 
+/**
+ * Icons used throughout the site.
+ */
+ 
+.icon {
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-bottom: 0;
+	
+	display: block;
+}
+
+.icon--menu {
+	@include svg-menu-icon();
+	
+	background-size: 48px 40px;
+	
+	height: 40px;
+	width: 48px;
+}
+
+@if ($is-critical != true) {
+	.icon--close {
+		@include svg-close-icon($color-white);
+		
+		background-size: 40px 40px;
+		
+		height: 40px;
+		width: 40px;	
+	}
+	
+	.icon--email {
+		@include svg-email-icon($color-white);
+		
+		background-size: 62px 46px;
+		
+		height: 46px;
+		width: 62px;
+	}
+	
+	.icon--facebook {
+		@include svg-facebook-logo($color-brand);
+		
+		height: 26px;
+		width: 14px;
+		
+		&:focus,
+		&:hover {
+			@include svg-facebook-logo($color-primary);
+		}
+	}
+	
+	.icon--github {
+		@include svg-github-logo($color-brand);
+		background-size: 26px 26px;
+		
+		height: 26px;
+		width: 26px;
+		
+		&:focus,
+		&:hover {
+			@include svg-github-logo($color-primary);
+		}
+	}
+	
+	.icon--linkedin {
+		@include svg-linkedin-logo($color-brand);
+		background-size: 26px 26px;
+		
+		height: 26px;
+		width: 26px;
+		
+		&:focus,
+		&:hover {
+			@include svg-linkedin-logo($color-primary);
+		}
+	}
+	
+	.icon--location {
+		@include svg-location-icon($color-white);
+		background-size: 58px 56px;
+		
+		height: 56px;
+		width: 58px;
+	}
+
+	.icon--telephone {
+		@include svg-telephone-icon($color-white);
+		background-size: 52px 52px;
+		
+		height: 52px;
+		width: 52px;
+	}
+	
+	.icon--twitter {
+		@include svg-twitter-logo($color-brand);
+		background-size: 24px 20px;
+		
+		height: 20px;
+		width: 24px;
+		
+		&:focus,
+		&:hover {
+			@include svg-twitter-logo($color-primary);
+		}
+	}
+}

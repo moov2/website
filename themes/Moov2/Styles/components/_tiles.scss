@@ -1,0 +1,113 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $TILES
+ * -----------------------------------------------------------------------------
+ */
+ 
+/**
+ * Displays a list of items in a grid.
+ */
+ 
+.tiles {
+	text-align: center;
+	
+	list-style: none;
+	margin-left: 0;
+	margin-right: 0;
+	max-width: none;
+	padding-left: 0;
+	padding-top: 0;
+}
+
+.tiles--inline {
+	@include rem(margin-bottom, $spacing-default / 2);
+	
+	text-align: left;
+	
+	display: inline-block;
+	width: auto;
+}
+	
+	/**
+	 * 1. Removes gap that appears when items wrap.
+	 * 2. Overrides default `ul` which uses a border to separate items.
+	 */
+	.tiles__tile {
+		@include rem(margin-bottom, $spacing-base);
+		
+		border-bottom: 0; /* 2. */
+		
+		text-align: left;
+		
+		box-sizing: border-box;
+		margin-bottom: 0;
+		padding: 0;
+		
+		.tiles--inline > & {
+			@include rem(margin-bottom, $spacing-default / 2);
+			@include rem(padding-left, $spacing-small);
+			@include rem(padding-right, $spacing-small);
+	
+			display: inline-block;
+			vertical-align: middle;
+			
+			&:first-child { padding-left: 0; }
+			&:last-child { padding-right: 0; }
+			
+			@media all and (min-width: $bp-tiles-stack-default) {
+				@include rem(padding-left, $spacing-base);
+				@include rem(padding-right, $spacing-base);				
+			}
+		}
+
+		.tiles--spaced > & {
+			@include rem(margin-bottom, $spacing-base * 2);
+		}
+		
+		.tiles--spaced-xtra > & {
+			@include rem(margin-bottom, $spacing-base * 4);
+		}
+		
+		.tiles--stacked & {
+			@include rem(margin-bottom, $spacing-large);
+			
+			display: block;
+			padding-left: 0;
+			padding-right: 0;
+		}
+		
+		/**
+		 * Large viewports should position the items side by side.
+		 * 1. Removes gap that appears when items wrap.
+		 */
+		@media all and (min-width: $bp-tiles-stack-default) {
+			display: inline-block;
+			margin-bottom: 0;
+			vertical-align: top; /* 1. */ 
+			
+			.tiles--inline > &,
+			.tiles--spaced > & {
+				@include rem(padding-left, $spacing-base);
+				@include rem(padding-right, $spacing-base);
+			}
+			
+			.tiles--spaced-xtra > & {
+				@include rem(padding-left, $spacing-base * 2);
+				@include rem(padding-right, $spacing-base * 2);				
+			}
+		}
+		
+		p, h2, h3, h4, h5, h6 {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	
+	@media all and (min-width: $bp-tiles-stack-default) {
+		.tiles__tile--whole { width: 100%; }
+		.tiles__tile--two-thirds { width: 66.6%; }
+		.tiles__tile--half { width: 50%; }
+		.tiles__tile--third { width: 33.3%; }
+		.tiles__tile--quarter { width: 25%; }
+		.tiles__tile--fifth { width: 20%; }
+	}

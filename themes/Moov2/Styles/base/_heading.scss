@@ -1,0 +1,81 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $HEADING
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Styles for the `h1` to `h6` elements.
+ */
+
+/**
+ * 1. Reduces the spacing above & below the font.
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1; /* 1. */
+
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	max-width: $content-line-length;
+	width: 100%;
+}
+
+h1 {
+	@include rem(margin-bottom, $spacing-large);
+}
+
+h2 {
+	@include rem(margin-bottom, $spacing-default * 1.5);
+}
+
+h3,
+h4,
+h5,
+h6 {
+	@include rem(margin-bottom, $spacing-default);
+}
+
+h1 {
+	@include rem(font-size, $font-size-heading-mobile);
+	@include rem(line-height, $font-size-heading-mobile);
+	@include rem(margin-bottom, $spacing-gigantic);
+
+    font-weight: $font-weight-bold;
+	text-align: center;
+
+	max-width: $content-width-large;
+
+	@media all and (min-width: $bp-reduce-heading-font-size) {
+		@include rem(font-size, $font-size-heading);
+		@include rem(line-height, $font-size-heading);
+	}
+}
+
+h2 {
+	@include subheading();
+}
+
+h3 {
+	@include subsubheading();
+}
+
+h4 {
+	@include rem(font-size, 2rem);
+	@include rem(line-height, 2.6rem);
+}
+
+h5 {
+	@include rem(font-size, 1.8rem);
+	@include rem(line-height, 2.4rem);
+}
+
+h6 {
+	@include rem(font-size, 1.4rem);
+	@include rem(line-height, 1.8rem);
+}

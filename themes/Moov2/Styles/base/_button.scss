@@ -1,0 +1,25 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $BUTTON
+ * -----------------------------------------------------------------------------
+ */
+ 
+/**
+ * Styles for `button` element.
+ */
+ 
+button {
+	@include rem(padding, $spacing-small $spacing-base);
+	
+	background-color: $color-primary;
+	border: none;
+	
+	color: $color-white;
+	
+	transition: background-color $animation-duration-default $animation-timing-default;
+	
+	&:focus,
+	&:hover {
+		background-color: $color-primary-light;
+	}
+}

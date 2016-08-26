@@ -1,0 +1,51 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $POST
+ * -----------------------------------------------------------------------------
+ */
+ 
+.post {
+    @include rem(margin-bottom, $spacing-large);
+    
+    display: block;
+}
+    
+    h2.post__title,
+    .post__title {
+        @include rem(font-size, $font-size-large);
+        @include rem(margin-bottom, 0);
+    }
+    
+    /**
+     * 1. Lines thumbnail up with title.
+     */
+    .post__thumbnail {
+        @include rem(max-width, $post-thumbnail-width);
+        @include rem(padding-top, $post-thumbnail-alignment); /* 1. */
+        
+        
+        display: block;
+    }
+    
+    .post__thumbnail--empty {
+        @include rem(height, $post-thumbnail-height);
+        @include rem(width, $post-thumbnail-width);
+    }
+    
+    .post__meta,
+    .metadata {
+        @include rem(margin-bottom, $spacing-large);
+        
+        color: $font-color-light;
+        text-align: center;
+        
+        .post--summary & {
+            @include rem(margin-bottom, $spacing-small);
+            
+            text-align: left;
+        }
+    }
+    
+    .post__excerpt {
+        @include rem(margin-bottom, $spacing-small);
+    } 

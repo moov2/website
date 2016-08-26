@@ -1,0 +1,43 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $TEXT
+ * -----------------------------------------------------------------------------
+ */
+
+
+/**
+ * Utility classes for changing how text is displayed.
+ */
+
+.text--impact {
+	@include rem(font-size, $font-size-heading / 2);
+	@include rem(line-height, ($font-size-heading / 2) + $line-height-addition);
+	@include rem(margin-bottom, $spacing-gigantic);
+
+	font-weight: $font-weight-default;
+	text-align: center;
+
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $content-width-large;
+}
+
+.text--italic { font-style: italic; }
+
+.text--light { color: $font-color-light; }
+
+.text--centered { text-align: center; }
+.text--left { text-align: left; }
+.text--right { text-align: right; }
+
+.text--large {
+	@include rem(font-size, $font-size-large);
+	@include rem(line-height, $font-size-large + $line-height-addition);
+}
+
+.text--small {
+	@include rem(font-size, $font-size-small);
+	@include rem(line-height, $font-size-small + $line-height-addition);
+}
+
+.text--cs-fable { color: $color-cs-fable; }

@@ -1,0 +1,24 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $LOGO
+ * -----------------------------------------------------------------------------
+ */
+ 
+/**
+ * Displaying company logos.
+ */
+ 
+.logo {
+	display: inline-block;
+}
+
+.logo--brand {
+	height: $logo-brand-height;
+	width: $logo-brand-width;
+}
+
+.logo--technology {
+	display: block;
+	max-height: $logo-technology-height;
+	max-width: $logo-technology-width;
+}

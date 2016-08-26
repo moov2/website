@@ -1,0 +1,34 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $BLOCKQUOTE
+ * -----------------------------------------------------------------------------
+ */
+ 
+/**
+ * Styles for `blockquote` element.
+ */
+ 
+blockquote {
+	@include rem(margin-bottom, $spacing-large);
+	@include rem(padding-left, $spacing-large);
+	@include rem(padding-right, $spacing-large);
+	
+	color: $font-color-light;
+	font-style: italic;
+	
+	box-sizing: border-box;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	max-width: $content-line-length;
+	width: 100%;
+	
+	> p {
+		margin-bottom: 0;
+	}
+}
+
+cite {
+	font-weight: $font-weight-bold;
+	font-style: normal;
+}

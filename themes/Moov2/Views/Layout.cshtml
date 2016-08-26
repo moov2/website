@@ -1,0 +1,19 @@
+    @if (Model.Logo != null || Model.Navigation != null) {
+    <header>
+        @Display(Model.Logo)
+        @Display(Model.Navigation)
+    </header>
+    }
+     
+    @if (Model.Content != null) {
+    <main>
+        @Display(Model.Content)
+    </main>
+    }
+    
+    @if (Model.FooterPrimary != null || Model.FooterSecondary != null) {
+    <footer>
+        @Display(Model.FooterPrimary)
+        @Display(Model.FooterSecondary)
+    </footer>
+    }

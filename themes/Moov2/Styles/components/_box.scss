@@ -1,0 +1,28 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $BOX
+ * -----------------------------------------------------------------------------
+ */
+ 
+/**
+ * Element that contains other element.
+ */
+ 
+.box {
+	@include rem(padding, $spacing-default);
+	
+	background-color: $color-grey-light;
+	
+	box-sizing: border-box;
+	display: block;
+	position: relative;
+}
+
+.box--logo {
+	text-align: center;
+	
+	display: table-cell;
+	height: 250px;
+	vertical-align: middle;
+	width: 250px;
+}

@@ -1,0 +1,15 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $UTILS
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Utility classes to assist with displaying style guide elements.
+ */
+ 
+.sg-background-alt {
+	@include rem(padding, $spacing-base);
+	
+	background-color: $color-brand;
+}

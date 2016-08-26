@@ -1,0 +1,27 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $CLEARFIX
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Micro clearfix by Nicolas Gallagher for clearing floats.
+ * http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+
+/**
+ * Adds micro clearfix to element.
+ */
+@mixin clearfix() {
+    *zoom: 1;
+
+    &:before,
+    &:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+
+    &:after {
+        clear: both;
+    }
+}

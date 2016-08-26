@@ -1,0 +1,20 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $NOTE
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Displays notes from the editor during the creation of content.
+ */
+ 
+.note {
+	@include rem(padding, $spacing-base);
+	
+	background-color: $note-background-color;
+	
+	color: $note-color;
+	
+	box-sizing: border-box;
+	max-width: $content-width-large;
+}

@@ -1,0 +1,10 @@
+﻿@*doing excerpt generation on the way out for now so we don't stick ourselves with needing to regen excerpts for existing data
+  also, doing this here, inline, until we have a pluggable processing model (both in and out)
+  also, ...this is ugly *@
+@{ 
+    Orchard.ContentManagement.ContentItem contentItem = Model.ContentPart.ContentItem;
+    string bodyHtml = Model.Html.ToString();
+    var body = new HtmlString(Html.Excerpt(bodyHtml, 170).ToString().Replace("</p>", "").Replace("<p>", "")); 
+}
+<p class="post__excerpt">@body</p>
+<p><a href="@Url.ItemDisplayUrl(contentItem)">@Html.Raw("Read more &raquo;")</a></p>

@@ -1,0 +1,19 @@
+@{
+	var counter = 0;
+	var itemsCount = Model.Items.Count;	
+}
+
+<section class="section section--wide">
+	<ul class="tiles tiles--stacked">
+		@foreach (var post in Model.Items) {
+			<li class="tiles__tile">
+				@Display(post)
+				
+				@if (itemsCount != counter + 1) {
+				<hr />
+				}
+			</li>
+			counter++;
+		}
+	</ul>
+</section>

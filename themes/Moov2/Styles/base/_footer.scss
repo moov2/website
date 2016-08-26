@@ -1,0 +1,35 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $FOOTER
+ * -----------------------------------------------------------------------------
+ */
+ 
+/**
+ * Styling for the `footer` element.
+ */
+ 
+footer {
+	@include rem(font-size, $font-size-small);
+	@include rem(padding, $spacing-large);
+	
+	box-sizing: border-box;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $layout-width-max;
+	width: 100%;
+	
+	/**
+	 * Reset styles for `footer` element that is added by default
+	 * to content items in Orchard.
+	 */
+	article & {
+		display: block;
+		max-width: none;
+		padding: 0;
+	}	
+	
+	p, .list {
+		@include rem(margin-bottom, $spacing-base * 1.5);
+	}
+}

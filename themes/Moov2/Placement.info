@@ -1,0 +1,15 @@
+<Placement>
+  <Match ContentType="Page">
+    <!-- Don't display publish date for pages. -->
+    <Place Parts_Common_Metadata="-"/>
+  </Match>
+  
+  <Match ContentType="Post">
+    <Place Fields_MediaLibraryPicker="-" />
+  </Match>
+  
+  <!-- Don't display page title on home page. -->
+  <Match Path="/">
+    <Place Parts_Title="-"/>
+  </Match>
+</Placement>

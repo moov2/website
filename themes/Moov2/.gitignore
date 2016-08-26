@@ -1,0 +1,16 @@
+# obtain Node dependencies by running `npm install` command.
+node_modules/
+
+# NPM log files.
+npm-debug.log
+
+# CSS files are compiled using Sass by running `grunt styles`.
+*.css
+
+# artefact from browserify by running `grunt js`.
+bundle.js
+tests.js
+
+# directory will contain distributable version of the theme, which can
+# be created by running `grunt dist`.
+dist/

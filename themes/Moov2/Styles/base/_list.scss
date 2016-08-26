@@ -1,0 +1,53 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $LIST-BASE
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Styles for `ul` & `ol` elements.
+ */
+
+ul,
+ol {
+	@include rem(margin-bottom, $spacing-large);
+	@include rem(padding-left, $spacing-large);
+
+	box-sizing: border-box;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	width: 100%;
+
+	> li {
+		@include rem(padding-bottom, $spacing-base);
+		@include rem(padding-top, $spacing-base);
+
+		&:first-child {
+			padding-top: 0;
+		}
+
+		&:last-child {
+			border-bottom: 0;
+			padding-bottom: 0;
+		}
+	}
+}
+
+
+ol > li {
+	font-weight: $font-weight-bold;
+}
+
+ul ul {
+	@include rem(padding-top, $spacing-base);
+
+	margin-bottom: 0;
+
+	li {
+		@include rem(padding-bottom, $spacing-base / 2);
+		@include rem(padding-top, $spacing-base / 2);
+
+		border-bottom: 0;
+	}
+}

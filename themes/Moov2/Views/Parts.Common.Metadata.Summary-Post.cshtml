@@ -1,0 +1,58 @@
+﻿@using Orchard.Core.Common.Models 
+@using Orchard.ContentManagement
+@using Orchard.MediaLibrary.Fields
+@using Orchard.Users.Models
+
+@functions {
+    string FormatDate(DateTime date) {
+		var day = date.Day.ToString();
+		
+		if ((date.Day % 100) == 11 || (date.Day % 100) == 12 || (date.Day % 100) == 13)
+			return day + "th";
+			
+		switch (date.Day % 10)
+		{
+			case 1: day += "st"; break;
+			case 2: day += "nd"; break;
+			case 3: day += "rd"; break;
+			default: day += "th"; break;
+		}
+		
+		return string.Format("{0} {1}", day, date.ToString("MMMM yyyy"));
+    }
+	
+	string FormatUsername(string username) {
+		if (string.IsNullOrEmpty(username)) {
+			return string.Empty;
+		}
+		
+		return char.ToUpper(username[0]) + username.Substring(1);
+	}
+}
+
+@{
+    string userAvatarUrl = string.Empty;
+    
+    if (Model.ContentItem.CommonPart != null) {
+        CommonPart commonPart = (CommonPart)Model.ContentItem.CommonPart;
+        
+        if (commonPart.Owner != null) {
+            UserPart userPart = (UserPart)commonPart.Owner;
+            ContentPart thumbnailPart = (userPart.ContentItem as ContentItem).Parts.Where(x => x.PartDefinition.Name == "ThumbnailPart").FirstOrDefault();
+            
+            if (thumbnailPart != null) {
+                var thumbnailField = thumbnailPart.Fields.Where(x => x.DisplayName == "Thumbnail").FirstOrDefault();
+                
+                if (thumbnailField != null) {
+                    userAvatarUrl = (thumbnailField as MediaLibraryPickerField).FirstMediaUrl;
+                }
+            }
+        }
+    }
+}
+
+@if (string.IsNullOrEmpty(userAvatarUrl)) {
+<p>@(Model.ContentPart.Owner != null ? string.Format("Written by {0}", FormatUsername(Model.ContentPart.Owner.UserName)) : "")</p>
+} else {
+<p>Written by <img src="@userAvatarUrl" alt="Profile picture of @FormatUsername(Model.ContentPart.Owner.UserName)" class="avatar" /> @FormatUsername(Model.ContentPart.Owner.UserName)</p>    
+}

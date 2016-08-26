@@ -1,0 +1,45 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $MEDIA
+ * -----------------------------------------------------------------------------
+ */
+ 
+/**
+ * Displays a media object (images, video, audio) to the left or right of a 
+ * content block.
+ */
+ 
+.media {
+	@include rem(margin-bottom, $spacing-base);
+	
+	display: table;
+	width: 100%;
+}
+
+	.media__object,
+	.media__body {
+		display: table-cell;
+		vertical-align: middle;
+        
+        .media--align-top & {
+            vertical-align: top;
+        }
+	}
+	
+	.media__object {
+		@include rem(padding-right, $spacing-base);
+
+		.media--rev & {
+			@include rem(padding-left, $spacing-base);
+			padding-right: 0;
+		}
+	}
+	
+	.media__body {
+		@include rem(padding-left, $spacing-base);
+		
+		.media--rev & {
+			@include rem(padding-right, $spacing-base);
+			padding-left: 0;
+		}
+	}

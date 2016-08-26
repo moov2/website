@@ -1,0 +1,6 @@
+Name: Moov2
+Author: Moov2
+Website: http://moov2.com
+Description: Theme for the Moov2 website.
+Version: 1.0
+Zones: Logo, Navigation, Content, FooterPrimary, FooterSecondary

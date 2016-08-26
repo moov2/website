@@ -1,0 +1,21 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $AVATAR
+ * -----------------------------------------------------------------------------
+ */
+ 
+/**
+ * Displays a profile picture of a user.
+ */
+ 
+.avatar {
+    @include rem(margin-left, $spacing-small / 3);
+    @include rem(margin-right, $spacing-small / 3);
+    
+    border-radius: 50%;
+    
+    display: inline-block;
+    height: $avatar-dimensions;
+    width: $avatar-dimensions;
+    vertical-align: middle;
+}

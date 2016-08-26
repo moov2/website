@@ -1,0 +1,17 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $CODE
+ * -----------------------------------------------------------------------------
+ */
+ 
+/**
+ * Styles for `code` element.
+ */
+ 
+code {
+	@include rem(font-size, $code-font-size);
+	@include rem(padding, .15rem .35rem);
+	
+	background-color: $code-background-color;
+	display: inline;
+}

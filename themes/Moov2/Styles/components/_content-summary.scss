@@ -1,0 +1,37 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $CONTENTSUMMARY
+ * -----------------------------------------------------------------------------
+ */
+ 
+/**
+ * Displays a summary of a piece of content that links through to a page
+ * associated to the content item
+ */
+ 
+.content-summary {
+	@include rem(margin-bottom, $spacing-base);
+	
+	text-align: center;
+	
+	display: block;
+	width: 100%;
+}
+
+	.content-summary__thumbnail,
+	.content-summary__title {
+		text-decoration: none;
+		
+		box-sizing: border-box;
+		display: block;
+	}
+
+	.content-summary__thumbnail {
+		@include rem(margin-bottom, $spacing-small);
+	}
+
+	.content-summary__title {
+		@include rem(padding-left, $spacing-base);
+		@include rem(padding-right, $spacing-base);
+		@include subsubheading();
+	}

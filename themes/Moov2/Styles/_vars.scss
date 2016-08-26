@@ -1,0 +1,177 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $VARS
+ * Contains properties used throughout the stylesheet.
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Flag indicating whether the styles are critical (aka above the fold styles).
+ */
+
+$is-critical: false;
+
+/**
+ * Properties related to URLs.
+ */
+
+$url-images: '../Content/';
+
+/**
+ * Colour palette.
+ */
+
+$color-brand: #171c1e;
+$color-grey: #91999c;
+$color-grey-light: #f4f4f4;
+$color-white: #fff;
+$color-pink: #CE245E;
+$color-primary: #d81e5b;
+$color-primary-light: #f02f6e;
+$color-cs-fable: #77E6FE;
+
+/**
+ * Font settings.
+ */
+
+$font-family-loaded: "Source Sans Pro", sans-serif;
+$font-family-default: sans-serif;
+
+$font-color-default: $color-brand;
+$font-color-light: $color-grey;
+
+$font-size-small: 1.6rem;
+$font-size-default: 1.8rem;
+$font-size-large: 2.4rem;
+$font-size-heading: 7.2rem;
+$font-size-heading-mobile: 4.8rem;
+
+$font-weight-default: 400;
+$font-weight-bold: 700;
+
+$line-height-default: 2.4rem;
+
+// value added to the element font size to create line height.
+$line-height-addition: .6rem;
+
+/**
+ * Spacing settings
+ */
+
+$spacing-small: .75rem;
+$spacing-base: 1.5rem;
+$spacing-base-px: 15px;
+$spacing-default: 2rem;
+$spacing-large: 4rem;
+$spacing-x-large: 5rem;
+$spacing-gigantic: 7rem;
+
+/**
+ * Animation defaults.
+ */
+
+$animation-duration-default: .25s;
+$animation-timing-default: ease-in-out;
+
+/**
+ * Avatar settings.
+ */
+
+$avatar-dimensions: 26px;
+
+/**
+ * Border settings.
+ */
+
+$border-color-default: $color-grey-light;
+
+/**
+ * Breakpoint widths.
+ */
+
+$bp-figcaption-aside: 1080px;
+$bp-figure-floated: 630px;
+$bp-tiles-stack-default: 650px;
+$bp-nav-toggle: 700px;
+$bp-footer-stack: 750px;
+$bp-reduce-heading-font-size: 550px;
+$bp-promo-small: 680px;
+$bp-content-padding-top: 600px;
+
+/**
+ * Code settings.
+ */
+
+$code-background-color: $color-grey-light;
+$code-font-size: $font-size-small;
+
+/**
+ * Content settings.
+ */
+
+$content-width: 700px;
+$content-width-large: 880px;
+$content-width-x-large: 1200px;
+
+$content-line-length: $content-width;
+
+/**
+ * Figure settings.
+ */
+
+$figure-caption-width: 150px;
+
+/**
+ * Layout settings.
+ */
+
+$layout-width-max: 1500px;
+
+/**
+ * Logo settings.
+ */
+
+$logo-brand-height: 40px;
+$logo-brand-width: 124px;
+
+$logo-technology-height: 40px;
+$logo-technology-width: 40px;
+
+/**
+ * Navigation settings.
+ */
+
+$nav-font-size-default: $font-size-default;
+$nav-font-size-toggle: 4.8rem;
+$nav-animation-duration: $animation-duration-default;
+$nav-animation-timing: $animation-timing-default;
+$nav-spacing: $spacing-base * 1.5;
+
+/**
+ * Note settings.
+ */
+
+$note-background-color: #c74a4a;
+$note-color: #fff;
+
+/**
+ * Post settings.
+ */
+
+$post-thumbnail-height: 11rem;
+$post-thumbnail-width: 18rem;
+$post-thumbnail-alignment: 1rem;
+
+/**
+ * Promo settings.
+ */
+
+$promo-min-height: 300px;
+$promo-description-width: 600px;
+$promo-btn-width: 200px;
+
+/**
+ * Site settings.
+ */
+
+$site-background: $color-grey-light;
