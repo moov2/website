@@ -1,0 +1,23 @@
+# external modules can be obtained by running `npm install` command.
+node_modules/
+
+# ignore error logging from Node.
+npm-debug.log
+
+# directory contains local copy of Orchard which can be obtained by running
+# `grunt setup` command.
+local/
+
+# directory contains artefacts from running `grunt build`.
+dist/
+intermediate/
+
+# MSBuild artefacts.
+modules/**/[Dd]ebug/
+modules/**/[Rr]elease/
+modules/**/[Rr]eleases/
+modules/**/[Bb]in/
+modules/**/[Oo]bj/
+
+# user specific files.
+*.csproj.user
