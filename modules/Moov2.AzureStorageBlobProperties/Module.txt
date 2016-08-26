@@ -1,0 +1,14 @@
+﻿Name: Microsoft Azure Storage Properties
+AntiForgery: enabled
+Author: Moov2
+Website: http://moov2.com
+Version: 0.1
+OrchardVersion: 1.9
+Description: Provides the ability to set properties for files uploaded to Microsoft Azure Blob Storage.
+Category: Hosting
+Features:
+    Moov2.AzureStorageBlobProperties:
+		Name: Microsoft Azure Storage Properties
+        Description: Provides the ability to set properties for files uploaded to Microsoft Azure Blob Storage.
+		Category: Hosting
+		Dependencies: Orchard.Azure.Media
