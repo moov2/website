@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<Orchard>
+  <Recipe>
+    <Name>Local Development</Name>
+    <Description>Sets up Moov2 website for running in a local development environment.</Description>
+    <Author>Moov2</Author>
+    <WebSite>http://moov2.com</WebSite>
+    <Category>Default</Category>
+    <Tags>developer</Tags>
+    <Version>1.0</Version>
+    <IsSetupRecipe>true</IsSetupRecipe>
+  </Recipe>
+
+  <Feature enable="Common, Containers, Contents, Dashboard, Feeds, Gallery, Navigation, Orchard.Alias, Orchard.Autoroute, Orchard.Azure, Orchard.Azure.Media, Orchard.CodeGeneration, Orchard.Conditions, Orchard.ContentPicker, Orchard.ContentTypes, Orchard.Forms, Orchard.ImportExport, Orchard.Layouts, Orchard.Layouts.Projections, Orchard.MediaLibrary, Orchard.MediaProcessing, Orchard.Modules, Orchard.Packaging, Orchard.Pages, Orchard.Projections, Orchard.Recipes, Orchard.Resources, Orchard.Roles, Orchard.Scripting, Orchard.Scripting.Lightweight, Orchard.Setup.Services, Orchard.Themes, Orchard.Tokens, Orchard.Users, Orchard.Widgets, PackagingServices, Scheduling, Settings, Shapes, Moov2, Moov2.Website.Core, TinyMce, Title" />
+
+  <CurrentTheme id="Moov2" />
+
+  <Command>
+    recipes execute Moov2.Website.Core ContentTypes
+  </Command>
+</Orchard>

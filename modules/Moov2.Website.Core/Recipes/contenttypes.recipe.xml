@@ -1,0 +1,38 @@
+﻿<?xml version="1.0"?>
+<Orchard>
+  <Recipe>
+    <Name>Content Types</Name>
+    <Description>Sets up different content types used on the Moov2 Website.</Description>
+    <Author>Moov2</Author>
+    <WebSite>http://moov2.com</WebSite>
+    <Category>Content</Category>
+    <Tags>developer</Tags>
+    <Version>1.0</Version>
+    <IsSetupRecipe>false</IsSetupRecipe>
+  </Recipe>
+
+  <ContentDefinition>
+    <Types>
+      <Homepage ContentTypeSettings.Creatable="True" ContentTypeSettings.Draftable="True" ContentTypeSettings.Listable="True" ContentTypeSettings.Securable="True" ContentTypeLayoutSettings.Placeable="False" DisplayName="Homepage">
+        <AutoroutePart AutorouteSettings.PerItemConfiguration="False" AutorouteSettings.AllowCustomPattern="True" AutorouteSettings.UseCulturePattern="False" AutorouteSettings.AutomaticAdjustmentOnEdit="False" AutorouteSettings.PatternDefinitions="[{&quot;Name&quot;:&quot;Title&quot;,&quot;Pattern&quot;:&quot;{Content.Slug}&quot;,&quot;Description&quot;:&quot;my-title&quot;,&quot;Culture&quot;:&quot;en-US&quot;}]" AutorouteSettings.DefaultPatternDefinitions="[{&quot;Culture&quot;:&quot;en-US&quot;,&quot;PatternIndex&quot;:&quot;0&quot;}]" />
+        <CommonPart OwnerEditorSettings.ShowOwnerEditor="True" DateEditorSettings.ShowDateEditor="False" />
+        <LayoutPart LayoutTypePartSettings.IsTemplate="False" />
+        <TitlePart />
+      </Homepage>
+      <Page ContentTypeSettings.Creatable="True" ContentTypeSettings.Listable="True" ContentTypeSettings.Securable="True" DisplayName="Page">
+        <AutoroutePart AutorouteSettings.AllowCustomPattern="True" AutorouteSettings.AutomaticAdjustmentOnEdit="False" AutorouteSettings.PatternDefinitions="[{&quot;Name&quot;:&quot;Title&quot;,&quot;Pattern&quot;:&quot;{Content.Slug}&quot;,&quot;Description&quot;:&quot;my-page&quot;}]" />
+        <CommonPart DateEditorSettings.ShowDateEditor="True" />
+        <LayoutPart LayoutTypePartSettings.IsTemplate="False" />
+        <PublishLaterPart />
+        <TitlePart />
+      </Page>
+    </Types>
+    <Parts>
+      <AutoroutePart ContentPartSettings.Attachable="True" ContentPartSettings.Description="Adds advanced url configuration options to your content type to completely customize the url pattern for a content item." />
+      <CommonPart ContentPartSettings.Attachable="True" ContentPartSettings.Description="Provides common information about a content item, such as Owner, Date Created, Date Published and Date Modified." ContentPartLayoutSettings.Placeable="True" />
+      <LayoutPart ContentPartSettings.Attachable="True" ContentPartSettings.Description="Adds a layout designer to your content type." />
+      <PublishLaterPart />
+      <TitlePart ContentPartSettings.Attachable="True" ContentPartSettings.Description="Provides a Title for your content item." ContentPartLayoutSettings.Placeable="True" />
+    </Parts>
+  </ContentDefinition>
+</Orchard>
