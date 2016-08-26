@@ -1,5 +1,4 @@
 ﻿using Microsoft.WindowsAzure.Storage.Blob;
-using Orchard.Azure;
 using Orchard.Azure.Services.Environment.Configuration;
 using Orchard.Azure.Services.FileSystems;
 using Orchard.Environment.Configuration;
@@ -20,7 +19,7 @@ namespace Moov2.AzureStorageBlobProperties.Services
 
         public AzureBlobStorageProvider(ShellSettings shellSettings, IMimeTypeProvider mimeTypeProvider, IPlatformConfigurationAccessor pca)
             : this(pca.GetSetting(Orchard.Azure.Constants.MediaStorageStorageConnectionStringSettingName, shellSettings.Name, null),
-                   Orchard.Azure.Constants.MediaStorageContainerName,
+                   Orchard.Azure.Constants.MediaStorageDefaultContainerName,
                    pca.GetSetting(Orchard.Azure.Constants.MediaStorageRootFolderPathSettingName, shellSettings.Name, null) ?? shellSettings.Name,
                    mimeTypeProvider,
                    pca.GetSetting(Orchard.Azure.Constants.MediaStoragePublicHostName, shellSettings.Name, null))
