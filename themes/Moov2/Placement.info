@@ -3,6 +3,11 @@
     <!-- Don't display publish date for pages. -->
     <Place Parts_Common_Metadata="-"/>
   </Match>
+
+  <Match ContentType="Homepage">
+    <!-- Don't display publish date on homepage. -->
+    <Place Parts_Common_Metadata="-"/>
+  </Match>
   
   <Match ContentType="Post">
     <Place Fields_MediaLibraryPicker="-" />
