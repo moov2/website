@@ -10,11 +10,11 @@
  */
 
 .text--impact {
-	@include rem(font-size, $font-size-heading / 2);
-	@include rem(line-height, ($font-size-heading / 2) + $line-height-addition);
+	@include rem(font-size, $font-size-heading);
 	@include rem(margin-bottom, $spacing-gigantic);
 
 	font-weight: $font-weight-default;
+	line-height: 1.3;
 	text-align: center;
 
 	margin-left: auto;
@@ -41,3 +41,4 @@
 }
 
 .text--cs-fable { color: $color-cs-fable; }
+.text--grey { color: $color-grey; }
