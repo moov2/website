@@ -26,8 +26,9 @@ $color-grey: #c1c1c1;
 $color-grey-light: #f4f4f4;
 $color-white: #fff;
 $color-pink: #CE245E;
-$color-primary: #d81e5b;
-$color-primary-light: #f02f6e;
+$color-primary: #2196f3;
+$color-primary-light: #a8c8e2;
+$color-primary-dark: #041523;
 $color-cs-fable: #77E6FE;
 
 /**
@@ -174,4 +175,4 @@ $promo-btn-width: 200px;
  * Site settings.
  */
 
-$site-background: $color-grey-light;
+$site-background: $color-primary-dark;

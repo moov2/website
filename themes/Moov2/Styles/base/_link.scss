@@ -3,18 +3,18 @@
  * $LINK
  * -----------------------------------------------------------------------------
  */
- 
+
 /**
  * Styles for the hyperlink elements.
  */
- 
+
 a {
 	color: $color-primary;
 	font-weight: $font-weight-default;
 	text-decoration: none;
-    
+
 	transition: color $animation-duration-default $animation-timing-default;
-	
+
 	&:active,
     &:focus,
 	&:hover {
@@ -25,8 +25,22 @@ a {
 /**
  * Removes the underline from the link.
  */
- 
+
 a.link--blank {
     color: $font-color-default;
 	text-decoration: none;
+}
+
+.link--cta {
+	@include rem(padding, $spacing-base $spacing-default);
+
+	background: $color-primary;
+	border-radius: $spacing-large;
+	color: $color-white;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+
+	&:hover {
+		text-decoration: none;
+	}
 }

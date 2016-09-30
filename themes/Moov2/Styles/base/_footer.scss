@@ -30,5 +30,7 @@ footer {
 
 	p, .list {
 		@include rem(margin-bottom, $spacing-base * 1.5);
+
+		color: $color-primary-light;
 	}
 }
