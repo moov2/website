@@ -1,0 +1,10 @@
+@using Orchard.Layouts.Helpers
+@{
+    var tagBuilder = TagBuilderExtensions.CreateElementTagBuilder(Model);
+    tagBuilder.AddCssClass("grid__row");
+}
+@if (!Model.Collapsed) {
+    @tagBuilder.StartElement
+    @DisplayChildren(Model)
+    @tagBuilder.EndElement
+}
