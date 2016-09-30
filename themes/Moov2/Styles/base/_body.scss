@@ -3,27 +3,26 @@
  * $BODY
  * -----------------------------------------------------------------------------
  */
- 
+
 /**
  * Styles for `body` element.
  */
 
 /**
  * 1. Sets the default font size back to 16px (unless $font-size-default has
- *    changed value). This is the only time `em` should be used to define the 
- *    font-size. This has to be `em` because of a bug in Chrome described in 
+ *    changed value). This is the only time `em` should be used to define the
+ *    font-size. This has to be `em` because of a bug in Chrome described in
  *    a link below.
  *    https://code.google.com/p/chromium/issues/detail?id=320754
  */
 body {
     background-color: $site-background;
-    
+
     color: $font-color-default;
     font-size: 1.6em; /* 1 */
-    
+
+    display: flex;
+    flex-direction: column;
     margin: 0;
-    
-    @media all and (min-width: $layout-width-max) {
-        @include rem(padding-top, $spacing-x-large);
-    }
+    min-height: 100vh;
 }
