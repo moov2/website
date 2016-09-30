@@ -1,0 +1,12 @@
+﻿Name: Moov2.Website.Elements
+AntiForgery: enabled
+Author: Moov2
+Website: http://moov2.com
+Version: 1.10.1
+OrchardVersion: 1.10.1
+Description: Provides custom elements for Orchard.Layouts
+Dependencies: Orchard.Layouts, Orchard.MediaLibrary, Orchard.Tokens
+Category: Layout
+Features:
+    Moov2.Website.Elements:
+        Description: Provides custom elements for Orchard.Layouts
