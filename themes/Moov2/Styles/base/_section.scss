@@ -11,27 +11,33 @@
 section,
 .section {
 	@include clearfix();
-	@include rem(margin-bottom, $spacing-large);
 	@include rem(padding, 0 $spacing-base);
 
 	box-sizing: border-box;
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: $content-width;
-	width: 100%;
 
 	&:last-child { margin-bottom: 0; }
+
+	@media all and (min-width: $bp-medium) {
+		padding: 0;
+	}
 }
+
+	.section__content {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: $content-width;
+		width: 100%;
+
+		.section--wide & { max-width: $content-width-large; }
+		.section--xtra-wide & { max-width: $content-width-x-large; }
+		.section--fill & { max-width: none; }
+	}
 
 .section--xtra-wide,
 .section--fill {
 	padding: 0;
 }
-
-.section--wide { max-width: $content-width-large; }
-.section--xtra-wide { max-width: $content-width-x-large; }
-.section--fill { max-width: none; }
 
 .section--primary {
 	@include rem(padding, $spacing-base);
@@ -57,4 +63,8 @@ section,
 
 	background-color: $color-pink;
 	color: $color-white;
+}
+
+.section--hero {
+	height: 75vh;
 }

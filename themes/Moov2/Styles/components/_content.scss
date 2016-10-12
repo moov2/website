@@ -3,30 +3,28 @@
  * $CONTENT
  * -----------------------------------------------------------------------------
  */
- 
+
 /**
  * Page content should be placed with the `content` container to override the
  * default styling of base elements.
  */
- 
+
 .content-item {
-	@include rem(padding-bottom, $spacing-large);
-	
 	box-sizing: border-box;
 	display: block;
 	width: 100%;
-	
+
 	p, h2, h3, h4, h5, h6 {
 		box-sizing: border-box;
-		
+
 		@include rem(padding-left, $spacing-base);
 		@include rem(padding-right, $spacing-base);
 	}
-	
+
 	@media all and (min-width: $bp-content-padding-top) {
 		@include rem(padding-top, $spacing-large);
 	}
-	
+
 	.projection-page & {
 		padding: 0;
 	}

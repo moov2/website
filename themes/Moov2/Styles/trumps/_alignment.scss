@@ -11,4 +11,7 @@
 .align--horizontal-left { float: left; }
 .align--horizontal-right { float: right; }
 
-.align--vertical-middle { vertical-align: middle; }
+.align--vertical-middle {
+    display: flex;
+    align-items: center;
+}
