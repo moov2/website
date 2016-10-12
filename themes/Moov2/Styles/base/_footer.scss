@@ -10,10 +10,8 @@
 
 footer {
 	@include rem(font-size, $font-size-small);
-	@include rem(padding, $spacing-large);
 
 	box-sizing: border-box;
-	display: table;
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
@@ -28,9 +26,9 @@ footer {
 		padding: 0;
 	}
 
-	p, .list {
+	p {
 		@include rem(margin-bottom, $spacing-base * 1.5);
 
-		color: $color-primary-light;
+		color: $color-brand;
 	}
 }

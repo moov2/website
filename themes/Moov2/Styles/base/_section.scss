@@ -20,6 +20,8 @@ section,
 	margin-right: auto;
 	max-width: $content-width;
 	width: 100%;
+
+	&:last-child { margin-bottom: 0; }
 }
 
 .section--xtra-wide,

@@ -23,7 +23,8 @@ $url-images: '../Content/';
 
 $color-brand: #171c1e;
 $color-grey: #c1c1c1;
-$color-grey-light: #f4f4f4;
+$color-grey-lightest: #f4f4f4;
+$color-grey-light: #e4e4e4;
 $color-white: #fff;
 $color-pink: #CE245E;
 $color-primary: #2196f3;
@@ -35,8 +36,9 @@ $color-cs-fable: #77E6FE;
  * Font settings.
  */
 
-$font-family-loaded: "Montserrat", sans-serif;
+$font-family-loaded: "PT Sans", sans-serif;
 $font-family-default: sans-serif;
+$font-family-heading: "Montserrat", sans-serif;
 
 $font-color-default: $color-brand;
 $font-color-light: $color-grey;
@@ -110,8 +112,8 @@ $code-font-size: $font-size-small;
  * Content settings.
  */
 
-$content-width: 700px;
-$content-width-large: 880px;
+$content-width: 800px;
+$content-width-large: 1000px;
 $content-width-x-large: 1200px;
 
 $content-line-length: $content-width;
@@ -175,4 +177,4 @@ $promo-btn-width: 200px;
  * Site settings.
  */
 
-$site-background: #edf0f3;
+$site-background: $color-grey-lightest;

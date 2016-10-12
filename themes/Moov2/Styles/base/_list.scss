@@ -20,8 +20,6 @@ ol {
 	width: 100%;
 
 	> li {
-		@include rem(padding-bottom, $spacing-base);
-		@include rem(padding-top, $spacing-base);
 
 		&:first-child {
 			padding-top: 0;
@@ -31,23 +29,5 @@ ol {
 			border-bottom: 0;
 			padding-bottom: 0;
 		}
-	}
-}
-
-
-ol > li {
-	font-weight: $font-weight-bold;
-}
-
-ul ul {
-	@include rem(padding-top, $spacing-base);
-
-	margin-bottom: 0;
-
-	li {
-		@include rem(padding-bottom, $spacing-base / 2);
-		@include rem(padding-top, $spacing-base / 2);
-
-		border-bottom: 0;
 	}
 }

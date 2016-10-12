@@ -45,10 +45,15 @@
 
 .list--horizontal {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
 
-    .list__item {
-        padding: 0;
+    > .list__item {
+        @include rem(padding-left, $spacing-small);
+        @include rem(padding-right, $spacing-small);
+
+        padding-bottom: 0;
+        padding-top: 0;
 
         &:last-child {
             margin-bottom: 0;
@@ -89,6 +94,11 @@
     }
 }
 
+.list--spacing-small {
+    > .list__item {
+        @include rem(padding-bottom, $spacing-small / 2);
+    }
+}
 /**
  * Displays a triple horizontal list list of links to sections of the site.
  *
@@ -120,35 +130,4 @@
     margin-right: auto;
     display: block;
     text-align: center;
-}
-
-/**
- * Items should stack due to limited viewport width.
- */
-@media all and (max-width: $bp-tiles-stack-default) {
-    .list--horizontal:not(.list--never-stack) {
-        margin-left: 0;
-        text-align: left;
-
-        .list__item {
-            @include rem(margin-bottom, $spacing-large);
-
-            display: block;
-            padding-left: 0;
-            padding-right: 0;
-            width: 100%;
-
-            &:first-child { padding-right: 0; }
-            &:last-child { padding-left: 0; }
-        }
-
-        .list__item--stacked-centered {
-            text-align: center;
-        }
-    }
-
-    .list--events {
-        margin-left: auto!important;
-        margin-right: auto!important;
-    }
 }
