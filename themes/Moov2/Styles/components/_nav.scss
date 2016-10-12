@@ -7,50 +7,50 @@
 /**
  * Favouring `max-width` here in order to reduce amount of CSS.
  */
-					
+
 .nav {
 	display: inline-block;
 }
 	.nav__open-btn {
 		display: none;
-		
+
 		@media all and (max-width: $bp-nav-toggle) {
 			display: block;
 		}
 	}
-	
+
 	/**
 	 * 1. Hides out of view until navigation is opened.
 	 * 2. Improves performance by transferring rendering responsibility to the GPU.
 	 */
 	.nav__content {
 		display: inline-block;
-		
+
 		@media all and (max-width: $bp-nav-toggle) {
 			@if ($is-critical != true) {
 				@include rem(padding, $spacing-gigantic $spacing-base);
-				
+
 				background-color: $color-brand;
-				
+
 				text-align: center;
-				
+
 				bottom: 0;
 				box-sizing: border-box;
 				width: 100%;
 				z-index: 150;
-				
+
 				transition: transform $nav-animation-duration $nav-animation-timing;
-			
+
 				.is-open & {
 					transform: translate3d(0, 0, 0);
 				}
 			}
-			
+
 			left: 0;
 			position: fixed;
 			top: 0;
 			transform: translate3d(0, -100%, 0); /* 1. */
-			
+
 			will-change: transform; /* 2. */
 		}
 	}
@@ -59,25 +59,25 @@
 			margin-bottom: 0;
 			padding-left: 0;
 			width: auto;
-			
+
 			@if ($is-critical != true) {
 				@media all and (max-width: $bp-nav-toggle) {
 					width: 100%;
 				}
 			}
 		}
-			
+
 			.nav__option {
 				@include rem(margin-right, $nav-spacing);
-				
+
 				border-bottom: 0;
-				
+
 				display: inline-block;
 				padding: 0;
-				
+
 				a {
 					color: $font-color-default;
-                    
+
                     &:active,
                     &:focus,
                     &:hover {
@@ -85,44 +85,44 @@
                         text-decoration: none;
                     }
 				}
-				
+
 				@if ($is-critical != true) {
 					@media all and (max-width: $bp-nav-toggle) {
 						@include rem(margin-bottom, $spacing-base);
-						
+
 						display: block;
 						margin-right: 0;
-						
+
 						a {
 							@include rem(font-size, $nav-font-size-toggle);
-							
+
 							color: $color-white;
 							font-weight: $font-weight-bold;
 						}
 					}
 				}
 			}
-		
+
 			.nav__option--shortcut {
 				display: none;
-				
-				@if ($is-critical != true) {	
+
+				@if ($is-critical != true) {
 					@media all and (max-width: $bp-nav-toggle) {
 						@include rem(padding-top, $spacing-large);
-						
+
 						display: block;
 					}
 				}
 			}
-			
-		@if ($is-critical != true) {	
+
+		@if ($is-critical != true) {
 			.nav__close-btn {
 				display: none;
-				
+
 				@media all and (max-width: $bp-nav-toggle) {
 					@include rem(right, $spacing-large);
 					@include rem(top, $spacing-large);
-				
+
 					display: block;
 					position: absolute;
 				}
