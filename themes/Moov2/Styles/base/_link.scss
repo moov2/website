@@ -34,6 +34,8 @@ a.link--blank {
 .link--cta {
 	@include rem(padding, $spacing-base $spacing-default);
 
+	display: inline-block;
+
 	background: $color-primary;
 	border-radius: $spacing-large;
 	color: $color-white;

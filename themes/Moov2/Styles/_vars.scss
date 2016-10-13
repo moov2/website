@@ -25,6 +25,7 @@ $color-brand: #171c1e;
 $color-grey: #c1c1c1;
 $color-grey-lightest: #f4f4f4;
 $color-grey-light: #e4e4e4;
+$color-grey-dark: #9a9a9a;
 $color-white: #fff;
 $color-pink: #CE245E;
 $color-primary: #2196f3;
@@ -101,7 +102,14 @@ $bp-reduce-heading-font-size: 550px;
 $bp-promo-small: 680px;
 $bp-content-padding-top: 600px;
 
+$bp-v-tiny: 360px;
+$bp-tiny: 480px;
+$bp-small: 640px;
 $bp-medium: 768px;
+$bp-medium-large: 1024px;
+$bp-large: 1280px;
+$bp-x-large: 1400px;
+$bp-huge: 1650px;
 
 /**
  * Code settings.

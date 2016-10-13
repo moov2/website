@@ -10,6 +10,7 @@
 
 .margin--bottom-none { margin-bottom: 0; }
 .margin--bottom-small { @include rem(margin-bottom, $spacing-small); }
+.margin--bottom-default { @include rem(margin-bottom, $spacing-default); }
 .margin--bottom-large { @include rem(margin-bottom, $spacing-large); }
 
 .margin--left-none { margin-left: 0; }

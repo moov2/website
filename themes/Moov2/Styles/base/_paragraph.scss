@@ -9,14 +9,12 @@
  */
 
 p {
-	@include rem(line-height, $line-height-default);
 	@include rem(margin-bottom, $spacing-default);
 
 	font-weight: $font-weight-default;
+	line-height: 1.4;
 
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
 	margin-top: 0;
 	width: 100%;
 

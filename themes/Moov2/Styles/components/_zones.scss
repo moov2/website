@@ -33,11 +33,12 @@
 }
 
 .zone-footer-primary {
-	@include rem(padding, $spacing-large);
+	@include rem(padding-top, $spacing-large);
+	@include rem(padding-bottom, $spacing-large);
 }
 
 .zone-footer-secondary {
-	@include rem(padding, $spacing-default);
+	@include rem(padding-bottom, $spacing-large);
 
-	background-color: $color-grey-light;
+	color: $color-grey-dark;
 }
