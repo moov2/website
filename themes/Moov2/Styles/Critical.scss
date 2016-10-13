@@ -38,7 +38,11 @@ $is-critical: true;
  * Styles to assist with layout.
  */
 
+/**
+ * Styles specific to the UI.
+ */
 
+@import "ui/scroll";
 
 /**
  * Components to be used through the site.
