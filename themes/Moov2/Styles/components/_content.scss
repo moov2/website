@@ -16,9 +16,6 @@
 
 	p, h2, h3, h4, h5, h6 {
 		box-sizing: border-box;
-
-		@include rem(padding-left, $spacing-base);
-		@include rem(padding-right, $spacing-base);
 	}
 
 	.projection-page & {

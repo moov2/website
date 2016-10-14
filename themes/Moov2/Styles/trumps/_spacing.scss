@@ -12,6 +12,7 @@
 .margin--bottom-small { @include rem(margin-bottom, $spacing-small); }
 .margin--bottom-default { @include rem(margin-bottom, $spacing-default); }
 .margin--bottom-large { @include rem(margin-bottom, $spacing-large); }
+.margin--bottom-gigantic { @include rem(margin-bottom, $spacing-gigantic)}
 
 .margin--left-none { margin-left: 0; }
 .margin--left-small { @include rem(margin-left, $spacing-small); }

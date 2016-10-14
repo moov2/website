@@ -12,21 +12,6 @@
 
     .list__item {
         position: relative;
-
-        .list--spaced & {
-            @include rem(margin-bottom, $spacing-large);
-        }
-
-        .list--separated & {
-           @include rem(padding-bottom, $spacing-large);
-
-           border-bottom: 1px solid $color-grey-light;
-
-            &:last-child {
-                border-bottom: 0;
-                padding-bottom: 0;
-            }
-        }
     }
 
 /**
@@ -46,88 +31,43 @@
 .list--horizontal {
     display: flex;
     flex-flow: row wrap;
+}
+
+.list--centered {
+    justify-content: center;
+}
+
+.list--equal-items {
+    > .list__item {
+        flex: 1;
+    }
+}
+
+.list--space-between {
+    justify-content: space-between;
+}
+
+/**
+ * Styling for list of latest labs work.
+ *
+*/
+
+.list--labs {
     justify-content: space-between;
 
     > .list__item {
-        @include rem(padding-left, $spacing-small);
-        @include rem(padding-right, $spacing-small);
+        @include rem(margin-right, $spacing-default);
+        @include rem(padding, $spacing-default $spacing-default);
 
-        padding-bottom: 0;
-        padding-top: 0;
+        display: flex;
+        flex-direction: column;
 
-        &:last-child {
-            margin-bottom: 0;
+        border: 1px solid $color-grey-light;
+
+        &:last-child { margin-right: 0; }
+
+        > :last-child {
+            align-self: bottom;
         }
     }
-}
-
-/**
- * Displays a two items in a horizontal list.
- *
-    <ul class="list list--horizontal list-horizontal--double">
-        <li class="list__item">
-            Left List Item
-        </li><li class="list__item">
-            Right List Item
-        </li>
-    </ul>
- *
- */
-
-.list--horizontal-double {
-    margin-left: 0;
-    width: 100%;
-
-    /**
-     * 1. Lines the left hand edge up with the rest of the content.
-     */
-    .list__item {    }
-}
-
-.list--horizontal-double-spaced {
-    .list__item {
-        padding-left: 0;
-        padding-right: 0;
-
-        &:first-child { @include rem(padding-right, $spacing-large); }
-        &:last-child { @include rem(padding-left, $spacing-large); }
-    }
-}
-
-.list--spacing-small {
-    > .list__item {
-        @include rem(padding-bottom, $spacing-small / 2);
-    }
-}
-/**
- * Displays a triple horizontal list list of links to sections of the site.
- *
-    <ul class="list list--horizontal list-horizontal--triple">
-        <li class="list__item">
-            Left List Item
-        </li><li class="list__item">
-            Center List Item
-        </li><li class="list__item">
-            Right List Item
-        </li>
-    </ul>
- *
- */
-
-.list--horizontal-triple {
-    width: 100%;
-
-    .list__item {
-        @include rem(padding-left, $spacing-large);
-        @include rem(padding-right, $spacing-large);
-
-        width: 33.3%;
-    }
-}
-
-.list--events {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    text-align: center;
 }

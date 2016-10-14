@@ -9,12 +9,6 @@
  */
 
 .promo {
-	border-bottom: 0;
-
-	display: block;
-	min-height: $promo-min-height;
-	position: relative;
-	width: 100%;
 }
 
 .promo--small {
@@ -34,60 +28,43 @@
 	}
 
 	.promo__content {
-		@include rem(left, $spacing-base);
+		@include rem(padding, $spacing-x-large);
 
+		box-sizing: border-box;
+		position:absolute;
+		width: 100%;
+		height: 100%;
+
+		flex-direction: column;
+    	justify-content: center;
+
+		opacity: 0;
+    	transition: all 1s ease;
 		text-align: center;
 
-		bottom: 5%;
-		position: absolute;
-
-		.promo--small & {
-			@include rem(right, $spacing-large);
-
-			bottom: 10%;
-			top: auto;
-		}
-
-		@media all and (min-width: $bp-promo-small) {
-			@include rem(left, $spacing-large);
-
-			text-align: left;
-
-			position: absolute;
-			top: 30%;
-
-			.promo--reverse & {
-				left: 55%;
-				width: 30%;
-			}
+		&:hover {
+			background: rgba(0,0,0,.6);
+			opacity: 1;
 		}
 	}
 
 		.promo__description,
 		.promo__title {
+			@include rem(margin-bottom, $spacing-default);
+
 			color: $color-white;
+			width: 100%;
 		}
 
 		.promo__title {
-			@include heading();
-			@include rem(margin-bottom, $spacing-default);
+			@include rem(font-size, $font-size-heading / 1.5);
 
-			.promo--small & {
-				@include rem(font-size, $font-size-large);
-				@include rem(line-height, $line-height-default);
-
-				text-align: center;
-			}
+			text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.8);
 		}
 
 		p.promo__description,
 		.promo__description {
-			@include rem(font-size, $font-size-large);
-			@include rem(line-height, $font-size-large + $line-height-addition);
-			@include rem(max-width, $promo-description-width);
-
-			margin-left: 0;
-			padding-left: 0;
+			@include rem(font-size, $font-size-default);
 		}
 
 		.promo__btn {
