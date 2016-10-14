@@ -31,14 +31,14 @@ section,
 		width: 100%;
 
 		.section--wide & { max-width: $content-width-large; }
-		.section--xtra-wide & { max-width: $content-width-x-large; }
+		.section--extra-wide & { max-width: $content-width-x-large; }
 		.section--fill & { max-width: none; }
 
 		.section--content-left & { margin-left: 0; }
 		.section--content-right & { margin-right: 0; }
 	}
 
-.section--xtra-wide,
+.section--extra-wide,
 .section--fill {
 	padding: 0;
 }

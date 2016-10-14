@@ -5,7 +5,7 @@
  */
 
 
-.scroll {
+.scroll-indicator {
     @include rem(font-size, $font-size-large * 2);
 
     bottom: 4rem;

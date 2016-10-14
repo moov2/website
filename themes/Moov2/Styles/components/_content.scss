@@ -21,10 +21,6 @@
 		@include rem(padding-right, $spacing-base);
 	}
 
-	@media all and (min-width: $bp-content-padding-top) {
-		@include rem(padding-top, $spacing-large);
-	}
-
 	.projection-page & {
 		padding: 0;
 	}
@@ -32,4 +28,10 @@
 
 .content-item--fill {
 	padding-bottom: 0;
+}
+
+.homepage { padding-top: 0; }
+
+.page {
+	@include rem(padding-top, $spacing-gigantic);
 }
