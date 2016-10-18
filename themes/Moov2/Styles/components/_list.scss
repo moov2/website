@@ -33,6 +33,13 @@
     flex-flow: row wrap;
 }
 
+.list--vertical {
+    display: flex;
+    flex-direction: column;
+
+    > .box { flex: 1; }
+}
+
 .list--centered {
     justify-content: center;
 }
@@ -45,29 +52,16 @@
 
 .list--space-between {
     justify-content: space-between;
-}
-
-/**
- * Styling for list of latest labs work.
- *
-*/
-
-.list--labs {
-    justify-content: space-between;
 
     > .list__item {
-        @include rem(margin-right, $spacing-default);
-        @include rem(padding, $spacing-default $spacing-default);
+        @include rem(margin-bottom, $spacing-gigantic / 2);
+    }
+}
 
-        display: flex;
-        flex-direction: column;
+.list--bordered { border: 1px solid $color-grey-light; }
 
-        border: 1px solid $color-grey-light;
-
-        &:last-child { margin-right: 0; }
-
-        > :last-child {
-            align-self: bottom;
-        }
+.list--padding {
+    > .list__item {
+        @include rem(padding, $spacing-default);
     }
 }

@@ -9,14 +9,15 @@
  */
 
 .box {
-	background-color: $color-grey-light;
 
 	box-sizing: border-box;
 	display: block;
 	position: relative;
 }
 
-	.box--padded { @include rem(padding, $spacing-default); }
+.box--bordered { border: 1px solid $color-grey-light; }
+
+.box--grey { background-color: $color-grey-light; }
 
 .box--logo {
 	text-align: center;
@@ -26,3 +27,5 @@
 	vertical-align: middle;
 	width: 250px;
 }
+
+.box--padded { @include rem(padding, $spacing-default); }

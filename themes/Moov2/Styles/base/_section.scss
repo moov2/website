@@ -31,17 +31,14 @@ section,
 		width: 100%;
 
 		.section--wide & { max-width: $content-width-large; }
-		.section--extra-wide & { max-width: $content-width-x-large; }
+		.section--x-wide & { max-width: $content-width-x-large; }
+		.section--xx-wide & { max-width: $content-width-xx-large; }
+		.section--xxx-wide & { max-width: $content-width-xxx-large; }
 		.section--fill & { max-width: none; }
 
 		.section--content-left & { margin-left: 0; }
 		.section--content-right & { margin-right: 0; }
 	}
-
-.section--extra-wide,
-.section--fill {
-	padding: 0;
-}
 
 .section--primary {
 	@include rem(padding, $spacing-base);
@@ -51,13 +48,6 @@ section,
 }
 
 .section--spaced { @include rem(padding, $spacing-large); }
-
-.section--pink {
-	@include rem(padding, $spacing-gigantic 0);
-
-	background-color: $color-pink;
-	color: $color-white;
-}
 
 .section--hero {
 	@include rem(padding-left, $spacing-gigantic);
@@ -115,3 +105,17 @@ section,
 	background-size: cover;
 	color: $color-white;
 }
+
+.section--dark {
+	background-color: $color-brand;
+	color: $color-white;
+}
+
+/**
+ * Padding modifiers. Top & bottom padding of a section should be consistent.
+ */
+
+.section--padding { @include rem(padding, $spacing-gigantic); }
+.section--padding-top { @include rem(padding-top, $spacing-gigantic); }
+.section--padding-bottom { @include rem(padding-top, $spacing-gigantic); }
+.section--padding-vertical { @include rem(padding, $spacing-gigantic 0); }
