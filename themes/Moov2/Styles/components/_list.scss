@@ -33,6 +33,10 @@
     flex-flow: row wrap;
 }
 
+.list--align-items-end {
+    align-items: flex-end;
+}
+
 .list--vertical {
     display: flex;
     flex-direction: column;
@@ -52,15 +56,11 @@
 
 .list--space-between {
     justify-content: space-between;
-
-    > .list__item {
-        @include rem(margin-bottom, $spacing-gigantic / 2);
-    }
 }
 
 .list--bordered { border: 1px solid $color-grey-light; }
 
-.list--padding {
+.list--padded {
     > .list__item {
         @include rem(padding, $spacing-default);
     }

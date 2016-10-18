@@ -32,6 +32,17 @@
 	}
 }
 
+.zone-footer-primary,
+.zone-footer-secondary {
+	background-color: $color-brand;
+
+	color: $color-grey-dark;
+
+	a { color: $color-grey-dark; }
+
+	hr { border-color: $color-grey-darkest; }
+}
+
 .zone-footer-primary {
 	@include rem(padding-top, $spacing-large);
 	@include rem(padding-bottom, $spacing-large);
@@ -39,6 +50,4 @@
 
 .zone-footer-secondary {
 	@include rem(padding-bottom, $spacing-large);
-
-	color: $color-grey-dark;
 }

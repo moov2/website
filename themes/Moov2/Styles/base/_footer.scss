@@ -28,7 +28,5 @@ footer {
 
 	p {
 		@include rem(margin-bottom, $spacing-base * 1.5);
-
-		color: $color-brand;
 	}
 }

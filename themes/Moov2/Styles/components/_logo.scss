@@ -3,19 +3,23 @@
  * $LOGO
  * -----------------------------------------------------------------------------
  */
- 
+
 /**
  * Displaying company logos.
  */
- 
+
 .logo {
 	display: inline-block;
 }
 
-.logo--brand {
-	height: $logo-brand-height;
-	width: $logo-brand-width;
+.logo--moov2 {
+    @include svg-moov2();
+    height: $logo-brand-height;
+    width: $logo-brand-width;
 }
+
+.logo--grey { @include svg-moov2($color-grey-dark); }
+.logo--white { @include svg-moov2($color-white); }
 
 .logo--technology {
 	display: block;
