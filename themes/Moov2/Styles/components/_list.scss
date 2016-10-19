@@ -31,6 +31,69 @@
 .list--horizontal {
     display: flex;
     flex-flow: row wrap;
+
+    &.triple\@tiny > .list__item {
+        @include bp-max-width($bp-tiny) {
+            flex: initial;
+            width: 33.33%;
+        }
+    }
+
+    &.triple\@small > .list__item {
+        @include bp-max-width($bp-small) {
+            flex: initial;
+            width: 33.33%;
+        }
+    }
+
+    &.triple\@medium > .list__item {
+        @include bp-max-width($bp-medium) {
+            flex: initial;
+            width: 33.33%;
+        }
+    }
+
+    &.double\@tiny > .list__item {
+        @include bp-max-width($bp-tiny) {
+            flex: initial;
+            width: 50%;
+        }
+    }
+
+    &.double\@small > .list__item {
+        @include bp-max-width($bp-small) {
+            flex: initial;
+            width: 50%;
+        }
+    }
+
+    &.double\@medium > .list__item {
+        @include bp-max-width($bp-medium) {
+            flex: initial;
+            width: 50%;
+        }
+    }
+
+    &.stack\@tiny > .list__item {
+        @include bp-max-width($bp-tiny) {
+            flex: initial;
+            width: 100%;
+        }
+    }
+
+    &.stack\@small > .list__item {
+        @include bp-max-width($bp-small) {
+            flex: initial;
+            width: 100%;
+        }
+    }
+
+    &.stack\@medium > .list__item {
+        @include bp-max-width($bp-medium) {
+            flex: initial;
+            width: 100%;
+        }
+    }
 }
 
 .list--align-items-end {

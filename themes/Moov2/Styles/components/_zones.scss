@@ -34,9 +34,16 @@
 
 .zone-footer-primary,
 .zone-footer-secondary {
-	background-color: $color-brand;
+	@include rem(padding-left, $spacing-base);
+	@include rem(padding-right, $spacing-base);
 
+	background-color: $color-brand;
 	color: $color-grey-dark;
+
+	@media all and (min-width: $bp-nav-toggle) {
+		@include rem(padding-left, $spacing-large);
+		@include rem(padding-right, $spacing-large);
+	}
 
 	a { color: $color-grey-dark; }
 
