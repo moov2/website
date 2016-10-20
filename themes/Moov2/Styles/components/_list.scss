@@ -15,6 +15,8 @@
         position: relative;
     }
 
+    .list__item--margin-none { margin-bottom: 0 !important; }
+
 /**
  * Displays items adjacent to each other.
  *
@@ -33,80 +35,53 @@
     display: flex;
     flex-flow: row wrap;
 
-    &.stack\@medium-large > .list__item {
-        @include bp-max-width($bp-medium-large) {
-            flex: initial;
-            width: 100%;
-        }
+    > .list__item {
+        @include rem(margin-bottom, $spacing-base * 2);
+
+        width: 100%;
+
+        text-align: center;
     }
 
-    &.triple\@medium > .list__item {
-        @include bp-max-width($bp-medium) {
-            flex: initial;
-            width: 33.33%;
-        }
-    }
+    > .list__item--grow { flex: 1; }
 
-    &.double\@medium > .list__item {
-        @include bp-max-width($bp-medium) {
-            flex: initial;
-            width: 50%;
-        }
-    }
+    &.double > .list__item { flex: initial; width: 50%; }
+    &.double\@tiny > .list__item { @include bp-min-width($bp-tiny) { width: 50%; } }
+    &.double\@small > .list__item { @include bp-min-width($bp-small) { width: 50%; } }
+    &.double\@medium > .list__item { @include bp-min-width($bp-medium) { width: 50%; } }
+    &.double\@medium-large > .list__item { @include bp-min-width($bp-medium-large) { width: 50%; } }
 
-    &.stack\@medium > .list__item {
-        @include bp-max-width($bp-medium) {
-            flex: initial;
-            width: 100%;
-        }
-    }
+    &.triple > .list__item { width: 33.33%; }
+    &.triple\@tiny > .list__item { @include bp-min-width($bp-tiny) { width: 33.33%; } }
+    &.triple\@small > .list__item { @include bp-min-width($bp-small) { width: 33.33%; } }
+    &.triple\@medium > .list__item { @include bp-min-width($bp-medium) { width: 33.33%; } }
+    &.triple\@medium-large > .list__item { @include bp-min-width($bp-medium-large) { width: 33.33%; } }
 
-    &.triple\@small > .list__item {
-        @include bp-max-width($bp-small) {
-            flex: initial;
-            width: 33.33%;
-        }
-    }
+    &.fill-row > .list__item { width: auto; }
+    &.fill-row\@tiny > .list__item { @include bp-min-width($bp-tiny) { width: auto; } }
+    &.fill-row\@small > .list__item { @include bp-min-width($bp-small) { width: auto; } }
+    &.fill-row\@medium > .list__item { @include bp-min-width($bp-medium) { width: auto; } }
+    &.fill-row\@medium-large > .list__item { @include bp-min-width($bp-medium-large) { width: auto; } }
+    &.fill-row\@large > .list__item { @include bp-min-width($bp-large) { width: auto; } }
 
-    &.double\@small > .list__item {
-        @include bp-max-width($bp-small) {
-            flex: initial;
-            width: 50%;
-        }
-    }
+    &.fill-row-equal > .list__item { width: auto; }
+    &.fill-row-equal\@tiny > .list__item { @include bp-min-width($bp-tiny) { flex: 1; width: auto; } }
+    &.fill-row-equal\@small > .list__item { @include bp-min-width($bp-small) { flex: 1; width: auto; } }
+    &.fill-row-equal\@medium > .list__item { @include bp-min-width($bp-medium) { flex: 1; width: auto; } }
+    &.fill-row-equal\@medium-large > .list__item { @include bp-min-width($bp-medium-large) { flex: 1; width: auto; } }
+    &.fill-row-equal\@large > .list__item { @include bp-min-width($bp-large) { flex: 1; width: auto; } }
 
-    &.stack\@small > .list__item {
-        @include bp-max-width($bp-small) {
-            flex: initial;
-            width: 100%;
-        }
-    }
+    &.align-center > .list__item { text-align: center; }
+    &.align-center\@tiny > .list__item { @include bp-min-width($bp-tiny) { text-align: center; } }
+    &.align-center\@small > .list__item { @include bp-min-width($bp-small) { text-align: center; } }
+    &.align-center\@medium > .list__item { @include bp-min-width($bp-medium) { text-align: center; } }
+    &.align-center\@medium-large > .list__item { @include bp-min-width($bp-medium-large) { text-align: center; } }
 
-    &.triple\@tiny > .list__item {
-        @include bp-max-width($bp-tiny) {
-            flex: initial;
-            width: 33.33%;
-        }
-    }
-
-    &.double\@tiny > .list__item {
-        @include bp-max-width($bp-tiny) {
-            flex: initial;
-            width: 50%;
-        }
-    }
-
-    &.stack\@tiny > .list__item,
-    &.stack-center\@tiny > .list__item {
-        @include bp-max-width($bp-tiny) {
-            flex: initial;
-            width: 100%;
-        }
-    }
-
-    &.stack-center\@tiny > .list__item {
-        @include bp-max-width($bp-tiny) { text-align: center; }
-    }
+    &.align-left > .list__item { text-align: left; }
+    &.align-left\@tiny > .list__item { @include bp-min-width($bp-tiny) { text-align: left; } }
+    &.align-left\@small > .list__item { @include bp-min-width($bp-small) { text-align: left; } }
+    &.align-left\@medium > .list__item { @include bp-min-width($bp-medium) { text-align: left; } }
+    &.align-left\@medium-large > .list__item { @include bp-min-width($bp-medium-large) { text-align: left; } }
 }
 
 .list--align-items-end {
@@ -119,25 +94,35 @@
     }
 }
 
+/**
+ * Displays items in a vertical list.
+ *
+ * 1. This is to make all boxes within a list__item fill the height.
+ *    Example: this is used for the 'Labs' section.
+ *
+ */
+
 .list--vertical {
     display: flex;
     flex-direction: column;
 
-    > .box { flex: 1; }
-}
+    > .box { flex: 1; } /* 1. */
 
-.list--centered {
-    justify-content: center;
-}
-
-.list--equal-items {
     > .list__item {
-        flex: 1;
+        @include rem(margin-bottom, $spacing-small);
     }
 }
 
-.list--space-between {
+.list--justify-around {
+    justify-content: space-around;
+}
+
+.list--justify-between {
     justify-content: space-between;
+}
+
+.list--justify-center {
+    justify-content: center;
 }
 
 .list--bordered { border: 1px solid $color-grey-light; }

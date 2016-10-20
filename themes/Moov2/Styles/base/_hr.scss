@@ -3,24 +3,22 @@
  * $HR
  * -----------------------------------------------------------------------------
  */
- 
+
 /**
  * Styles for `hr` element.
  */
- 
+
 hr {
 	@include rem(margin-bottom, $spacing-large);
-	@include rem(margin-left, $spacing-base);
-	@include rem(margin-right, $spacing-base);
-	
+
 	border: 0;
 	border-bottom: 1px solid $border-color-default;
-	
+
 	box-sizing: border-box;
 	margin-top: 0;
 	max-width: $content-width-large;
-	width: auto;	
-	
+	width: auto;
+
 	@media all and (min-width: $content-width-large) {
 		margin-left: auto;
 		margin-right: auto;

@@ -51,10 +51,10 @@
 }
 
 .zone-footer-primary {
-	@include rem(padding-top, $spacing-large);
-	@include rem(padding-bottom, $spacing-large);
+	@include rem(padding-top, $spacing-x-large);
+	@include rem(padding-bottom, $spacing-large / 4);
 }
 
 .zone-footer-secondary {
-	@include rem(padding-bottom, $spacing-large);
+	@include rem(padding-bottom, $spacing-x-large);
 }
