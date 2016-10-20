@@ -11,6 +11,7 @@
 }
 
     .list__item {
+        box-sizing: border-box;
         position: relative;
     }
 
@@ -32,10 +33,31 @@
     display: flex;
     flex-flow: row wrap;
 
-    &.triple\@tiny > .list__item {
-        @include bp-max-width($bp-tiny) {
+    &.stack\@medium-large > .list__item {
+        @include bp-max-width($bp-medium-large) {
+            flex: initial;
+            width: 100%;
+        }
+    }
+
+    &.triple\@medium > .list__item {
+        @include bp-max-width($bp-medium) {
             flex: initial;
             width: 33.33%;
+        }
+    }
+
+    &.double\@medium > .list__item {
+        @include bp-max-width($bp-medium) {
+            flex: initial;
+            width: 50%;
+        }
+    }
+
+    &.stack\@medium > .list__item {
+        @include bp-max-width($bp-medium) {
+            flex: initial;
+            width: 100%;
         }
     }
 
@@ -46,8 +68,22 @@
         }
     }
 
-    &.triple\@medium > .list__item {
-        @include bp-max-width($bp-medium) {
+    &.double\@small > .list__item {
+        @include bp-max-width($bp-small) {
+            flex: initial;
+            width: 50%;
+        }
+    }
+
+    &.stack\@small > .list__item {
+        @include bp-max-width($bp-small) {
+            flex: initial;
+            width: 100%;
+        }
+    }
+
+    &.triple\@tiny > .list__item {
+        @include bp-max-width($bp-tiny) {
             flex: initial;
             width: 33.33%;
         }
@@ -60,44 +96,27 @@
         }
     }
 
-    &.double\@small > .list__item {
-        @include bp-max-width($bp-small) {
-            flex: initial;
-            width: 50%;
-        }
-    }
-
-    &.double\@medium > .list__item {
-        @include bp-max-width($bp-medium) {
-            flex: initial;
-            width: 50%;
-        }
-    }
-
-    &.stack\@tiny > .list__item {
+    &.stack\@tiny > .list__item,
+    &.stack-center\@tiny > .list__item {
         @include bp-max-width($bp-tiny) {
             flex: initial;
             width: 100%;
         }
     }
 
-    &.stack\@small > .list__item {
-        @include bp-max-width($bp-small) {
-            flex: initial;
-            width: 100%;
-        }
-    }
-
-    &.stack\@medium > .list__item {
-        @include bp-max-width($bp-medium) {
-            flex: initial;
-            width: 100%;
-        }
+    &.stack-center\@tiny > .list__item {
+        @include bp-max-width($bp-tiny) { text-align: center; }
     }
 }
 
 .list--align-items-end {
     align-items: flex-end;
+}
+
+.list--double {
+    > .list__item {
+        width: 50%;
+    }
 }
 
 .list--vertical {
