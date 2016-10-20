@@ -119,6 +119,10 @@
 
 .list--padded {
     > .list__item {
-        @include rem(padding, $spacing-default);
+        @include rem(padding, $spacing-small);
+
+        @include bp-min-width($bp-small) {
+            @include rem(padding, $spacing-default);
+        }
     }
 }
