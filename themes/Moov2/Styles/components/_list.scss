@@ -58,6 +58,7 @@
     &.quad\@small > .list__item { @include bp-min-width($bp-small) { width: 25%; } }
     &.quad\@medium > .list__item { @include bp-min-width($bp-medium) { width: 25%; } }
     &.quad\@medium-large > .list__item { @include bp-min-width($bp-medium-large) { width: 25%; } }
+    &.quad\@large > .list__item { @include bp-min-width($bp-large) { width: 25%; } }
 
     &.fill-row > .list__item { width: auto; }
     &.fill-row\@tiny > .list__item { @include bp-min-width($bp-tiny) { width: auto; } }
