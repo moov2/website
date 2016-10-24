@@ -3,76 +3,77 @@
  * $FIGURE
  * -----------------------------------------------------------------------------
  */
- 
+
 /**
  * Styles for `figure` element.
  */
- 
+
 figure,
 .figure {
 	@include rem(margin-bottom, $spacing-default);
-	
+
 	text-align: center;
-	
+
 	box-sizing: border-box;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 0;
 	max-width: $content-line-length;
 	position: relative;
-	width: 100%;	
+	width: 100%;
 }
 
 	.figure--left,
 	.figure--right {
 		margin-left: 0;
-		margin-right: 0;	
+		margin-right: 0;
 		max-width: none;
 		width: auto;
 	}
-	
+
 	@media all and (min-width: $bp-figure-floated) {
 		.figure--left {
 			@include rem(margin-right, $spacing-default);
-			
+
 			float: left;
 		}
-		
+
 		.figure--right {
 			@include rem(margin-left, $spacing-default);
-			
+
 			text-align: right;
-			
+
 			float: right;
 		}
 	}
 
 	figcaption {
 		@include rem(font-size, $font-size-small);
-		
+		@include rem(padding-top, $spacing-small);
+
 		color: $font-color-light;
 		font-style: italic;
 		text-align: left;
-		
+
 		box-sizing: border-box;
 		width: 100%;
-		
+
 		.figure--left & {
 			margin-left: 0;
-			
+
 			/**
 		     * Positions the `figcaption` element to the right outside of the
 		     * main content area.
 		     */
 			@media all and (min-width: $bp-figcaption-aside) {
 				@include rem(margin-right, $spacing-base);
-				
+
 				text-align: right;
-				
+
 				left: -($figure-caption-width + $spacing-base-px);
 			}
 		}
-		
+
 		/**
 		 * Positions the `figcaption` element to the right outside of the
 		 * main content area.
