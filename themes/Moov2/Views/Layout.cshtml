@@ -1,16 +1,16 @@
     @if (Model.Logo != null || Model.Navigation != null) {
-    <header>
+    <header class="align--vertical-middle">
         @Display(Model.Logo)
         @Display(Model.Navigation)
     </header>
     }
-     
+
     @if (Model.Content != null) {
     <main>
         @Display(Model.Content)
     </main>
     }
-    
+
     @if (Model.FooterPrimary != null || Model.FooterSecondary != null) {
     <footer>
         @Display(Model.FooterPrimary)
