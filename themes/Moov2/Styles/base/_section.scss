@@ -114,7 +114,8 @@ section,
 	color: $color-white;
 }
 
-.section--primary {
+.section--primary,
+.section--primary-dark {
 	background-color: $color-primary;
 	color: $color-white;
 
@@ -123,6 +124,8 @@ section,
 		text-decoration: underline;
 	}
 }
+
+.section--primary-dark { background-color: $color-primary-dark; }
 
 /**
  * Padding modifiers. Top & bottom padding of a section should be consistent.
