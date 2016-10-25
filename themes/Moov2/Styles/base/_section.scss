@@ -58,7 +58,7 @@ section,
 	@include rem(padding-left, $spacing-gigantic);
 	@include rem(padding-right, $spacing-gigantic);
 
-	height: 82vh;
+	height: 95vh;
 
 	@include bp-min-width($bp-huge) {
         @include rem(padding-left, $spacing-gigantic * 2);
@@ -66,7 +66,7 @@ section,
     }
 
 	p {
-		@include rem(font-size, $font-size-heading / 3);
+		@include rem(font-size, $font-size-large * 0.8);
 		@include rem(margin-bottom, $spacing-large);
 	}
 }

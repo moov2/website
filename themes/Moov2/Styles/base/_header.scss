@@ -29,7 +29,13 @@ header {
 	}
 
 	body > & {
-		border-bottom: 1px solid $color-grey-light;
+		left: 0;
+		position: absolute;
+		top: 0;
+		z-index: 10;
+
+		background: none;
+		border-bottom: 1px solid $color-grey-transparent;
 	}
 
 	/**
@@ -41,4 +47,12 @@ header {
 		max-width: none;
 		padding: 0;
 	}
+}
+
+.header--inverted {
+	border-bottom: 1px solid $color-grey-transparent;
+
+	& .logo--moov2 {
+    	@include svg-moov2($color-white);
+    }
 }
