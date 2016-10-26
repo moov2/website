@@ -18,8 +18,8 @@
     <Place Parts_Title="-"/>
   </Match>
 
-  <!-- Don't display page title on about v2 page. -->
-  <Match Path="/about-v2">
+  <!-- Don't display page title on about page. -->
+  <Match Path="/about">
     <Place Parts_Title="-"/>
   </Match>
 </Placement>

@@ -32,6 +32,7 @@ a.link--blank {
 }
 
 .link--cta {
+	@include rem(font-size, $font-size-default);
 	@include rem(padding, $spacing-base $spacing-default);
 
 	display: inline-block;
@@ -47,4 +48,8 @@ a.link--blank {
 	&:hover {
 		text-decoration: none;
 	}
+}
+
+.link--cta-large {
+	@include rem(font-size, $font-size-large);
 }

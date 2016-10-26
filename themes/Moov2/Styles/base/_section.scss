@@ -45,13 +45,6 @@ section,
 		.section--content-right & { margin-right: 0; }
 	}
 
-.section--primary {
-	@include rem(padding, $spacing-base);
-
-	background-color: $color-primary;
-	color: $color-white;
-}
-
 .section--spaced { @include rem(padding, $spacing-large); }
 
 .section--hero {
@@ -66,10 +59,14 @@ section,
     }
 
 	p {
-		@include rem(font-size, $font-size-large * 0.8);
+		@include rem(font-size, $font-size-large);
 		@include rem(margin-bottom, $spacing-large);
 	}
 }
+
+/**
+ * Apply a dark gradient to the bottom of the section.
+ */
 
 .section--gradient {
 	&:before {
@@ -87,6 +84,10 @@ section,
 		background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 70%, rgba(0,0,0,.5) 100%);
 	}
 }
+
+/**
+ * Sections for specific projects.
+ */
 
 .section--3fire {
 	background-image: url(#{$url-images}section-bg-tom-gates.jpg);
@@ -109,14 +110,14 @@ section,
 	color: $color-white;
 }
 
-.section--dark {
-	background-color: $color-brand;
-	color: $color-white;
-}
+/**
+ * Section colour modifiers.
+ */
 
+.section--dark,
 .section--primary,
-.section--primary-dark {
-	background-color: $color-primary;
+.section--primary-dark,
+.section--purple {
 	color: $color-white;
 
 	a {
@@ -125,13 +126,16 @@ section,
 	}
 }
 
+.section--dark { background-color: $color-brand; }
+.section--primary { background-color: $color-primary; }
 .section--primary-dark { background-color: $color-primary-dark; }
+.section--purple { background-color: $color-purple; }
 
 /**
  * Padding modifiers. Top & bottom padding of a section should be consistent.
  */
 
 .section--padding { @include rem(padding, $spacing-gigantic); }
+.section--padding-bottom { @include rem(padding-bottom, $spacing-gigantic); }
 .section--padding-top { @include rem(padding-top, $spacing-gigantic); }
-.section--padding-bottom { @include rem(padding-top, $spacing-gigantic); }
 .section--padding-vertical { @include rem(padding, $spacing-gigantic 0); }
