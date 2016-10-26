@@ -35,7 +35,7 @@ header {
 		z-index: 10;
 
 		background: none;
-		border-bottom: 1px solid $color-grey-transparent;
+		border-bottom: 1px solid $color-grey-lightest;
 	}
 
 	/**
@@ -49,12 +49,11 @@ header {
 	}
 }
 
-.header--inverted {
-	border-bottom: 1px solid $color-grey-transparent;
-
-	& .logo--moov2 {
-    	@include svg-moov2($color-white);
-    }
-
-    & .nav__option a { color: $color-white; }
+/**
+ * Uses semi-transparent border against dark backgrounds.
+ */
+html {
+	&.is-inverted-header {
+		header { border-bottom: 1px solid $color-grey-transparent; }
+	}
 }

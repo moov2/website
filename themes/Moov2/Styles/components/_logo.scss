@@ -18,6 +18,17 @@
     width: $logo-brand-width;
 }
 
+/**
+ * Changes the logo to white for use against dark backgrounds.
+ */
+html {
+    &.is-inverted-header {
+        .logo--moov2 {
+            @include svg-moov2($color-white);
+        }
+    }
+}
+
 .logo--grey { @include svg-moov2($color-grey-dark); }
 .logo--white { @include svg-moov2($color-white); }
 

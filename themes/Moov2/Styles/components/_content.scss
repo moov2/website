@@ -28,7 +28,4 @@
 }
 
 .homepage { padding-top: 0; }
-
-.page {
-	@include rem(padding-top, $spacing-gigantic);
-}
+.page { padding-top: 0; }

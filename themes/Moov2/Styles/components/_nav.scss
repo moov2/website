@@ -128,3 +128,13 @@
 				}
 			}
 		}
+
+/**
+ * Changes the navigation to white for use against dark backgrounds.
+ */
+html {
+    &.is-inverted-header {
+        .nav__option a {
+            color: $color-white; }
+        }
+}
