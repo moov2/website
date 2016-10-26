@@ -1,0 +1,8 @@
+﻿@using Orchard.Utility.Extensions
+@{
+    bool? booleanValue = Model.ContentField.Value;
+
+    if (booleanValue.HasValue && booleanValue.Value) {
+        Html.AddPageClassNames(new string [] { "is-inverted-header" });
+    }
+}
