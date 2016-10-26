@@ -55,4 +55,6 @@ header {
 	& .logo--moov2 {
     	@include svg-moov2($color-white);
     }
+
+    & .nav__option a { color: $color-white; }
 }
