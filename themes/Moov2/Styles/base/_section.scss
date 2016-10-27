@@ -16,8 +16,10 @@ section,
 	display: block;
 	position: relative;
 
-	&:first-child {
-		@include rem(padding-top, $header-height);
+	.orchard-layouts-root > & {
+		&:first-child {
+			@include rem(padding-top, $header-height);
+		}
 	}
 
 	&:last-child { margin-bottom: 0; }
@@ -135,6 +137,7 @@ section,
 }
 
 .section--dark { background-color: $color-brand; }
+.section--grey-lightest { background-color: $color-grey-lightest; }
 .section--primary { background-color: $color-primary; }
 .section--primary-dark { background-color: $color-primary-dark; }
 .section--purple { background-color: $color-purple; }

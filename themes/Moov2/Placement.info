@@ -27,4 +27,9 @@
   <Match Path="/work">
     <Place Parts_Title="-"/>
   </Match>
+
+  <!-- Don't display page title on rocket jump brighton page. -->
+  <Match Path="/posted/rocket-jump-events-brighton">
+    <Place Parts_Title="-"/>
+  </Match>
 </Placement>

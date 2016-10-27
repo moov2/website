@@ -12,6 +12,8 @@
 .text--heading {
     @include rem(font-size, $font-size-heading);
 
+    font-family: $font-family-heading;
+    font-weight: 700;
     line-height: 1;
 }
 
