@@ -136,7 +136,14 @@ section,
 .section--purple { background-color: $color-purple; }
 
 /**
- * Padding modifiers. Top & bottom padding of a section should be consistent.
+ * Section height modifiers.
+ */
+
+.section--height-half { height: 50vh; }
+.section--height-full { height: 100vh; }
+
+/**
+ * Section padding modifiers. Top & bottom padding of a section should be consistent.
  */
 
 .section--padding { @include rem(padding, $spacing-gigantic); }

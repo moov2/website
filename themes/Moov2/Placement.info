@@ -22,4 +22,9 @@
   <Match Path="/about">
     <Place Parts_Title="-"/>
   </Match>
+
+  <!-- Don't display page title on work page. -->
+  <Match Path="/work">
+    <Place Parts_Title="-"/>
+  </Match>
 </Placement>
