@@ -22,6 +22,7 @@
 .padding--gigantic { @include rem(padding, $spacing-gigantic); }
 
 .padding--top { @include rem(padding-top, $spacing-base); }
+.padding--top-header { @include rem(padding-top, $header-height); }
 .padding--top-large { @include rem(padding-top, $spacing-large); }
 
 .padding--left-none { padding-left: 0; }
