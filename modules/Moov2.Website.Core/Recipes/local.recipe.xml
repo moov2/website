@@ -11,11 +11,10 @@
     <IsSetupRecipe>true</IsSetupRecipe>
   </Recipe>
 
-  <Feature enable="Common, Containers, Contents, Dashboard, Feeds, Gallery, Navigation, Orchard.Alias, Orchard.Autoroute, Orchard.Azure, Orchard.Azure.Media, Orchard.CodeGeneration, Orchard.Conditions, Orchard.ContentPicker, Orchard.ContentTypes, Orchard.Forms, Orchard.ImportExport, Orchard.Layouts, Orchard.Layouts.Projections, Orchard.MediaLibrary, Orchard.MediaProcessing, Orchard.Modules, Orchard.Packaging, Orchard.Pages, Orchard.Projections, Orchard.Recipes, Orchard.Resources, Orchard.Roles, Orchard.Scripting, Orchard.Scripting.Lightweight, Orchard.Setup.Services, Orchard.Themes, Orchard.Tokens, Orchard.Users, Orchard.Widgets, PackagingServices, Scheduling, Settings, Shapes, Moov2, Moov2.Website.Core, TinyMce, Title" />
-
   <CurrentTheme id="Moov2" />
 
   <Command>
-    recipes execute Moov2.Website.Core ContentTypes
+    recipes execute Moov2.Website.Core Features
+    recipes execute Moov2.Website.Core Content
   </Command>
 </Orchard>

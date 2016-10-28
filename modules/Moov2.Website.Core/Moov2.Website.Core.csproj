@@ -74,7 +74,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Recipes\contenttypes.recipe.xml" />
+    <Content Include="Recipes\content.recipe.xml" />
+    <Content Include="Recipes\features.recipe.xml" />
     <Content Include="Recipes\local.recipe.xml" />
     <Content Include="Web.config" />
     <Content Include="Module.txt" />
