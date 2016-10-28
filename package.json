@@ -1,7 +1,7 @@
 {
-  "name": "orchard-development",
-  "version": "0.2.0",
-  "description": "This project is used by Moov2 to assist with developing & deploying solutions utilising Orchard CMS.",
+  "name": "moov2-website",
+  "version": "0.1.0",
+  "description": "Website for Moov2.",
   "devDependencies": {
     "grunt": "0.4.5",
     "grunt-contrib-clean": "0.6.0",
@@ -18,5 +18,10 @@
   },
   "scripts": {
     "install": "grunt setup"
-  }
+  },
+  "repository": {
+    "url": "git@github.com:moov2/website.git",
+    "type": "git"
+  },
+  "author": "Moov2 Ltd"
 }

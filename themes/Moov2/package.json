@@ -29,8 +29,7 @@
     "sinon": "1.17.2"
   },
   "scripts": {
-    "dist": "npm install & grunt dist",
-    "develop": "npm install & grunt",
-    "uat": "npm install && grunt dist -cdnUrl=http://az833848.vo.msecnd.net -container=theme -accountName=moov2website3wen -accountKey=fZ4Qu3TqsfGhrNTi+FW8c3qbx6M6ezOizhA5IljPAC31iWCKdDWETExfONTK2CYhGXLzmLN+713ESl8G6F73EA=="
+    "dist": "yarn install & grunt dist",
+    "develop": "yarn install & grunt"
   }
 }

@@ -1,1 +1,1 @@
-call npm run develop
+call yarn run develop
