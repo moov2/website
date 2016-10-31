@@ -32,7 +32,7 @@
 		}
 
 			.nav__option {
-				@include rem(margin-right, $nav-spacing);
+				@include rem(margin-right, $spacing-large);
 
 				border-bottom: 0;
 
@@ -50,6 +50,7 @@
                     }
 				}
 
+				&:last-child { margin-right: 0; }
 
 			}
 
