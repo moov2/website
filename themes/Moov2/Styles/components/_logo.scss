@@ -13,9 +13,14 @@
 }
 
 .logo--moov2 {
-    @include svg-moov2();
+    @include svg-moov2-m();
     height: $logo-brand-height;
-    width: $logo-brand-width;
+    width: $logo-brand-width-m;
+
+    @media all and (min-width: $bp-small) {
+        @include svg-moov2();
+        width: $logo-brand-width;
+    }
 }
 
 /**
@@ -24,7 +29,11 @@
 html {
     &.is-inverted-header {
         .logo--moov2 {
-            @include svg-moov2($color-white);
+            @include svg-moov2-m($color-white);
+
+            @media all and (min-width: $bp-small) {
+                @include svg-moov2($color-white);
+            }
         }
     }
 }

@@ -16,11 +16,39 @@
 }
 
 .zone-navigation {
+	@include rem(padding-left, $spacing-large);
+
+	flex: 1;
+
+	@media all and (min-width: $bp-v-tiny) {
+		flex: initial;
+		padding-left: 0;
+		width: 60%;
+	}
+
+	@media all and (min-width: $bp-tiny) {
+		width: 50%;
+	}
+
+	@media all and (min-width: $bp-small) {
+		width: 40%;
+	}
 
 	@media all and (min-width: $bp-medium) {
-		width: 80%;
+		@include rem(width, $spacing-x-large * 6);
+	}
 
-		text-align: right;
+	a {
+		@include rem(font-size, $font-size-small);
+		@include rem(padding-top, $spacing-small / 3);
+
+		color: $color-grey-dark;
+
+		@media all and (min-width: $bp-medium) {
+			@include rem(font-size, $font-size-default);
+
+			padding-top: 0;
+		}
 	}
 }
 
