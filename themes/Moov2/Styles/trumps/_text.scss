@@ -18,9 +18,13 @@
 }
 
 .text--impact {
-    @include rem(font-size, $font-size-heading);
+    @include rem(font-size, $font-size-small * 2);
 
     line-height: 1.4;
+
+    @media all and (min-width: $bp-small) {
+        @include rem(font-size, $font-size-heading);
+    }
 }
 
 .text--italic { font-style: italic; }
