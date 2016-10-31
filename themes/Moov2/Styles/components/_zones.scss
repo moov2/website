@@ -12,7 +12,7 @@
 .zone-logo {
 	width: 60%;
 
-	@media all and (min-width: $bp-nav-toggle) {
+	@media all and (min-width: $bp-medium) {
 		width: 20%;
 	}
 }
@@ -21,7 +21,7 @@
 	text-align: right;
 	width: 40%;
 
-	@media all and (min-width: $bp-nav-toggle) {
+	@media all and (min-width: $bp-medium) {
 		width: 80%;
 	}
 }
@@ -34,7 +34,7 @@
 	background-color: $color-brand;
 	color: $color-grey-dark;
 
-	@media all and (min-width: $bp-nav-toggle) {
+	@media all and (min-width: $bp-medium) {
 		@include rem(padding-left, $spacing-large);
 		@include rem(padding-right, $spacing-large);
 	}

@@ -23,7 +23,7 @@ header {
 	margin-right: auto;
 	width: 100%;
 
-	@media all and (min-width: $bp-nav-toggle) {
+	@media all and (min-width: $bp-medium) {
 		@include rem(padding-left, $spacing-large);
 		@include rem(padding-right, $spacing-large);
 	}
