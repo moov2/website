@@ -1,0 +1,14 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $DIRECTION
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Utility classes for dictating flex direction.
+ */
+
+.direction--column { flex-direction: column; }
+
+.direction--row { flex-direction: row; }
+.direction--row\@tiny { @media all and (min-width: $bp-tiny) { flex-direction: row; } }
