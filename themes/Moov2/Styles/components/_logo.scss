@@ -9,7 +9,7 @@
  */
 
 .logo {
-	display: block;
+	display: inline-block;
 }
 
 .logo--moov2 {
@@ -38,8 +38,23 @@ html {
     }
 }
 
-.logo--grey { @include svg-moov2($color-grey-dark); }
-.logo--white { @include svg-moov2($color-white); }
+.logo--grey {
+    @include svg-moov2-m($color-grey-dark);
+
+    @media all and (min-width: $bp-small) {
+        @include svg-moov2($color-grey-dark);
+        width: $logo-brand-width;
+    }
+}
+
+.logo--white {
+    @include svg-moov2-m($color-white);
+
+    @media all and (min-width: $bp-small) {
+        @include svg-moov2($color-white);
+        width: $logo-brand-width;
+    }
+}
 
 .logo--technology {
 	display: block;

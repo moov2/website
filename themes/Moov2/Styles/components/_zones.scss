@@ -13,6 +13,8 @@
 	@media all and (min-width: $bp-medium) {
 		width: 20%;
 	}
+
+	a { display: block; }
 }
 
 .zone-navigation {
@@ -26,17 +28,9 @@
 		width: 60%;
 	}
 
-	@media all and (min-width: $bp-tiny) {
-		width: 50%;
-	}
-
-	@media all and (min-width: $bp-small) {
-		width: 40%;
-	}
-
-	@media all and (min-width: $bp-medium) {
-		@include rem(width, $spacing-x-large * 6);
-	}
+	@media all and (min-width: $bp-tiny) { width: 50%; }
+	@media all and (min-width: $bp-small) {	width: 40%;	}
+	@media all and (min-width: $bp-medium) { @include rem(width, $spacing-x-large * 6);	}
 
 	a {
 		@include rem(font-size, $font-size-small);
