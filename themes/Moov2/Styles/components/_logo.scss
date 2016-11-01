@@ -17,7 +17,7 @@
     height: $logo-brand-height;
     width: $logo-brand-width-m;
 
-    @media all and (min-width: $bp-small) {
+    @media all and (min-width: $bp-v-tiny) {
         @include svg-moov2();
         width: $logo-brand-width;
     }
@@ -31,7 +31,7 @@ html {
         .logo--moov2 {
             @include svg-moov2-m($color-white);
 
-            @media all and (min-width: $bp-small) {
+            @media all and (min-width: $bp-v-tiny) {
                 @include svg-moov2($color-white);
             }
         }
