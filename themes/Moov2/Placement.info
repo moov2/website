@@ -32,4 +32,9 @@
   <Match Path="/posted/rocket-jump-events-brighton">
     <Place Parts_Title="-"/>
   </Match>
+
+  <!-- Don't display page title on blog page. -->
+  <Match Path="/blog">
+    <Place Parts_Title="-"/>
+  </Match>
 </Placement>

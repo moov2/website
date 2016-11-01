@@ -35,15 +35,13 @@ html {
                 @include svg-moov2($color-white);
             }
         }
-    }
-}
+        .logo--grey {
+            @include svg-moov2-m($color-grey-dark);
 
-.logo--grey {
-    @include svg-moov2-m($color-grey-dark);
-
-    @media all and (min-width: $bp-small) {
-        @include svg-moov2($color-grey-dark);
-        width: $logo-brand-width;
+            @media all and (min-width: $bp-v-tiny) {
+                @include svg-moov2($color-grey-dark);
+            }
+        }
     }
 }
 
