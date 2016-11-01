@@ -30,3 +30,8 @@
 }
 
 .box--padded { @include rem(padding, $spacing-default); }
+
+/* DELETE once media uploads are working */
+.box--image-holder {
+    height: 200px;
+}
