@@ -46,6 +46,15 @@
 	}
 }
 
+/**
+ * Changes navigation links to white against dark backgrounds.
+ */
+html {
+	&.is-inverted-header {
+		.zone-navigation a { color: $color-white; }
+	}
+}
+
 .zone-footer-primary,
 .zone-footer-secondary {
 	@include rem(padding-left, $spacing-base);
