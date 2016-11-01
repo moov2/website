@@ -37,6 +37,7 @@
     width: 100%;
 
     @include bp-min-width($bp-medium) {
-        width: 300px;
+        height: 180px;
+        width: 260px;
     }
 }

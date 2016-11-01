@@ -18,6 +18,8 @@
 .margin--left-small { @include rem(margin-left, $spacing-small); }
 .margin--left-large { @include rem(margin-left, $spacing-large); }
 
+.margin--left\@medium { @include bp-min-width($bp-medium) { @include rem(margin-left, $spacing-default); } }
+
 .padding--large { @include rem(padding, $spacing-large); }
 .padding--gigantic { @include rem(padding, $spacing-gigantic); }
 
@@ -39,3 +41,4 @@
 
 .padding--vertical { @include rem(padding, $spacing-default 0); }
 .padding--vertical-large { @include rem(padding, $spacing-large 0); }
+.padding--vertical-gigantic { @include rem(padding, $spacing-gigantic 0); }
