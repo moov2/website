@@ -16,11 +16,11 @@ section,
 	display: block;
 	position: relative;
 
-	.orchard-layouts-root > & {
+	/*.orchard-layouts-root > & {
 		&:first-child {
 			@include rem(padding-top, $header-height);
 		}
-	}
+	}*/
 
 	&:last-child { margin-bottom: 0; }
 
@@ -99,8 +99,21 @@ section,
  * Sections for specific projects.
  */
 
-.section--brands {
-  	background: radial-gradient(ellipse at top, rgb(190, 109, 249) 0%, rgb(81, 43, 113) 70%, rgb(33, 15, 47) 100%);
+.section--promo {
+	animation: GradientPromo 30s ease infinite;
+  	background: linear-gradient(230deg,#a24bcf,#4b79cf,#4bc5cf);
+  	background-size: 300% 300%;
+
+  	& h1 {
+  		@include rem(font-size, $font-size-heading * 1.5);
+  		@include rem(max-width, 120rem);
+
+  		margin-left: auto;
+  		margin-right: auto;
+
+  		color: $color-white;
+  		opacity: 0.99;
+  	}
 }
 
 .section--3fire {

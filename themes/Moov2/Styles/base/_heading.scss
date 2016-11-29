@@ -51,7 +51,8 @@ h1 {
 
 	@media all and (min-width: $bp-reduce-heading-font-size) {
 		@include rem(font-size, $font-size-heading);
-		@include rem(line-height, $font-size-heading);
+
+		line-height: 1.2;
 	}
 }
 

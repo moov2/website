@@ -35,7 +35,7 @@ header {
 		z-index: 10;
 
 		background: none;
-		border-bottom: 1px solid $color-grey-lightest;
+		/*border-bottom: 1px solid $color-grey-lightest;*/
 	}
 
 	/**
@@ -54,6 +54,6 @@ header {
  */
 html {
 	&.is-inverted-header {
-		header { border-bottom: 1px solid $color-white-transparent; }
+		.header--masthead { /*border-bottom: 1px solid $color-white-transparent;*/ }
 	}
 }

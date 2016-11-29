@@ -34,6 +34,12 @@
  *Brands intro
 */
 
+@keyframes GradientPromo {
+    0%{background-position:0% 84%}
+    50%{background-position:100% 16%}
+    100%{background-position:0% 84%}
+}
+
 @keyframes GradientHasbro {
     0%{opacity: 1;}
     20%{opacity: 1;}
