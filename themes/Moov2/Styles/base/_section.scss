@@ -54,7 +54,7 @@ section,
 .section--spaced { @include rem(padding, $spacing-large); }
 
 .section--hero {
-	height: 95vh;
+	height: 100vh;
 
 	@include bp-min-width($bp-huge) {
         @include rem(padding-left, $spacing-gigantic * 2);
