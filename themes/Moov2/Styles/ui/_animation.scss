@@ -34,3 +34,64 @@
  *Brands intro
 */
 
+@keyframes GradientHasbro {
+    0%{opacity: 1;}
+    20%{opacity: 1;}
+    25%{opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@keyframes GradientMars {
+    0%{opacity: 1;}
+    45%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 0;}
+}
+
+@keyframes GradientMicrosoft {
+    0%{opacity: 1;}
+    70%{opacity: 1;}
+    75%{opacity: 0;}
+    100%{opacity: 0;}
+}
+
+@keyframes GradientSupermassive {
+    0%{opacity: 1;}
+    95%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+@keyframes LogoHasbro {
+  0% { transform:  translate(0px,50px); opacity: 0; }
+  5% { transform:  translate(0px,0px); opacity: 1; }
+  15% { transform:  translate(0px,0px); opacity: 1; }
+  20% { transform:  translate(0px,-50px); opacity: 0; }
+  100% { transform:  translate(0px,-50px); opacity: 0; }
+}
+
+@keyframes LogoMars {
+  0% { transform:  translate(0px,50px); opacity: 0; }
+  25% { transform:  translate(0px,50px); opacity: 0; }
+  30% { transform:  translate(0px,0px); opacity: 1; }
+  40% { transform:  translate(0px,0px); opacity: 1; }
+  45% { transform:  translate(0px,-50px); opacity: 0; }
+  100% { transform:  translate(0px,-50px); opacity: 0; }
+}
+
+@keyframes LogoMicrosoft {
+  0% { transform:  translate(0px,50px); opacity: 0; }
+  50% { transform:  translate(0px,50px); opacity: 0; }
+  55% { transform:  translate(0px,0px); opacity: 1; }
+  65% { transform:  translate(0px,0px); opacity: 1; }
+  70% { transform:  translate(0px,-50px); opacity: 0; }
+  100% { transform:  translate(0px,-50px); opacity: 0; }
+}
+
+@keyframes LogoSupermassive {
+  0% { transform:  translate(0px,50px); opacity: 0; }
+  75% { transform:  translate(0px,50px); opacity: 0; }
+  80% { transform:  translate(0px,0px); opacity: 1; }
+  90% { transform:  translate(0px,0px); opacity: 1; }
+  95% { transform:  translate(0px,-50px); opacity: 0; }
+  100% { transform:  translate(0px,-50px); opacity: 0; }
+}
