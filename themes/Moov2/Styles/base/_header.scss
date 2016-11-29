@@ -57,3 +57,16 @@ html {
 		.header--masthead { /*border-bottom: 1px solid $color-white-transparent;*/ }
 	}
 }
+
+.header--masthead {
+	opacity: 0.6;
+	transition: opacity .25s ease-in-out;
+
+	@media all and (min-width: $bp-medium-large) {
+		@include rem(padding-top, $spacing-base * 2);
+	}
+
+	&:hover {
+		opacity: 1;
+	}
+}

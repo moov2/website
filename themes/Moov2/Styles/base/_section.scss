@@ -102,10 +102,12 @@ section,
 .section--promo {
 	animation: GradientPromo 30s ease infinite;
   	background: linear-gradient(230deg,#a24bcf,#4b79cf,#4bc5cf);
+  	background: linear-gradient(230deg,#006351,#024f67,#6c21a7);
+  	background: linear-gradient(230deg,#0a0815,#0b5d77,#771212);
   	background-size: 300% 300%;
 
   	& h1 {
-  		@include rem(font-size, $font-size-heading * 1.5);
+  		@include rem(font-size, $font-size-heading-mobile);
   		@include rem(max-width, 120rem);
 
   		margin-left: auto;
@@ -113,6 +115,10 @@ section,
 
   		color: $color-white;
   		opacity: 0.99;
+
+  		@media all and (min-width: $bp-medium) {
+  			@include rem(font-size, $font-size-heading * 1.5);
+  		}
   	}
 }
 

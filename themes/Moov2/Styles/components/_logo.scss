@@ -61,19 +61,21 @@ html {
 }
 
 .logo-hasbro {
-    position: absolute;
+    /*position: absolute;
     left: 50%;
     top: 50%;
     margin-left: -300px;
     margin-top: -300px;
     width: 600px;
     height: 600px;
-    z-index: 8;
+    z-index: 8;*/
 
-    animation: LogoHasbro 16s ease forwards;
-
-    background-size: 100% 100%;
+    animation: LogoHasbro2 16s ease forwards;
 }
+
+.logo-mars,
+.logo-microsoft,
+.logo-supermassive { display: none; }
 
 .logo-mars {
     position: absolute;
@@ -85,7 +87,7 @@ html {
     height: 261px;
     z-index: 7;
 
-    animation: LogoMars 16s ease forwards;
+    animation: LogoMars2 16s ease forwards;
 
     background-size: 100% 100%;
 }
@@ -100,7 +102,7 @@ html {
     height: 261px;
     z-index: 7;
 
-    animation: LogoMicrosoft 16s ease forwards;
+    animation: LogoMicrosoft2 16s ease forwards;
 
     background-size: 100% 100%;
 }
@@ -115,7 +117,7 @@ html {
     height: 261px;
     z-index: 7;
 
-    animation: LogoSupermassive 16s ease forwards;
+    animation: LogoSupermassive2 16s ease forwards;
 
     background-size: 100% 100%;
 }
