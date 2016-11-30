@@ -54,3 +54,8 @@ a.link--blank {
 .link--cta-large {
 	@include rem(font-size, $font-size-large);
 }
+
+.link--border {
+	background: none;
+	border: 4px solid;
+}
