@@ -60,7 +60,7 @@ html {
     height: 300px;
     z-index: 8;
 
-    animation: LogoHasbro 16s ease forwards;
+    animation: LogoHasbro $animation-brand-duration ease forwards;
 
     @media all and (min-width: $bp-medium) {
         margin-left: -300px;
@@ -87,7 +87,7 @@ html {
     height: 100px;
     z-index: 7;
 
-    animation: LogoMars 16s ease forwards;
+    animation: LogoMars $animation-brand-duration ease forwards;
 
     @media all and (min-width: $bp-medium) {
         margin-left: -275px;
@@ -114,7 +114,7 @@ html {
     height: 80px;
     z-index: 7;
 
-    animation: LogoMicrosoft 16s ease forwards;
+    animation: LogoMicrosoft $animation-brand-duration ease forwards;
 
     background-size: 100% 100%;
 
@@ -143,7 +143,7 @@ html {
     height: 70px;
     z-index: 7;
 
-    animation: LogoSupermassive 16s ease forwards;
+    animation: LogoSupermassive $animation-brand-duration ease forwards;
 
     @media all and (min-width: $bp-medium) {
         margin-left: -275px;

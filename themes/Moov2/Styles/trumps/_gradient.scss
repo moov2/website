@@ -21,7 +21,7 @@
     background: radial-gradient(ellipse at top, rgba(102,208,208,1) 0%, rgba(6,112,176,1) 70%, rgba(0,77,122,1) 100%);
     background-size: 200% 200%;
 
-    animation: GradientHasbro 16s forwards;
+    animation: GradientHasbro $animation-brand-duration forwards;
     z-index: 4;
 }
 
@@ -29,7 +29,7 @@
     background: radial-gradient(ellipse at top, rgba(234,6,32,1) 0%, rgba(168,0,19,1) 50%, rgba(66,1,8,1) 100%);
     background-size: 200% 200%;
 
-    animation: GradientMars 16s forwards;
+    animation: GradientMars $animation-brand-duration forwards;
     z-index: 3;
 }
 
@@ -37,7 +37,7 @@
     background: radial-gradient(ellipse at top, rgba(120,120,120,1) 0%, rgba(50,50,50,1) 70%, rgba(13,13,13,1) 100%);
     background-size: 200% 200%;
 
-    animation: GradientMicrosoft 16s forwards;
+    animation: GradientMicrosoft $animation-brand-duration forwards;
     z-index: 2;
 }
 
@@ -45,6 +45,6 @@
     background: radial-gradient(ellipse at top, rgba(43,108,118,1) 0%, rgba(7,40,48,1) 50%, rgba(4,20,23,1) 100%);
     background-size: 200% 200%;
 
-    animation: GradientSupermassive 16s forwards;
+    animation: GradientSupermassive $animation-brand-duration forwards;
     z-index: 1;
 }
