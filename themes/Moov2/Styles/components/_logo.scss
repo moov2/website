@@ -27,30 +27,20 @@
  * Changes the logo to white for use against dark backgrounds.
  */
 html {
-    &.is-inverted-header {
-        .logo--moov2 {
-            @include svg-moov2-m($color-white);
+    &.is-inverted-header .header--masthead .logo--moov2 {
+        @include svg-moov2-m($color-white);
 
-            @media all and (min-width: $bp-v-tiny) {
-                @include svg-moov2($color-white);
-            }
-        }
-        .logo--grey {
-            @include svg-moov2-m($color-grey-dark);
-
-            @media all and (min-width: $bp-v-tiny) {
-                @include svg-moov2($color-grey-dark);
-            }
+        @media all and (min-width: $bp-v-tiny) {
+            @include svg-moov2($color-white);
         }
     }
 }
 
-.logo--white {
-    @include svg-moov2-m($color-white);
+.logo--moov2-grey {
+    @include svg-moov2-m($color-grey-dark);
 
-    @media all and (min-width: $bp-small) {
-        @include svg-moov2($color-white);
-        width: $logo-brand-width;
+    @media all and (min-width: $bp-v-tiny) {
+        @include svg-moov2($color-grey-dark);
     }
 }
 

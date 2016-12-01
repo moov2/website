@@ -14,6 +14,9 @@
 .margin--bottom-large { @include rem(margin-bottom, $spacing-large); }
 .margin--bottom-gigantic { @include rem(margin-bottom, $spacing-gigantic)}
 
+.margin--horizontal-none { margin-left: 0; margin-right: 0; }
+.margin--horizontal-small { @include rem(margin-left, $spacing-small); @include rem(margin-right, $spacing-small); }
+
 .margin--left-none { margin-left: 0; }
 .margin--left-small { @include rem(margin-left, $spacing-small); }
 .margin--left-large { @include rem(margin-left, $spacing-large); }

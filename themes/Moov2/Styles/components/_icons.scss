@@ -9,8 +9,6 @@
  */
 
 .icon {
-	@include rem(padding, 0 $spacing-small);
-
 	display: inline-block;
 
 	background-position: center center;
@@ -28,6 +26,14 @@
 }
 
 @if ($is-critical != true) {
+	.icon--apple {
+		@include svg-apple($color-white);
+
+		background-size: 35px 40px;
+
+	    height: 40px;
+	    width: 35px;
+	}
 	.icon--close {
 		@include svg-close-icon($color-white);
 
@@ -90,6 +96,14 @@
 
 		height: 56px;
 		width: 58px;
+	}
+
+	.icon--orchard {
+		@include svg-orchard($color-white);
+		background-size: 40px 40px;
+
+		height: 40px;
+		width: 40px;
 	}
 
 	.icon--telephone {
