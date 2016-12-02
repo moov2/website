@@ -72,7 +72,7 @@ section,
  */
 
 .section--shadow-gradient,
-.section--shad0w-gradient-light {
+.section--shadow-gradient-light {
 	&:before {
 		content: "";
 		position: absolute;
@@ -128,10 +128,43 @@ section,
 }
 
 .section--rocket-jump {
-	background-image: url(#{$url-images}section-bg-rocket-jump.jpg);
-	background-position: 0 0;
-	background-size: cover;
+	background: $color-rje;
 	color: $color-white;
+
+	.rocket-man {
+		@include svg-rje-man();
+
+		position: absolute;
+		height: 560px;
+		width: 260px;
+		left: 75%;
+
+		animation: RocketMan 3s ease infinite;
+
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+
+	.rocket-clouds,
+	.rocket-clouds2 {
+		@include svg-rje-clouds();
+
+		width: 100%;
+		height: 100px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+
+		animation: RocketClouds 15s linear infinite;
+
+
+		background-repeat: repeat-x;
+	}
+
+	.rocket-clouds2 {
+		animation: RocketClouds2 20s linear infinite;
+		opacity: 0.3;
+	}
 }
 
 .section--until-dawn {

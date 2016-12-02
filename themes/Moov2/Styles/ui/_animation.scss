@@ -68,36 +68,58 @@
 }
 
 @keyframes LogoHasbro {
-  0% { transform:  translate(0px,50px); opacity: 0; }
-  5% { transform:  translate(0px,0px); opacity: 1; }
-  15% { transform:  translate(0px,0px); opacity: 1; }
-  20% { transform:  translate(0px,-50px); opacity: 0; }
-  100% { transform:  translate(0px,-50px); opacity: 0; }
+    0% { transform:  translate(0px,50px); opacity: 0; }
+    5% { transform:  translate(0px,0px); opacity: 1; }
+    15% { transform:  translate(0px,0px); opacity: 1; }
+    20% { transform:  translate(0px,-50px); opacity: 0; }
+    100% { transform:  translate(0px,-50px); opacity: 0; }
 }
 
 @keyframes LogoMars {
-  0% { transform:  translate(0px,50px); opacity: 0; }
-  25% { transform:  translate(0px,50px); opacity: 0; }
-  30% { transform:  translate(0px,0px); opacity: 1; }
-  40% { transform:  translate(0px,0px); opacity: 1; }
-  45% { transform:  translate(0px,-50px); opacity: 0; }
-  100% { transform:  translate(0px,-50px); opacity: 0; }
+    0% { transform:  translate(0px,50px); opacity: 0; }
+    25% { transform:  translate(0px,50px); opacity: 0; }
+    30% { transform:  translate(0px,0px); opacity: 1; }
+    40% { transform:  translate(0px,0px); opacity: 1; }
+    45% { transform:  translate(0px,-50px); opacity: 0; }
+    100% { transform:  translate(0px,-50px); opacity: 0; }
 }
 
 @keyframes LogoMicrosoft {
-  0% { transform:  translate(0px,50px); opacity: 0; }
-  50% { transform:  translate(0px,50px); opacity: 0; }
-  55% { transform:  translate(0px,0px); opacity: 1; }
-  65% { transform:  translate(0px,0px); opacity: 1; }
-  70% { transform:  translate(0px,-50px); opacity: 0; }
-  100% { transform:  translate(0px,-50px); opacity: 0; }
+    0% { transform:  translate(0px,50px); opacity: 0; }
+    50% { transform:  translate(0px,50px); opacity: 0; }
+    55% { transform:  translate(0px,0px); opacity: 1; }
+    65% { transform:  translate(0px,0px); opacity: 1; }
+    70% { transform:  translate(0px,-50px); opacity: 0; }
+    100% { transform:  translate(0px,-50px); opacity: 0; }
 }
 
 @keyframes LogoSupermassive {
-  0% { transform:  translate(0px,50px); opacity: 0; }
-  75% { transform:  translate(0px,50px); opacity: 0; }
-  80% { transform:  translate(0px,0px); opacity: 1; }
-  90% { transform:  translate(0px,0px); opacity: 1; }
-  95% { transform:  translate(0px,-50px); opacity: 0; }
-  100% { transform:  translate(0px,-50px); opacity: 0; }
+    0% { transform:  translate(0px,50px); opacity: 0; }
+    75% { transform:  translate(0px,50px); opacity: 0; }
+    80% { transform:  translate(0px,0px); opacity: 1; }
+    90% { transform:  translate(0px,0px); opacity: 1; }
+    95% { transform:  translate(0px,-50px); opacity: 0; }
+    100% { transform:  translate(0px,-50px); opacity: 0; }
+}
+
+/*
+ * Rocket Jump Events header
+*/
+
+@keyframes RocketClouds {
+    0% { background-position: 0 0; }
+    50% { background-position: -1126px 0; }
+    100% { background-position: -2252px 0; }
+}
+
+@keyframes RocketClouds2 {
+    0% { background-position: -500px 20px; }
+    50% { background-position: -1626px 20px; }
+    100% { background-position: -2752px 20px; }
+}
+
+@keyframes RocketMan {
+    0% { bottom: -100px; }
+    50% { bottom: -180px; }
+    100% { bottom: -100px; }
 }
