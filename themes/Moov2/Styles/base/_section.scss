@@ -135,14 +135,25 @@ section,
 		@include svg-rje-man();
 
 		position: absolute;
-		height: 560px;
-		width: 260px;
-		left: 75%;
+		height: 250px;
+		width: 100px;
+		bottom: 0;
+		left: 50%;
 
 		animation: RocketMan 3s ease infinite;
 
 		background-repeat: no-repeat;
 		background-size: 100%;
+
+		@media all and (min-width: $bp-medium) {
+			left: 75%;
+		}
+
+		@media all and (min-width: $bp-medium-large) {
+			height: 300px;
+			left: 62%;
+			width: 150px;
+		}
 	}
 
 	.rocket-clouds,
@@ -201,7 +212,12 @@ section,
  */
 
 .section--height-quarter { height: 25vh; }
-.section--height-half { height: 50vh; }
+
+.section--height-half {
+	@include rem(min-height, $spacing-large * 10);
+	height: 50vh;
+}
+
 .section--height-full { height: 100vh; }
 
 /**
