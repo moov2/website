@@ -43,16 +43,15 @@ h6 {
 
 h1 {
 	@include rem(font-size, $font-size-heading-mobile);
-	@include rem(line-height, $font-size-heading-mobile);
-	@include rem(margin-bottom, $spacing-gigantic);
+	@include rem(margin-bottom, $spacing-default);
 
     font-weight: $font-weight-bold;
+    line-height: 1.2;
 	text-align: center;
 
 	@media all and (min-width: $bp-reduce-heading-font-size) {
 		@include rem(font-size, $font-size-heading);
-
-		line-height: 1.2;
+		@include rem(margin-bottom, $spacing-gigantic);
 	}
 }
 
