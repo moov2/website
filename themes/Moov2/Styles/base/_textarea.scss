@@ -9,5 +9,7 @@
  */
 
 textarea {
-
+    display: block;
+    width: 100%;
+    resize: vertical;
 }
