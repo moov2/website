@@ -11,6 +11,7 @@
 textarea {
     display: block;
 
+    box-sizing: border-box;
     width: 100%;
 
     resize: vertical;
