@@ -62,6 +62,10 @@ h1 {
 
 h2 {
 	@include subheading();
+
+	@media all and (min-width: $bp-medium) {
+		@include rem(font-size, $font-size-default * 2);
+	}
 }
 
 h3 {
