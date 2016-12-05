@@ -23,6 +23,8 @@ input[type=password],
 input[type=tel],
 input[type=text] {
 	@include rem(padding, $spacing-small);
-    display: block;
-    width: 100%;
+}
+
+input[type=submit] {
+	border: none;
 }
