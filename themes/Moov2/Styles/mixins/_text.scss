@@ -3,27 +3,26 @@
  * $TEXTMIXINS
  * -----------------------------------------------------------------------------
  */
- 
+
 /**
  * Useful mixin to assist with styling text.
  */
- 
+
 @mixin heading() {
 	@include rem(font-size, $font-size-heading-mobile);
 	@include rem(line-height, $font-size-heading-mobile);
-	 
+
     font-weight: $font-weight-bold;
-	
+
 	@media all and (min-width: $bp-reduce-heading-font-size) {
 		@include rem(font-size, $font-size-heading);
 		@include rem(line-height, $font-size-heading);
 	}
 }
- 
+
 @mixin subheading() {
-	@include rem(font-size, 3.6rem);
-	@include rem(line-height, 4rem);
-	
+	@include rem(font-size, $font-size-large);
+
 	font-weight: $font-weight-bold;
 }
 
@@ -31,6 +30,6 @@
 {
 	@include rem(font-size, 2.4rem);
 	@include rem(line-height, 3rem);
-	
-	font-weight: $font-weight-bold;	
+
+	font-weight: $font-weight-bold;
 }

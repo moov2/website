@@ -37,4 +37,9 @@
   <Match Path="/blog">
     <Place Parts_Title="-"/>
   </Match>
+
+  <!-- Don't display page title on contact page. -->
+  <Match Path="/contact">
+    <Place Parts_Title="-"/>
+  </Match>
 </Placement>

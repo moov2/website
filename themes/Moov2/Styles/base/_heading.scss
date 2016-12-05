@@ -70,15 +70,12 @@ h3 {
 
 h4 {
 	@include rem(font-size, 2rem);
-	@include rem(line-height, 2.6rem);
 }
 
 h5 {
 	@include rem(font-size, 1.8rem);
-	@include rem(line-height, 2.4rem);
 }
 
 h6 {
 	@include rem(font-size, 1.4rem);
-	@include rem(line-height, 1.8rem);
 }
