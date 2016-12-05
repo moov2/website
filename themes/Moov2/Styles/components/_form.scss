@@ -9,6 +9,13 @@
  */
 
 form {
-
-
+    & input[type=email],
+    & input[type=password],
+    & input[type=tel],
+    & input[type=text],
+    & input[type=submit],
+    & label {
+        display: block;
+        width: 100%;
+    }
 }
