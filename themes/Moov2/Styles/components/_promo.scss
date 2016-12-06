@@ -9,12 +9,14 @@
  */
 
 .promo {
+	position: relative;
+	overflow: hidden;
+	width: 100%;;
 }
 
-.promo--small {
-	display: inline-block;
-	min-height: none;
-	width: auto;
+.promo--rev {
+	display: flex;
+	justify-content: flex-end;
 }
 
 	.promo__image,
@@ -31,20 +33,47 @@
 		@include rem(padding, $spacing-x-large);
 
 		box-sizing: border-box;
-		position:absolute;
-		width: 100%;
-		height: 100%;
+		min-height: 900px;
+		position: relative;
+		width: 550px;
+		z-index: 1;
 
+		align-items: center;
+		display: flex;
 		flex-direction: column;
-    	justify-content: center;
+		justify-content: center;
 
-		opacity: 0;
-    	transition: all 1s ease;
-		text-align: center;
 
-		&:hover {
-			background: rgba(0,0,0,.6);
-			opacity: 1;
+			transition: all 4s;
+
+    	&:after {
+			content: "";
+			position: absolute;
+			left: -150px;
+			top: 0;
+			width: 700px;
+			height: 100%;
+			z-index: -1;
+
+			transform: skewX(-10deg);
+
+			background: $color-purple;
+			box-shadow: 0px 0px 40px rgba(0,0,0,0.5);
+		}
+
+		.section--supermassive & {
+			&:after {
+				background: $color-supermassive;
+			}
+		}
+
+		.promo--rev & {
+			&:after {
+				left: auto;
+				right: -150px;
+
+				transform: skewX(10deg);
+			}
 		}
 	}
 

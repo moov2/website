@@ -185,7 +185,7 @@ section,
 	}
 }
 
-.section--until-dawn {
+.section--supermassive {
 	background-image: url(#{$url-images}section-bg-until-dawn.jpg);
 	background-position: 0 0;
 	background-size: cover;
@@ -214,6 +214,20 @@ section,
 .section--primary-dark { background-color: $color-primary-dark; }
 .section--purple { background-color: $color-purple; }
 .section--teal { background-color: $color-teal; }
+
+.section--dark {
+	&:after {
+		/*content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100px;
+		transform: skewY(-2deg);
+
+		background-color: $color-purple;*/
+	}
+}
 
 /**
  * Section height modifiers.
