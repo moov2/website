@@ -26,6 +26,8 @@
 	}
 
 	.promo__image {
+		@include rem(margin-bottom, $spacing-large);
+
 		display: block;
 	}
 
@@ -43,10 +45,7 @@
 		flex-direction: column;
 		justify-content: center;
 
-
-			transition: all 4s;
-
-    	&:after {
+		&:after {
 			content: "";
 			position: absolute;
 			left: -150px;
@@ -55,15 +54,16 @@
 			height: 100%;
 			z-index: -1;
 
+			transition: all 0.1s ease;
 			transform: skewX(-10deg);
 
 			background: $color-purple;
 			box-shadow: 0px 0px 40px rgba(0,0,0,0.5);
 		}
 
-		.section--supermassive & {
+		&:hover {
 			&:after {
-				background: $color-supermassive;
+				left: -130px;
 			}
 		}
 
@@ -74,12 +74,23 @@
 
 				transform: skewX(10deg);
 			}
+
+			&:hover {
+				&:after {
+					right: -130px;
+				}
+			}
 		}
+
+
+		.section--hello-games & { &:after { background: $color-hello-games; } }
+		.section--microsoft-studios & { &:after { background: $color-microsoft-studios; } }
+		.section--supermassive & { &:after { background: $color-supermassive; } }
 	}
 
 		.promo__description,
 		.promo__title {
-			@include rem(margin-bottom, $spacing-default);
+			@include rem(margin-bottom, $spacing-large);
 
 			color: $color-white;
 			width: 100%;
@@ -94,6 +105,11 @@
 		p.promo__description,
 		.promo__description {
 			@include rem(font-size, $font-size-default);
+
+			padding-left: 0;
+			padding-right: 0;
+
+			line-height: 1.4;
 		}
 
 		.promo__btn {
