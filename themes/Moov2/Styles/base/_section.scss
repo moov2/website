@@ -192,6 +192,13 @@ section,
 	color: $color-white;
 }
 
+.section--lol-compare {
+	background-image: url(https://moov2websitedev.azureedge.net/media/Default/Temporary/bg_champion_annie_1920x1080.jpg);
+	background-position: top center;
+	background-size: cover;
+	color: $color-white;
+}
+
 .section--microsoft-studios {
 	background-image: url(https://moov2websitedev.azureedge.net/media/Default/Temporary/fable_legends_2-HD.jpg);
 	background-position: 0 0;
@@ -199,8 +206,15 @@ section,
 	color: $color-white;
 }
 
+.section--rocket-jump {
+	background-image: url(https://moov2websitedev.azureedge.net/media/Default/Temporary/section-bg-rocket-jump-1920x1080.jpg);
+	background-position: center;
+	background-size: cover;
+	color: $color-white;
+}
+
 .section--supermassive {
-	background-image: url(#{$url-images}section-bg-until-dawn.jpg);
+	background-image: url(https://moov2websitedev.azureedge.net/media/Default/Temporary/1330854-beautiful-until-dawn-wallpaper.jpg);
 	background-position: 0 0;
 	background-size: cover;
 	color: $color-white;

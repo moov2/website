@@ -40,7 +40,7 @@
 		width: 550px;
 		z-index: 1;
 
-		align-items: center;
+		align-items: flex-start;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -84,7 +84,9 @@
 
 
 		.section--hello-games & { &:after { background: $color-hello-games; } }
+		.section--lol-compare & { &:after { background: $color-microsoft-studios; } }
 		.section--microsoft-studios & { &:after { background: $color-microsoft-studios; } }
+		.section--rocket-jump & { &:after { background: $color-rocket-jump; } }
 		.section--supermassive & { &:after { background: $color-supermassive; } }
 	}
 
@@ -104,7 +106,7 @@
 
 		p.promo__description,
 		.promo__description {
-			@include rem(font-size, $font-size-default);
+			@include rem(font-size, $font-size-large);
 
 			padding-left: 0;
 			padding-right: 0;
