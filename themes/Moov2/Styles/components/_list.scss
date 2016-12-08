@@ -37,7 +37,7 @@
     > .list__item {
         @include rem(margin-bottom, $spacing-base * 2);
 
-        width: 100%;
+        max-width: 100%;
     }
 
     > .list__item--grow { flex: 1 0 auto; }

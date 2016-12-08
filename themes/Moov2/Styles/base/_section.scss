@@ -44,14 +44,6 @@ section,
 
 		.section--content-left & { margin-left: 0; }
 		.section--content-right & { margin-right: 0; }
-
-		h1,h2,h3,
-		p {
-			@include rem(padding-left, $spacing-base);
-			@include rem(padding-right, $spacing-base);
-
-			line-height: 1.2;
-		}
 	}
 
 .section--spaced { @include rem(padding, $spacing-large); }
@@ -71,7 +63,7 @@ section,
 }
 
 .section--heading {
-	@include rem(min-height, $spacing-x-large * 6);
+	@include rem(min-height, $spacing-x-large * 9.2);
 }
 
 /**

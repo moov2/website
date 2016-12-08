@@ -1,0 +1,17 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $BORDER
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Utility classes for adding borders to elements.
+ */
+
+.border--left {
+    border-left: 1px solid;
+}
+
+.border--colour-grey {
+    border-color: $color-grey-light;
+}

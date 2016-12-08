@@ -26,53 +26,47 @@
 	}
 
 	.promo__image {
-		@include rem(margin-bottom, $spacing-large);
-
-		display: block;
-	}
-
-	.promo__content {
-		@include rem(padding, $spacing-x-large);
-
-		box-sizing: border-box;
-		min-height: 900px;
+		height: 600px;
+		max-width: 1300px;
+		overflow: hidden;
 		position: relative;
-		width: 550px;
 		z-index: 1;
 
-		align-items: flex-start;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-
+		&:before,
 		&:after {
 			content: "";
 			position: absolute;
-			left: -150px;
 			top: 0;
-			width: 700px;
+			width: 200px;
 			height: 100%;
-			z-index: -1;
+			z-index: 0;
 
 			transition: all 0.1s ease;
-			transform: skewX(-10deg);
+			transform: skewX(-6deg);
 
-			background: $color-purple;
-			box-shadow: 0px 0px 40px rgba(0,0,0,0.5);
+			background: $color-white;
 		}
 
-		&:hover {
+		&:before {
+			left: -168px;
+		}
+
+		&:after {
+			right: -168px;
+		}
+
+		/*&:hover {
 			&:after {
 				left: -130px;
 			}
-		}
+		}*/
 
 		.promo--rev & {
 			&:after {
 				left: auto;
 				right: -150px;
 
-				transform: skewX(10deg);
+				transform: skewX(6deg);
 			}
 
 			&:hover {
@@ -81,20 +75,17 @@
 				}
 			}
 		}
+	}
 
-
-		.section--hello-games & { &:after { background: $color-hello-games; } }
-		.section--lol-compare & { &:after { background: $color-microsoft-studios; } }
-		.section--microsoft-studios & { &:after { background: $color-microsoft-studios; } }
-		.section--rocket-jump & { &:after { background: $color-rocket-jump; } }
-		.section--supermassive & { &:after { background: $color-supermassive; } }
+	.promo__content {
+		box-sizing: border-box;
+		width: 300px;
 	}
 
 		.promo__description,
 		.promo__title {
 			@include rem(margin-bottom, $spacing-large);
 
-			color: $color-white;
 			width: 100%;
 		}
 
@@ -106,8 +97,6 @@
 
 		p.promo__description,
 		.promo__description {
-			@include rem(font-size, $font-size-large);
-
 			padding-left: 0;
 			padding-right: 0;
 
