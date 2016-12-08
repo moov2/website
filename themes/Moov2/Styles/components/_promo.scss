@@ -15,10 +15,14 @@
 }
 
 .promo--rev {
-	display: flex;
-	justify-content: flex-end;
+	& .list--horizontal {
+		@include bp-min-width($bp-medium-large) {
+			flex-direction: row-reverse;
+		}
+	}
 }
 
+	.promo__brand,
 	.promo__image,
 	.promo__title {
 		box-sizing: border-box;
@@ -26,7 +30,6 @@
 	}
 
 	.promo__image {
-		height: 600px;
 		max-width: 1300px;
 		overflow: hidden;
 		position: relative;
@@ -36,55 +39,71 @@
 		&:after {
 			content: "";
 			position: absolute;
-			top: 0;
-			width: 200px;
-			height: 100%;
-			z-index: 0;
+			top: -20px;
+			width: 50%;
+			height: 50px;
+			z-index: 1;
 
-			transition: all 0.1s ease;
-			transform: skewX(-6deg);
+			transform: skewY(5deg);
 
 			background: $color-white;
+
+			@include bp-min-width($bp-medium) {
+				height: 100%;
+				top: 0;
+				width: 200px;
+				z-index: 1;
+
+				transform: skewX(-6deg);
+			}
 		}
 
 		&:before {
-			left: -168px;
+			left: 0;
+
+			@include bp-min-width($bp-medium) {
+				left: -168px;
+			}
 		}
 
 		&:after {
-			right: -168px;
+			right: 0;
+
+			transform: skewY(-5deg);
+
+			@include bp-min-width($bp-medium) {
+				right: -168px;
+			}
 		}
 
-		/*&:hover {
-			&:after {
-				left: -130px;
-			}
-		}*/
-
 		.promo--rev & {
+			&:before,
 			&:after {
-				left: auto;
-				right: -150px;
-
-				transform: skewX(6deg);
+				@include bp-min-width($bp-medium) {
+					transform: skewX(6deg);
+				}
 			}
+		}
+
+		img {
+			transition: transform 1s ease-in-out;
 
 			&:hover {
-				&:after {
-					right: -130px;
-				}
+				transform: scale(1.03);
 			}
 		}
 	}
 
 	.promo__content {
 		box-sizing: border-box;
-		width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 300px;
 	}
 
 		.promo__description,
 		.promo__title {
-			@include rem(margin-bottom, $spacing-large);
+			@include rem(margin-bottom, $spacing-default);
 
 			width: 100%;
 		}

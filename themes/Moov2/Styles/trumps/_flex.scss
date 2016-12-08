@@ -1,0 +1,59 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $FLEX
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Utility classes for adding flexbox attributes to elements.
+ */
+
+.flex { display: flex; }
+
+.flex--align-center { align-items: center; }
+.flex--align-center\@tiny { @include bp-min-width($bp-tiny) { align-items: center; } }
+.flex--align-center\@small { @include bp-min-width($bp-small) { align-items: center; } }
+.flex--align-center\@medium { @include bp-min-width($bp-medium) { align-items: center; } }
+.flex--align-center\@medium-large { @include bp-min-width($bp-medium-large) { align-items: center; } }
+
+.flex--align-start { align-items: flex-start; }
+.flex--align-start\@tiny { @include bp-min-width($bp-tiny) { align-items: flex-start; } }
+.flex--align-start\@small { @include bp-min-width($bp-small) { align-items: flex-start; } }
+.flex--align-start\@medium { @include bp-min-width($bp-medium) { align-items: flex-start; } }
+.flex--align-start\@medium-large { @include bp-min-width($bp-medium-large) { align-items: flex-start; } }
+
+.flex--align-end { align-items: flex-end; }
+.flex--align-end\@tiny { @include bp-min-width($bp-tiny) { align-items: flex-end; } }
+.flex--align-end\@small { @include bp-min-width($bp-small) { align-items: flex-end; } }
+.flex--align-end\@medium { @include bp-min-width($bp-medium) { align-items: flex-end; } }
+.flex--align-end\@medium-large { @include bp-min-width($bp-medium-large) { align-items: flex-end; } }
+
+.flex--direction-column { flex-direction: column; }
+.flex--direction-column\@tiny { @include bp-min-width($bp-tiny) { flex-direction: column; } }
+.flex--direction-column\@small { @include bp-min-width($bp-small) { flex-direction: column; } }
+.flex--direction-column\@medium { @include bp-min-width($bp-medium) { flex-direction: column; } }
+.flex--direction-column\@medium-large { @include bp-min-width($bp-medium-large) { flex-direction: column; } }
+
+.flex--direction-row { display: flex; flex-direction: row; }
+.flex--direction-row\@tiny { @include bp-min-width($bp-tiny) { flex-direction: row; } }
+.flex--direction-row\@small { @include bp-min-width($bp-small) { flex-direction: row; } }
+.flex--direction-row\@medium { @include bp-min-width($bp-medium) { flex-direction: row; } }
+.flex--direction-row\@medium-large { @include bp-min-width($bp-medium-large) { flex-direction: row; } }
+
+.flex--justify-center { justify-content: center; }
+.flex--justify-center\@tiny { @include bp-min-width($bp-tiny) { justify-content: center; } }
+.flex--justify-center\@small { @include bp-min-width($bp-small) { justify-content: center; } }
+.flex--justify-center\@medium { @include bp-min-width($bp-medium) { justify-content: center; } }
+.flex--justify-center\@medium-large { @include bp-min-width($bp-medium-large) { justify-content: center; } }
+
+.flex--justify-start { justify-content: flex-start; }
+.flex--justify-start\@tiny { @include bp-min-width($bp-tiny) { justify-content: flex-start; } }
+.flex--justify-start\@small { @include bp-min-width($bp-small) { justify-content: flex-start; } }
+.flex--justify-start\@medium { @include bp-min-width($bp-medium) { justify-content: flex-start; } }
+.flex--justify-start\@medium-large { @include bp-min-width($bp-medium-large) { justify-content: flex-start; } }
+
+.flex--justify-end { align-items: flex-end; }
+.flex--justify-end\@tiny { @include bp-min-width($bp-tiny) { justify-content: flex-end; } }
+.flex--justify-end\@small { @include bp-min-width($bp-small) { justify-content: flex-end; } }
+.flex--justify-end\@medium { @include bp-min-width($bp-medium) { justify-content: flex-end; } }
+.flex--justify-end\@medium-large { @include bp-min-width($bp-medium-large) { justify-content: flex-end; } }

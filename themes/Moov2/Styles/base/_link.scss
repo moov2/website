@@ -33,17 +33,16 @@ a.link--blank {
 }
 
 .link--cta {
-	@include rem(font-size, $font-size-default);
-	@include rem(padding, $spacing-base $spacing-default);
+	@include rem(font-size, $font-size-small);
+	@include rem(padding, $spacing-default / 2 $spacing-small * 2);
 
 	display: inline-block;
 
-	background: $color-primary;
-	border-radius: $spacing-large;
+	background: $color-brand;
+	border-radius: $spacing-base / 3;
 	color: $color-white;
 	font-family: $font-family-heading;
 	font-weight: 400;
-	letter-spacing: 1px;
 	text-transform: uppercase;
 
 	&:hover {
@@ -53,6 +52,7 @@ a.link--blank {
 
 .link--cta-large {
 	@include rem(font-size, $font-size-large);
+	@include rem(padding, $spacing-base $spacing-default);
 }
 
 .link--border {

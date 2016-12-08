@@ -25,3 +25,7 @@ hr {
 		width: 100%;
 	}
 }
+
+.hr--narrow {
+	max-width: $spacing-large * 2;
+}

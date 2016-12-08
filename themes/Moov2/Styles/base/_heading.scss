@@ -49,7 +49,6 @@ h1 {
 
     font-weight: $font-weight-bold;
     line-height: 1.2;
-	text-align: center;
 
 	@media all and (min-width: $bp-small) {
 		@include rem(font-size, $font-size-heading);
