@@ -50,7 +50,7 @@ h1 {
     font-weight: $font-weight-bold;
     line-height: 1.2;
 
-	@media all and (min-width: $bp-small) {
+	@media all and (min-width: $bp-medium) {
 		@include rem(font-size, $font-size-heading);
 		@include rem(margin-bottom, $spacing-large);
 	}

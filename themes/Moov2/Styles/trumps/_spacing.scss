@@ -36,6 +36,7 @@
 .padding--left-none { padding-left: 0; }
 .padding--left-small { @include rem(padding-left, $spacing-small); }
 .padding--left-large { @include rem(padding-left, $spacing-large); }
+.padding--left-large\@medium { @include bp-min-width($bp-medium) { @include rem(padding-left, $spacing-large); } }
 
 .padding--right-none { padding-right: 0; }
 .padding--right-small { @include rem(padding-right, $spacing-small); }
