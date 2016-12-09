@@ -29,10 +29,7 @@
  *
  */
 
-.list--horizontal,
-.list--horizontal-wrap {
-    display: flex;
-    flex-flow: row;
+.list {
 
     > .list__item {
         @include rem(margin-bottom, $spacing-base * 2);

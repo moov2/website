@@ -40,6 +40,18 @@
 .flex--direction-row\@medium { @include bp-min-width($bp-medium) { flex-direction: row; } }
 .flex--direction-row\@medium-large { @include bp-min-width($bp-medium-large) { flex-direction: row; } }
 
+.flex--justify-around { justify-content: space-around; }
+.flex--justify-around\@tiny { @include bp-min-width($bp-tiny) { justify-content: space-around; } }
+.flex--justify-around\@small { @include bp-min-width($bp-small) { justify-content: space-around; } }
+.flex--justify-around\@medium { @include bp-min-width($bp-medium) { justify-content: space-around; } }
+.flex--justify-around\@medium-large { @include bp-min-width($bp-medium-large) { justify-content: space-around; } }
+
+.flex--justify-between { justify-content: space-between; }
+.flex--justify-between\@tiny { @include bp-min-width($bp-tiny) { justify-content: space-between; } }
+.flex--justify-between\@small { @include bp-min-width($bp-small) { justify-content: space-between; } }
+.flex--justify-between\@medium { @include bp-min-width($bp-medium) { justify-content: space-between; } }
+.flex--justify-between\@medium-large { @include bp-min-width($bp-medium-large) { justify-content: space-between; } }
+
 .flex--justify-center { justify-content: center; }
 .flex--justify-center\@tiny { @include bp-min-width($bp-tiny) { justify-content: center; } }
 .flex--justify-center\@small { @include bp-min-width($bp-small) { justify-content: center; } }
@@ -57,3 +69,6 @@
 .flex--justify-end\@small { @include bp-min-width($bp-small) { justify-content: flex-end; } }
 .flex--justify-end\@medium { @include bp-min-width($bp-medium) { justify-content: flex-end; } }
 .flex--justify-end\@medium-large { @include bp-min-width($bp-medium-large) { justify-content: flex-end; } }
+
+.flex--wrap { flex-wrap: wrap; }
+.flex--wrap-no { flex-wrap: nowrap; }
