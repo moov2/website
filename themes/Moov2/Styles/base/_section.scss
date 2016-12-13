@@ -49,11 +49,14 @@ section,
 .section--spaced { @include rem(padding, $spacing-large); }
 
 .section--hero {
+    @include rem(padding-top, $header-height);
+
 	height: 100vh;
 
 	@include bp-min-width($bp-huge) {
-        @include rem(padding-left, $spacing-gigantic * 2);
-        @include rem(padding-right, $spacing-gigantic * 2);
+        @include rem(padding-bottom, $spacing-large);
+        @include rem(padding-left, $spacing-large);
+        @include rem(padding-right, $spacing-large);
     }
 
 	p {
