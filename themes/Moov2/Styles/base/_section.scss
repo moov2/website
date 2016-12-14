@@ -52,17 +52,6 @@ section,
     @include rem(padding-top, $header-height);
 
 	height: 100vh;
-
-	@include bp-min-width($bp-huge) {
-        @include rem(padding-bottom, $spacing-large);
-        @include rem(padding-left, $spacing-large);
-        @include rem(padding-right, $spacing-large);
-    }
-
-	p {
-		@include rem(font-size, $font-size-large);
-		@include rem(margin-bottom, $spacing-large);
-	}
 }
 
 .section--heading {
