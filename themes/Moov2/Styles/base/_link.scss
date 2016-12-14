@@ -51,7 +51,6 @@ a.link--blank {
 }
 
 .link--cta-large {
-	@include rem(font-size, $font-size-large);
 	@include rem(padding, $spacing-base $spacing-default);
 }
 

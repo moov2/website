@@ -9,5 +9,68 @@
  */
 
 .hero {
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
+    width: 100%;
 }
+
+    .hero__text {
+        background: $color-white;
+
+        h1 {
+            @include rem(max-width, $spacing-x-large * 19);
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    /**
+     * 1. Element fills remaining space of parent.
+     */
+    .hero__images {
+        flex: 1 0 auto; /* 1. */
+        overflow: hidden;
+        position: relative;
+
+        background: $color-brand;
+
+        /*&:before,
+        &:after {
+            content: "";
+            position: absolute;
+            top: -140px;
+            width: 50%;
+            height: 200px;
+            z-index: 1;
+
+            background: $color-white;
+        }
+
+        &:before {
+            left: 0;
+
+            transform: skewY(5deg);
+        }
+
+        &:after {
+            right: 0;
+
+            transform: skewY(-5deg);
+        }
+        */
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+
+            border-style: solid;
+            border-width: 100px 100px 0 100px;
+            border-color: #007bff transparent transparent transparent;
+        }
+    }
