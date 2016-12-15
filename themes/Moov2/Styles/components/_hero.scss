@@ -16,13 +16,26 @@
 }
 
     .hero__text {
+        @include rem(padding-bottom, $spacing-default);
+        @include rem(padding-top, $spacing-default);
+
         background: $color-white;
 
+        @media all and (min-width: $bp-medium) {
+            @include rem(padding-top, $spacing-large);
+        }
+
         h1 {
-            @include rem(max-width, $spacing-x-large * 19);
+            @include rem(margin-bottom, $spacing-default);
+            @include rem(max-width, $spacing-x-large * 6);
 
             margin-left: auto;
             margin-right: auto;
+
+            @media all and (min-width: $bp-medium) {
+                @include rem(margin-bottom, $spacing-large);
+                @include rem(max-width, $spacing-x-large * 19);
+            }
         }
     }
 
@@ -34,43 +47,58 @@
         overflow: hidden;
         position: relative;
 
-        background: $color-brand;
-
-        /*&:before,
+        &:before,
         &:after {
-            content: "";
-            position: absolute;
-            top: -140px;
-            width: 50%;
-            height: 200px;
-            z-index: 1;
 
-            background: $color-white;
+
+            @media all and (min-width: $bp-medium) {
+                content: "";
+                height: 200px;
+                position: absolute;
+                top: -140px;
+                width: 50%;
+                z-index: 1;
+
+                background: $color-white;
+            }
         }
 
         &:before {
             left: 0;
 
-            transform: skewY(5deg);
+            transform: skewY(10deg);
+
+            @media all and (min-width: $bp-medium) {
+                transform: skewY(5deg);
+            }
         }
 
         &:after {
             right: 0;
 
-            transform: skewY(-5deg);
+            transform: skewY(-10deg);
+
+            @media all and (min-width: $bp-medium) {
+                transform: skewY(-5deg);
+            }
         }
-        */
 
-        &:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 200px;
+        img {
+            @media all and (min-width: $bp-medium) {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
 
-            border-style: solid;
-            border-width: 100px 100px 0 100px;
-            border-color: #007bff transparent transparent transparent;
+    .hero__secondary {
+        @include rem(padding-bottom, $spacing-large);
+        @include rem(padding-top, $spacing-base * 2);
+
+        @media all and (min-width: $bp-medium) {
+            display: none;
         }
     }

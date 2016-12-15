@@ -55,7 +55,7 @@ section,
     @include rem(padding-top, $header-height);
 
     display: flex; /* 1. */
-	height: 100vh;
+	min-height: 100vh;
 
 	& .section__content { display: flex; /* 1. */ }
 }
