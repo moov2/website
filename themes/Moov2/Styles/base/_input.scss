@@ -3,15 +3,17 @@
  * $INPUT
  * -----------------------------------------------------------------------------
  */
- 
-/** 
+
+/**
  * Styles for the `input` element.
  */
- 
+
 input {
 	font-weight: $font-weight-default;
-	
+
 	box-sizing: border-box;
+    display: block;
+    width: 100%;
 }
 
 input[type=checkbox] {

@@ -1,17 +1,15 @@
 /**
  * -----------------------------------------------------------------------------
- * $LABEL
+ * $TEXTAREA
  * -----------------------------------------------------------------------------
  */
 
 /**
- * Styles for the `label` element.
+ * Styles for the `textarea` element.
  */
 
-label {
-	@include rem(margin-right, $spacing-base);
-    display: block;
-    width: 100%;
 
-	font-weight: $font-weight-default;
+textarea {
+    display:block;
+    width: 100%;
 }
