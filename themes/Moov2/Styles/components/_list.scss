@@ -50,6 +50,7 @@
     &.triple\@small > .list__item { @include bp-min-width($bp-small) { width: 33.33%; } }
     &.triple\@medium > .list__item { @include bp-min-width($bp-medium) { width: 33.33%; } }
     &.triple\@medium-large > .list__item { @include bp-min-width($bp-medium-large) { width: 33.33%; } }
+    &.triple\@large > .list__item { @include bp-min-width($bp-large) { width: 33.33%; } }
 
     &.quad > .list__item { width: 25%; }
     &.quad\@tiny > .list__item { @include bp-min-width($bp-tiny) { width: 25%; } }
@@ -57,6 +58,14 @@
     &.quad\@medium > .list__item { @include bp-min-width($bp-medium) { width: 25%; } }
     &.quad\@medium-large > .list__item { @include bp-min-width($bp-medium-large) { width: 25%; } }
     &.quad\@large > .list__item { @include bp-min-width($bp-large) { width: 25%; } }
+
+    &.five > .list__item { width: 20%; }
+    &.five\@tiny > .list__item { @include bp-min-width($bp-tiny) { width: 20%; } }
+    &.five\@small > .list__item { @include bp-min-width($bp-small) { width: 20%; } }
+    &.five\@medium > .list__item { @include bp-min-width($bp-medium) { width: 20%; } }
+    &.five\@medium-large > .list__item { @include bp-min-width($bp-medium-large) { width: 20%; } }
+    &.five\@large > .list__item { @include bp-min-width($bp-large) { width: 20%; } }
+    &.five\@x-large > .list__item { @include bp-min-width($bp-x-large) { width: 20%; } }
 
     &.fill-row > .list__item { width: auto; }
     &.fill-row\@tiny > .list__item { @include bp-min-width($bp-tiny) { width: auto; } }

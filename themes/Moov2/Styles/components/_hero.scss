@@ -35,12 +35,9 @@
             margin-right: auto;
 
             @media all and (min-width: $bp-medium) {
+                @include rem(font-size, $font-size-heading-mobile * 2);
                 @include rem(margin-bottom, $spacing-large);
-                @include rem(max-width, $spacing-x-large * 12);
-            }
-
-            @media all and (min-width: $bp-medium-large) {
-                @include rem(max-width, $spacing-x-large * 19);
+                @include rem(max-width, $spacing-gigantic * 10);
             }
         }
     }

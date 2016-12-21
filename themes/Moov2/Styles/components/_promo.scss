@@ -125,7 +125,7 @@
 		@include bp-min-width($bp-medium) {
 			@include rem(margin-left, $spacing-default);
 
-			width: 300px;
+			max-width: 500px;
 		}
 
 		@include bp-min-width($bp-huge) {
@@ -153,13 +153,11 @@
 		}
 
 		.promo__title {
-			@include rem(font-size, $font-size-heading / 1.5);
-
-			text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.8);
 		}
 
 		p.promo__description,
-		.promo__description {
+		.promo__description,
+		.promo__title {
 			padding-left: 0;
 			padding-right: 0;
 
