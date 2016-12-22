@@ -56,6 +56,7 @@
 .padding--right-small { @include rem(padding-right, $spacing-small); }
 .padding--right-large { @include rem(padding-right, $spacing-large); }
 
+.padding--horizontal-none { padding-left: 0; padding-right: 0; }
 .padding--horizontal { @include rem(padding, 0 $spacing-default); }
 .padding--horizontal\@large { @include bp-min-width($bp-large) { @include rem(padding, 0 $spacing-default); } }
 .padding--horizontal-large { @include rem(padding, 0 $spacing-large); }
