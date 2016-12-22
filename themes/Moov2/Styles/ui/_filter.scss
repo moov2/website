@@ -1,0 +1,18 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $FILTER
+ * -----------------------------------------------------------------------------
+ */
+
+/*
+ * Filters for applying image effects
+*/
+
+.filter--grayscale {
+    filter: grayscale(1);
+    transition: filter 0.5s;
+
+    &:hover {
+        filter: grayscale(0);
+    }
+}

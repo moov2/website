@@ -96,6 +96,28 @@ section,
  * Sections for specific projects.
  */
 
+.section--testimonials {
+	min-height: 500px;
+	position: relative;
+
+	& .section__content {
+		position: relative;
+		z-index: 1;
+	}
+
+	&:after {
+		content: "";
+		height: 500px;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+
+		background: #dbf3ec;
+		/*transform: skewY(-7deg);*/
+	}
+}
+
 .section--promo {
 	animation: GradientPromo 30s ease infinite;
   	background: linear-gradient(230deg,#794bab,#207d9a,#90b348);
