@@ -9,11 +9,9 @@
  */
 
 .avatar {
-    display: inline-block;
+    display: block;
     height: $avatar-dimensions;
-    max-width: none;
     width: $avatar-dimensions;
-    vertical-align: middle;
 
     border-radius: 50%;
 }
