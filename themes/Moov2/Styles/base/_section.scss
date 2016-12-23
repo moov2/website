@@ -97,25 +97,10 @@ section,
  */
 
 .section--testimonials {
-	min-height: 500px;
-	position: relative;
+    @include rem(padding-bottom, $spacing-gigantic * 1.5);
+    @include rem(padding-top, $spacing-gigantic * 2);
 
-	& .section__content {
-		position: relative;
-		z-index: 1;
-	}
-
-	&:after {
-		content: "";
-		height: 500px;
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: 100%;
-
-		background: #dbf3ec;
-		/*transform: skewY(-7deg);*/
-	}
+	background: #dbf3ec;
 }
 
 .section--promo {
