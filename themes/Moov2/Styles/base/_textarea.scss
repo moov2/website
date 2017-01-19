@@ -1,14 +1,20 @@
 /**
  * -----------------------------------------------------------------------------
- * $IFRAME
+ * $TEXTAREA
  * -----------------------------------------------------------------------------
  */
 
 /**
- * Styles for `iframe` element.
+ * Styles for `textarea` elements.
  */
 
-iframe {
-	width: 100%;
-    margin-bottom: -10px;
+textarea {
+    display: block;
+
+    box-sizing: border-box;
+    width: 100%;
+
+    resize: vertical;
+
+    color: $color-brand;
 }
