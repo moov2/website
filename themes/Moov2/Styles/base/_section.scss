@@ -61,7 +61,7 @@ section,
 }
 
 .section--heading {
-	@include rem(min-height, $spacing-x-large * 9.2);
+	@include rem(height, $spacing-x-large * 9.2);
 }
 
 /**
