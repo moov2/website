@@ -1,0 +1,115 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $HERO
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Homepage content.
+ */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+}
+
+    .hero__text {
+        @include rem(padding-bottom, $spacing-default);
+        @include rem(padding-top, $spacing-default);
+
+        background: $color-white;
+
+        @media all and (min-width: $bp-medium) {
+            @include rem(padding-top, $spacing-base * 4);
+
+            padding-bottom: 0;
+        }
+
+        h1 {
+            @include rem(margin-bottom, $spacing-default);
+            @include rem(max-width, $spacing-x-large * 6);
+
+            margin-left: auto;
+            margin-right: auto;
+
+            @media all and (min-width: $bp-medium) {
+                @include rem(font-size, $font-size-heading-mobile * 2);
+                @include rem(margin-bottom, $spacing-large);
+                @include rem(max-width, $spacing-gigantic * 10);
+            }
+        }
+    }
+
+    /**
+     * 1. Element fills remaining space of parent.
+     */
+    .hero__images {
+        flex: 1 0 auto; /* 1. */
+        overflow: hidden;
+        position: relative;
+
+        &:before,
+        &:after {
+
+
+            @media all and (min-width: $bp-medium + 1) {
+                content: "";
+                height: 200px;
+                position: absolute;
+                top: -140px;
+                width: 50%;
+                z-index: 1;
+
+                background: $color-white;
+            }
+        }
+
+        &:before {
+            left: 0;
+
+            transform: skewY(10deg);
+
+            @media all and (min-width: $bp-medium) {
+                transform: skewY(5deg);
+            }
+        }
+
+        &:after {
+            right: 0;
+
+            transform: skewY(-10deg);
+
+            @media all and (min-width: $bp-medium) {
+                transform: skewY(-5deg);
+            }
+        }
+
+        & .hero__images--desktop {
+            display: none;
+
+            @media all and (min-width: $bp-medium + 1) {
+                display: block;
+            }
+        }
+
+        img {
+            @media all and (min-width: $bp-medium + 1) {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .hero__secondary {
+        @include rem(padding-bottom, $spacing-x-large);
+        @include rem(padding-top, $spacing-large);
+
+        @media all and (min-width: $bp-medium + 1) {
+            display: none;
+        }
+    }

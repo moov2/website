@@ -39,7 +39,7 @@
 		color: $color-grey-dark;
 
 		@media all and (min-width: $bp-medium) {
-			@include rem(font-size, $font-size-default * 1.1);
+			@include rem(font-size, $font-size-default);
 
 			padding-top: 0;
 		}

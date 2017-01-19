@@ -44,13 +44,14 @@ h6 {
 h1 {
 	@include rem(font-size, $font-size-heading-mobile);
 	@include rem(margin-bottom, $spacing-default);
+	@include rem(padding-left, $spacing-base);
+	@include rem(padding-right, $spacing-base);
 
     font-weight: $font-weight-bold;
     line-height: 1.2;
-	text-align: center;
 
-	@media all and (min-width: $bp-small) {
-		@include rem(font-size, $font-size-heading);
+	@media all and (min-width: $bp-medium) {
+		@include rem(font-size, $font-size-heading-mobile * 2);
 		@include rem(margin-bottom, $spacing-large);
 	}
 
@@ -62,6 +63,13 @@ h1 {
 
 h2 {
 	@include subheading();
+
+	@include rem(padding-left, $spacing-base);
+	@include rem(padding-right, $spacing-base);
+
+	@media all and (min-width: $bp-medium) {
+		@include rem(font-size, $font-size-default * 2);
+	}
 }
 
 h3 {
@@ -70,15 +78,12 @@ h3 {
 
 h4 {
 	@include rem(font-size, 2rem);
-	@include rem(line-height, 2.6rem);
 }
 
 h5 {
 	@include rem(font-size, 1.8rem);
-	@include rem(line-height, 2.4rem);
 }
 
 h6 {
 	@include rem(font-size, 1.4rem);
-	@include rem(line-height, 1.8rem);
 }

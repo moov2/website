@@ -10,10 +10,13 @@
 
 p {
 	@include rem(margin-bottom, $spacing-default);
+	@include rem(padding-left, $spacing-base);
+	@include rem(padding-right, $spacing-base);
 
 	font-weight: $font-weight-default;
 	line-height: 1.4;
 
+	box-sizing: border-box;
 	display: block;
 	margin-top: 0;
 	width: 100%;

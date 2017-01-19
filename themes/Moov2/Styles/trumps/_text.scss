@@ -42,12 +42,16 @@
 
 .text--small {
 	@include rem(font-size, $font-size-small);
-	@include rem(line-height, $font-size-small + $line-height-addition);
 }
 
 .text--cs-fable { color: $color-cs-fable; }
 .text--grey { color: $color-grey; }
 .text--white { color: $color-white; }
 
+.text--line-height-compact { line-height: 1; }
+.text--line-height-loose { line-height: 1.4; }
+
 .text--shadow-light { text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); }
 .text--shadow { text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4); }
+
+.text--uppercase { text-transform: uppercase; }

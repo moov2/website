@@ -48,18 +48,20 @@ section,
 
 .section--spaced { @include rem(padding, $spacing-large); }
 
+/**
+ * 1. Both need flex in order to fill the height of their parent element.
+ */
 .section--hero {
-	height: 100vh;
+    @include rem(padding-top, $header-height);
 
-	@include bp-min-width($bp-huge) {
-        @include rem(padding-left, $spacing-gigantic * 2);
-        @include rem(padding-right, $spacing-gigantic * 2);
-    }
+    display: flex; /* 1. */
+	min-height: 100vh;
 
-	p {
-		@include rem(font-size, $font-size-large);
-		@include rem(margin-bottom, $spacing-large);
-	}
+	& .section__content { display: flex; /* 1. */ }
+}
+
+.section--heading {
+	@include rem(min-height, $spacing-x-large * 9.2);
 }
 
 /**
@@ -93,6 +95,13 @@ section,
 /**
  * Sections for specific projects.
  */
+
+.section--testimonials {
+    @include rem(padding-bottom, $spacing-gigantic * 1.5);
+    @include rem(padding-top, $spacing-gigantic * 2);
+
+	background: #dbf3ec;
+}
 
 .section--promo {
 	animation: GradientPromo 30s ease infinite;
@@ -173,8 +182,36 @@ section,
 	}
 }
 
-.section--until-dawn {
-	background-image: url(#{$url-images}section-bg-until-dawn.jpg);
+.section--hello-games {
+	background-image: url(https://moov2websitedev.azureedge.net/media/Default/Temporary/wallup-104275.jpg);
+	background-position: center;
+	background-size: cover;
+	color: $color-white;
+}
+
+.section--lol-compare {
+	background-image: url(https://moov2websitedev.azureedge.net/media/Default/Temporary/bg_champion_annie_1920x1080.jpg);
+	background-position: top center;
+	background-size: cover;
+	color: $color-white;
+}
+
+.section--microsoft-studios {
+	background-image: url(https://moov2websitedev.azureedge.net/media/Default/Temporary/fable_legends_2-HD.jpg);
+	background-position: 0 0;
+	background-size: cover;
+	color: $color-white;
+}
+
+.section--rocket-jump {
+	background-image: url(https://moov2websitedev.azureedge.net/media/Default/Temporary/section-bg-rocket-jump-1920x1080.jpg);
+	background-position: center;
+	background-size: cover;
+	color: $color-white;
+}
+
+.section--supermassive {
+	background-image: url(https://moov2websitedev.azureedge.net/media/Default/Temporary/1330854-beautiful-until-dawn-wallpaper.jpg);
 	background-position: 0 0;
 	background-size: cover;
 	color: $color-white;
@@ -201,6 +238,21 @@ section,
 .section--primary { background-color: $color-primary; }
 .section--primary-dark { background-color: $color-primary-dark; }
 .section--purple { background-color: $color-purple; }
+.section--teal { background-color: $color-teal; }
+
+.section--dark {
+	&:after {
+		/*content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100px;
+		transform: skewY(-2deg);
+
+		background-color: $color-purple;*/
+	}
+}
 
 /**
  * Section height modifiers.

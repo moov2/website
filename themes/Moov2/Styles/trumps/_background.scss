@@ -1,17 +1,13 @@
 /**
  * -----------------------------------------------------------------------------
- * $AVATAR
+ * $BACKGROUND
  * -----------------------------------------------------------------------------
  */
 
 /**
- * Displays a profile picture of a user.
+ * Utility classes for adding background properties.
  */
 
-.avatar {
-    display: block;
-    height: $avatar-dimensions;
-    width: $avatar-dimensions;
-
-    border-radius: 50%;
+.background--dark-grey {
+    background: $color-brand;
 }

@@ -1,0 +1,37 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $TEAM
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Promotes team related content.
+ */
+
+
+.team {
+    position: relative;
+}
+
+    .team__content {
+        left: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+
+        &:hover {
+            background: $color-primary;
+
+            opacity: 1;
+        }
+    }
+
+        .team__image,
+        .team__link {
+            display: block;
+        }
+

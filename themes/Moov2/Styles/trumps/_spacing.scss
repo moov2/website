@@ -15,6 +15,20 @@
 .margin--bottom-gigantic { @include rem(margin-bottom, $spacing-gigantic)}
 
 .margin--horizontal-none { margin-left: 0; margin-right: 0; }
+
+.margin--horizontal\@large {
+    @include bp-min-width($bp-large) {
+        @include rem(margin-left, $spacing-default);
+        @include rem(margin-right, $spacing-default);
+    }
+}
+.margin--horizontal-large\@large {
+    @include bp-min-width($bp-large) {
+        @include rem(margin-left, $spacing-large);
+        @include rem(margin-right, $spacing-large);
+    }
+}
+
 .margin--horizontal-small { @include rem(margin-left, $spacing-small); @include rem(margin-right, $spacing-small); }
 
 .margin--left-none { margin-left: 0; }
@@ -23,9 +37,12 @@
 
 .margin--left\@medium { @include bp-min-width($bp-medium) { @include rem(margin-left, $spacing-default); } }
 
+.margin--right\@medium { @include bp-min-width($bp-medium) { @include rem(margin-right, $spacing-default); } }
+
 .padding--large { @include rem(padding, $spacing-large); }
 .padding--gigantic { @include rem(padding, $spacing-gigantic); }
 
+.padding--top-small { @include rem(padding-top, $spacing-small); }
 .padding--top { @include rem(padding-top, $spacing-base); }
 .padding--top-header { @include rem(padding-top, $header-height); }
 .padding--top-large { @include rem(padding-top, $spacing-large); }
@@ -33,12 +50,15 @@
 .padding--left-none { padding-left: 0; }
 .padding--left-small { @include rem(padding-left, $spacing-small); }
 .padding--left-large { @include rem(padding-left, $spacing-large); }
+.padding--left-large\@medium { @include bp-min-width($bp-medium) { @include rem(padding-left, $spacing-large); } }
 
 .padding--right-none { padding-right: 0; }
 .padding--right-small { @include rem(padding-right, $spacing-small); }
 .padding--right-large { @include rem(padding-right, $spacing-large); }
 
+.padding--horizontal-none { padding-left: 0; padding-right: 0; }
 .padding--horizontal { @include rem(padding, 0 $spacing-default); }
+.padding--horizontal\@large { @include bp-min-width($bp-large) { @include rem(padding, 0 $spacing-default); } }
 .padding--horizontal-large { @include rem(padding, 0 $spacing-large); }
 .padding--horizontal-gigantic { @include rem(padding, 0 $spacing-gigantic); }
 

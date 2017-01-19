@@ -16,6 +16,11 @@
     align-items: center;
 }
 
+.align--vertical-top {
+    display: flex;
+    align-items: flex-start;
+}
+
 .align--center { text-align: center; }
 .align--center\@tiny { @include bp-min-width($bp-tiny) { text-align: center; } }
 .align--center\@small { @include bp-min-width($bp-small) { text-align: center; } }
