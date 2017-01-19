@@ -31,7 +31,28 @@
 }
 
 /*
- *Brands intro
+ * Hero images
+*/
+
+.animation--hero-fade {
+    -webkit-animation-name: HeroFade;
+            animation-name: HeroFade;
+    -webkit-animation-duration: 12s;
+            animation-duration: 12s;
+    -webkit-animation-iteration-count:infinite;
+            animation-iteration-count:infinite;
+}
+
+@keyframes HeroFade {
+    0% { opacity: 0; }
+    40% { opacity: 0; }
+    50% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/*
+ * Brands intro
 */
 
 @keyframes GradientPromo {
