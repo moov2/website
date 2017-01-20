@@ -35,3 +35,51 @@
             display: block;
         }
 
+    .team-member {
+        position: relative;
+        top: 0;
+        left: 0;
+
+        width: 20%;
+
+        @include rem(padding-left, $spacing-small);
+        @include rem(padding-right, $spacing-small);
+        @include rem(margin-bottom, $spacing-small);
+
+        hr {
+            opacity: 0.5;
+        }
+
+        h4 {
+            @include rem(margin-bottom, $spacing-default);
+        }
+
+        h3, hr {
+            @include rem(margin-bottom, $spacing-small);
+        }
+
+        img {
+            display: block;
+
+            margin: 0;
+            padding: 0;
+        }
+
+        .team-member__info {
+            position: relative;
+            top: 0;
+            left: 0;
+
+            transition: 0.4s background-color ease;
+            text-align: left;
+
+            color: $color-white;
+            background-color: $color-brand;
+
+            @include rem(padding, $spacing-base);
+
+            &:hover {
+                background-color: lighten($color-brand, 5%);
+            }
+        }
+    }
