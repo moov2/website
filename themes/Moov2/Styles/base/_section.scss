@@ -61,7 +61,15 @@ section,
 }
 
 .section--heading {
-	@include rem(height, $spacing-x-large * 9.2);
+	@include rem(height, $spacing-x-large * 6.2);
+	@include rem(margin-bottom, $spacing-gigantic);
+	@include rem(padding-top, $header-height);
+
+	@media all and (min-width: $bp-medium) {
+		@include rem(height, $spacing-x-large * 9.2);
+
+		margin-bottom: 0;
+	}
 }
 
 /**

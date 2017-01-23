@@ -46,6 +46,7 @@
 .padding--top { @include rem(padding-top, $spacing-base); }
 .padding--top-header { @include rem(padding-top, $header-height); }
 .padding--top-large { @include rem(padding-top, $spacing-large); }
+.padding--top-gigantic { @include rem(padding-top, $spacing-gigantic); }
 
 .padding--left-none { padding-left: 0; }
 .padding--left-small { @include rem(padding-left, $spacing-small); }
