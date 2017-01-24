@@ -58,3 +58,8 @@ a.link--blank {
 	background: none;
 	border: 3px solid;
 }
+
+.link--color-blue {
+	background: $color-blue;
+	color: $color-white;
+}

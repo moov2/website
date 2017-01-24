@@ -9,11 +9,15 @@
  */
 
 form {
-    @include rem(min-width, $spacing-base * 35);
+    max-width: 100%;
     box-sizing: border-box;
 
     @include rem(padding-left, $spacing-base);
     @include rem(padding-right, $spacing-base);
+
+    @include bp-min-width($bp-medium) {
+        @include rem(min-width, $spacing-base * 35);
+    }
 
     & input[type=email],
     & input[type=password],
