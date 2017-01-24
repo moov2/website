@@ -9,6 +9,7 @@
  */
 
 .margin--bottom-none { margin-bottom: 0 !important; }
+.margin--bottom-none\@medium { @include bp-min-width($bp-medium) { @include rem(margin-bottom, $spacing-default); } }
 .margin--bottom-small { @include rem(margin-bottom, $spacing-small); }
 .margin--bottom-default { @include rem(margin-bottom, $spacing-default); }
 .margin--bottom-large { @include rem(margin-bottom, $spacing-large); }
@@ -49,7 +50,7 @@
 .padding--bottom-gigantic { @include rem(padding-bottom, $spacing-gigantic); }
 
 .padding--top-small { @include rem(padding-top, $spacing-small); }
-.padding--top { @include rem(padding-top, $spacing-base); }
+.padding--top-base { @include rem(padding-top, $spacing-base); }
 .padding--top-header { @include rem(padding-top, $header-height); }
 .padding--top-large { @include rem(padding-top, $spacing-large); }
 .padding--top-large\@medium { @include bp-min-width($bp-medium) { @include rem(padding-top, $spacing-large); } }
