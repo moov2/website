@@ -44,3 +44,9 @@
 
     &:after { background-color: $color-purple; }
 }
+
+.bg--skew-color-teal {
+    color: white;
+
+    &:after { background-color: $color-teal; }
+}

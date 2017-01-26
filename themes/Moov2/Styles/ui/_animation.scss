@@ -124,6 +124,30 @@
 }
 
 /*
+ * Hello Games freighter
+*/
+
+.animation--freighter {
+    position: absolute;
+    right: 12rem;
+    top: -10rem;
+    z-index: 1;
+
+    -webkit-animation-name: HelloGamesFreighter;
+            animation-name: HelloGamesFreighter;
+    -webkit-animation-duration: 10s;
+            animation-duration: 10s;
+    -webkit-animation-iteration-count:infinite;
+            animation-iteration-count:infinite;
+}
+
+@keyframes HelloGamesFreighter {
+    0% { transform:  translate(0px,0px); }
+    50% { transform:  translate(0px,-15px); }
+    100% { transform:  translate(0px,0px); }
+}
+
+/*
  * Rocket Jump Events header
 */
 
