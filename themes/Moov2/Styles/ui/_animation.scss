@@ -129,8 +129,8 @@
 
 .animation--freighter {
     position: absolute;
-    right: 12rem;
-    top: -10rem;
+    right: -14rem;
+    top: -13rem;
     z-index: 1;
 
     -webkit-animation-name: HelloGamesFreighter;
@@ -142,9 +142,9 @@
 }
 
 @keyframes HelloGamesFreighter {
-    0% { transform:  translate(0px,0px); }
-    50% { transform:  translate(0px,-15px); }
-    100% { transform:  translate(0px,0px); }
+    0% { transform:  translate(0px,-10px); }
+    50% { transform:  translate(0px,0px); }
+    100% { transform:  translate(0px,-10px); }
 }
 
 /*
