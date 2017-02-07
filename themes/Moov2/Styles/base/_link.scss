@@ -63,3 +63,22 @@ a.link--blank {
 	background: $color-blue;
 	color: $color-white;
 }
+
+.manage-actions {
+	bottom: 0;
+	position: absolute;
+	right: 0;
+	z-index: 10;
+
+	> a {
+	    padding: $spacing-default / 2 $spacing-default;
+
+		background: $color-orange;
+	    color: white;
+	    font-family: $font-family-heading;
+	    font-weight: 700;
+	    text-transform: uppercase;
+
+	    &:hover { text-decoration: none; }
+	}
+}
