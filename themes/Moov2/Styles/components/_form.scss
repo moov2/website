@@ -1,0 +1,52 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $FORM
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Styling for the `form` element.
+ */
+
+form {
+    max-width: 100%;
+    box-sizing: border-box;
+
+    @include rem(padding-left, $spacing-base);
+    @include rem(padding-right, $spacing-base);
+
+    @include bp-min-width($bp-medium) {
+        @include rem(min-width, $spacing-base * 35);
+    }
+
+    & input[type=email],
+    & input[type=password],
+    & input[type=tel],
+    & input[type=text],
+    & textarea,
+    & label {
+        display: block;
+        width: 100%;
+    }
+
+    & input[type=email],
+    & input[type=password],
+    & input[type=tel],
+    & input[type=text],
+    & textarea {
+        border: 1px solid $color-grey-light;
+        border-radius: $spacing-base / 3;
+    }
+
+    & input[type=submit] {
+        width: auto;
+    }
+
+    label {
+        @include rem(font-size, $font-size-small);
+
+        color: $color-grey;
+    }
+}
+
+.input--required { color: $color-red; }

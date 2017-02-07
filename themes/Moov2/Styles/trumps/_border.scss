@@ -11,6 +11,6 @@
 .border--left { border-left: 1px solid; }
 .border--left\@medium { @include bp-min-width($bp-medium) { border-left: 1px solid } }
 
-.border--colour-grey {
-    border-color: $color-grey-light;
-}
+.border--color-grey { border-color: $color-grey-light; }
+.border--color-white { border-color: $color-white; }
+.border--color-white-transparent { border-color: rgba($color-white, .2); }

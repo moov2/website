@@ -52,6 +52,7 @@
 @import "base/paragraph";
 @import "base/section";
 @import "base/svg";
+@import "base/textarea";
 
 /**
  * Styles to assist with layout.
@@ -68,6 +69,7 @@
 @import "components/content";
 @import "components/content-summary";
 @import "components/embed";
+@import "components/form";
 @import "components/grid";
 @import "components/hero";
 @import "components/icons";

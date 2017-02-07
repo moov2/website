@@ -9,8 +9,8 @@
  * Utility classes for adding shadows to box and text elements.
  */
 
-.box--shadow { box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4); }
-.box--shadow-light { box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); }
+.shadow--box { box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4); }
+.shadow--box-light { box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); }
 
-.text--shadow { text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4); }
-.text--shadow-light { text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); }
+.shadow--text { text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4); }
+.shadow--text-light { text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); }

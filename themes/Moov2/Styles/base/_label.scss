@@ -3,13 +3,16 @@
  * $LABEL
  * -----------------------------------------------------------------------------
  */
- 
-/** 
+
+/**
  * Styles for the `label` element.
  */
- 
+
 label {
 	@include rem(margin-right, $spacing-base);
-	
+
+    display: block;
+    width: 100%;
+
 	font-weight: $font-weight-default;
 }

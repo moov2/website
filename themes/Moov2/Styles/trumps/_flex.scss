@@ -34,11 +34,25 @@
 .flex--direction-column\@medium { @include bp-min-width($bp-medium) { flex-direction: column; } }
 .flex--direction-column\@medium-large { @include bp-min-width($bp-medium-large) { flex-direction: column; } }
 
+.flex--direction-column-rev { flex-direction: column-reverse; }
+.flex--direction-column-rev\@tiny { @include bp-min-width($bp-tiny) { flex-direction: column-reverse; } }
+.flex--direction-column-rev\@small { @include bp-min-width($bp-small) { flex-direction: column-reverse; } }
+.flex--direction-column-rev\@medium { @include bp-min-width($bp-medium) { flex-direction: column-reverse; } }
+.flex--direction-column-rev\@medium-large { @include bp-min-width($bp-medium-large) { flex-direction: column-reverse; } }
+
 .flex--direction-row { display: flex; flex-direction: row; }
 .flex--direction-row\@tiny { @include bp-min-width($bp-tiny) { flex-direction: row; } }
 .flex--direction-row\@small { @include bp-min-width($bp-small) { flex-direction: row; } }
 .flex--direction-row\@medium { @include bp-min-width($bp-medium) { flex-direction: row; } }
 .flex--direction-row\@medium-large { @include bp-min-width($bp-medium-large) { flex-direction: row; } }
+
+.flex--direction-row-rev { display: flex; flex-direction: row-reverse; }
+.flex--direction-row-rev\@tiny { @include bp-min-width($bp-tiny) { flex-direction: row-reverse; } }
+.flex--direction-row-rev\@small { @include bp-min-width($bp-small) { flex-direction: row-reverse; } }
+.flex--direction-row-rev\@medium { @include bp-min-width($bp-medium) { flex-direction: row-reverse; } }
+.flex--direction-row-rev\@medium-large { @include bp-min-width($bp-medium-large) { flex-direction: row-reverse; } }
+
+.flex--grow { flex: 1; }
 
 .flex--justify-around { justify-content: space-around; }
 .flex--justify-around\@tiny { @include bp-min-width($bp-tiny) { justify-content: space-around; } }

@@ -3,22 +3,31 @@
  * $INPUT
  * -----------------------------------------------------------------------------
  */
- 
-/** 
+
+/**
  * Styles for the `input` element.
  */
- 
+
 input {
 	font-weight: $font-weight-default;
-	
+	color: $color-brand;
+
 	box-sizing: border-box;
+    display: block;
+    width: 100%;
 }
 
 input[type=checkbox] {
 	@include rem(margin-right, $spacing-base);
 }
 
+input[type=email],
 input[type=password],
+input[type=tel],
 input[type=text] {
 	@include rem(padding, $spacing-small);
+}
+
+input[type=submit] {
+	border: none;
 }

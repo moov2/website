@@ -10,7 +10,6 @@
 
 .promo {
 	position: relative;
-	overflow: hidden;
 	width: 100%;
 }
 
@@ -30,90 +29,6 @@
 	}
 
 	.promo__image {
-		max-height: 600px;
-		max-width: 1300px;
-		overflow: hidden;
-		position: relative;
-		z-index: 1;
-
-		&:before,
-		&:after {
-			content: "";
-			position: absolute;
-			top: -45px;
-			width: 50%;
-			height: 80px;
-			z-index: 1;
-
-			background: $color-white;
-
-			@include bp-min-width($bp-medium) {
-				height: 100%;
-				top: 0;
-				width: 200px;
-				z-index: 1;
-			}
-		}
-
-		&:before {
-			left: 0;
-
-			transform: skewY(10deg);
-
-			@include bp-min-width($bp-medium) {
-				left: -168px;
-				transform: skewX(-6deg);
-			}
-		}
-
-		&:after {
-			right: 0;
-
-			transform: skewY(-10deg);
-
-			@include bp-min-width($bp-medium) {
-				display: none;
-				right: -168px;
-			}
-
-			@include bp-min-width($bp-medium-large) {
-				display: block;
-				transform: skewX(-6deg);
-			}
-		}
-
-		.promo--rev & {
-			&:before,
-			&:after {
-				@include bp-min-width($bp-medium) {
-					transform: skewX(6deg);
-				}
-			}
-
-			&:before {
-				@include bp-min-width($bp-medium) {
-					display: none;
-				}
-
-				@include bp-min-width($bp-medium-large) {
-					display: block;
-				}
-			}
-
-			&:after {
-				@include bp-min-width($bp-medium) {
-					display: block;
-				}
-			}
-		}
-
-		img {
-			transition: transform 1s ease-in-out;
-
-			&:hover {
-				transform: scale(1.03);
-			}
-		}
 	}
 
 	.promo__content {
@@ -124,8 +39,6 @@
 
 		@include bp-min-width($bp-medium) {
 			@include rem(margin-left, $spacing-default);
-
-			max-width: 500px;
 		}
 
 		@include bp-min-width($bp-huge) {

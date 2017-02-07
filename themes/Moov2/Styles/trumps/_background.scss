@@ -8,6 +8,54 @@
  * Utility classes for adding background properties.
  */
 
-.background--dark-grey {
+.bg--color-blue {
+    background-color: $color-blue;
+    color: white;
+}
+.bg--color-dark-grey {
     background: $color-brand;
+}
+
+.bg--skew {
+    position: relative;
+
+    .section__content { position: relative; z-index: 1; }
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 140%;
+        left: 0;
+        top: -20%;
+
+        transform: skewY(-4deg);
+    }
+}
+
+.bg--skew-color-blue {
+    color: white;
+
+    &:after { background-color: $color-blue; }
+}
+
+.bg--skew-color-purple {
+    color: white;
+
+    &:after { background-color: $color-purple; }
+}
+
+.bg--skew-color-teal {
+    color: white;
+
+    &:after { background-color: $color-teal; }
+}
+
+.bg--skew-hello-games {
+    color: white;
+
+    &:after {
+        background: url(https://moov2websitedev.azureedge.net/media/Default/Temporary/starfield.jpg);
+        background-size: cover;
+    }
 }
