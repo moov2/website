@@ -43,6 +43,7 @@
 
 .margin--right\@medium { @include bp-min-width($bp-medium) { @include rem(margin-right, $spacing-default); } }
 .margin--right-large\@medium { @include bp-min-width($bp-medium) { @include rem(margin-right, $spacing-large); } }
+.margin--right-gigantic\@medium { @include bp-min-width($bp-medium) { @include rem(margin-right, $spacing-gigantic); } }
 
 .margin--top-large\@medium { @include bp-min-width($bp-medium) { @include rem(margin-top, $spacing-large); } }
 
