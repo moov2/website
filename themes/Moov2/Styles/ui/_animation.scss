@@ -129,8 +129,9 @@
 
 .animation--freighter {
     position: absolute;
-    right: -15rem;
-    top: -13rem;
+    bottom: -13.5rem;
+    left: 5rem;
+    max-width: 75%;
     z-index: 1;
 
     -webkit-animation-name: HelloGamesFreighter;
@@ -139,6 +140,11 @@
             animation-duration: 10s;
     -webkit-animation-iteration-count:infinite;
             animation-iteration-count:infinite;
+
+    @include bp-min-width($bp-medium) {
+        bottom:-28rem;
+        left: 14rem;
+    }
 }
 
 @keyframes HelloGamesFreighter {

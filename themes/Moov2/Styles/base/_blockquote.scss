@@ -54,3 +54,12 @@ cite {
 	font-weight: $font-weight-bold;
 	font-style: normal;
 }
+
+.blockquote--white {
+	color: $color-white;
+
+	&:before,
+	&:after {
+		@include svg-quote-icon($color-white);
+	}
+}

@@ -39,7 +39,8 @@
 
 .margin--left\@medium { @include bp-min-width($bp-medium) { @include rem(margin-left, $spacing-default); } }
 .margin--left-large\@medium { @include bp-min-width($bp-medium) { @include rem(margin-left, $spacing-large); } }
-.margin--left-gigantic\@medium { @include bp-min-width($bp-medium) { @include rem(margin-left, -$spacing-gigantic); } }
+.margin--left-gigantic\@medium { @include bp-min-width($bp-medium) { @include rem(margin-left, $spacing-gigantic); } }
+.margin--left-gigantic-neg\@medium { @include bp-min-width($bp-medium) { @include rem(margin-left, -$spacing-gigantic); } }
 
 .margin--right\@medium { @include bp-min-width($bp-medium) { @include rem(margin-right, $spacing-default); } }
 .margin--right-large\@medium { @include bp-min-width($bp-medium) { @include rem(margin-right, $spacing-large); } }

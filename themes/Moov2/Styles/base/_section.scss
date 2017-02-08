@@ -105,10 +105,9 @@ section,
  */
 
 .section--testimonials {
-    @include rem(padding-bottom, $spacing-gigantic * 1.5);
-    @include rem(padding-top, $spacing-gigantic * 2);
+    @include rem(height, $spacing-large * 15);
 
-	background: #dbf3ec;
+    color: $color-white;
 }
 
 .section--promo {

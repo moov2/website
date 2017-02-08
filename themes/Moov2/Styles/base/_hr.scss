@@ -31,11 +31,22 @@ hr {
 }
 
 .hr--spacer {
-	@include rem(margin-bottom, $spacing-gigantic);
-	@include rem(padding-top, $spacing-gigantic);
+	@include rem(margin-bottom, $spacing-large);
+	@include rem(padding-top, $spacing-large);
 
 	@media all and (min-width: $bp-medium-large) {
 		@include rem(margin-bottom, $spacing-gigantic * 2);
 		@include rem(padding-top, $spacing-gigantic * 2);
 	}
+
+	&-large {
+		@media all and (min-width: $bp-medium-large) {
+			@include rem(margin-bottom, $spacing-gigantic * 3);
+			@include rem(padding-top, $spacing-gigantic * 3);
+		}
+	}
+}
+
+.hr--transparent {
+	border-bottom: 0;
 }
