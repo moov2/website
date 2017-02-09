@@ -61,8 +61,8 @@ section,
 }
 
 .section--heading {
-	@include rem(height, $spacing-x-large * 6.2);
-	@include rem(margin-bottom, $spacing-gigantic);
+	@include rem(height, $spacing-x-large * 7);
+	@include rem(margin-bottom, $spacing-gigantic * 2);
 	@include rem(padding-top, $header-height);
 
 	@media all and (min-width: $bp-medium) {
