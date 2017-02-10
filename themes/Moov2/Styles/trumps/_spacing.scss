@@ -8,14 +8,16 @@
  * Utility classes for dictating margin or padding.
  */
 
-.margin--bottom-none { margin-bottom: 0 !important; }
-.margin--bottom-none\@medium { @include bp-min-width($bp-medium) { @include rem(margin-bottom, $spacing-default); } }
 .margin--bottom-small { @include rem(margin-bottom, $spacing-small); }
 .margin--bottom-default { @include rem(margin-bottom, $spacing-default); }
 .margin--bottom-large { @include rem(margin-bottom, $spacing-large); }
 .margin--bottom-gigantic { @include rem(margin-bottom, $spacing-gigantic)}
 .margin--bottom-gigantic\@medium { @include bp-min-width($bp-medium) { @include rem(margin-bottom, $spacing-gigantic); } }
+.margin--bottom-none { margin-bottom: 0 !important; }
+.margin--bottom-none\@medium { @include bp-min-width($bp-medium) { margin-bottom: 0; } }
+.margin--bottom-none\@medium-large { @include bp-min-width($bp-medium-large) { margin-bottom: 0; } }
 
+.margin--horizontal-auto { margin-left: auto; margin-right: auto; }
 .margin--horizontal-none { margin-left: 0; margin-right: 0; }
 
 .margin--horizontal\@large {
@@ -35,21 +37,28 @@
 
 .margin--left-none { margin-left: 0; }
 .margin--left-small { @include rem(margin-left, $spacing-small); }
+.margin--left-default { @include rem(margin-left, $spacing-default); }
 .margin--left-large { @include rem(margin-left, $spacing-large); }
 
 .margin--left\@medium { @include bp-min-width($bp-medium) { @include rem(margin-left, $spacing-default); } }
 .margin--left-large\@medium { @include bp-min-width($bp-medium) { @include rem(margin-left, $spacing-large); } }
 .margin--left-gigantic\@medium { @include bp-min-width($bp-medium) { @include rem(margin-left, $spacing-gigantic); } }
 .margin--left-gigantic-neg\@medium { @include bp-min-width($bp-medium) { @include rem(margin-left, -$spacing-gigantic); } }
+.margin--left-gigantic-neg\@medium-large { @include bp-min-width($bp-medium-large) { @include rem(margin-left, -$spacing-gigantic); } }
 
 .margin--right\@medium { @include bp-min-width($bp-medium) { @include rem(margin-right, $spacing-default); } }
+.margin--right-default { @include rem(margin-right, $spacing-default); }
+.margin--right-large { @include rem(margin-right, $spacing-large); }
 .margin--right-large\@medium { @include bp-min-width($bp-medium) { @include rem(margin-right, $spacing-large); } }
+.margin--right-large\@medium-large { @include bp-min-width($bp-medium-large) { @include rem(margin-right, $spacing-large); } }
 .margin--right-gigantic\@medium { @include bp-min-width($bp-medium) { @include rem(margin-right, $spacing-gigantic); } }
 
 .margin--top-large\@medium { @include bp-min-width($bp-medium) { @include rem(margin-top, $spacing-large); } }
 
+.padding--default\@medium { @include bp-min-width($bp-medium) { @include rem(padding, $spacing-default); } }
 .padding--large { @include rem(padding, $spacing-large); }
 .padding--gigantic { @include rem(padding, $spacing-gigantic); }
+.padding--none\@medium-large { @include bp-min-width($bp-medium-large) { padding: 0; } }
 
 .padding--bottom-gigantic { @include rem(padding-bottom, $spacing-gigantic); }
 
@@ -77,6 +86,12 @@
 .padding--horizontal\@large { @include bp-min-width($bp-large) { @include rem(padding, 0 $spacing-default); } }
 .padding--horizontal-large { @include rem(padding, 0 $spacing-large); }
 .padding--horizontal-gigantic { @include rem(padding, 0 $spacing-gigantic); }
+.padding--horizontal-gigantic\@large {
+    @include bp-min-width($bp-large) {
+        @include rem(padding-left, $spacing-gigantic);
+        @include rem(padding-right, $spacing-gigantic);
+    }
+}
 
 .padding--vertical { @include rem(padding, $spacing-default 0); }
 .padding--vertical-large { @include rem(padding, $spacing-large 0); }

@@ -51,7 +51,7 @@ h1 {
     line-height: 1.2;
 
 	@media all and (min-width: $bp-medium) {
-		@include rem(font-size, $font-size-heading-mobile * 2);
+		@include rem(font-size, $font-size-heading-mobile * 1.5);
 		@include rem(margin-bottom, $spacing-large);
 	}
 

@@ -71,21 +71,6 @@
     &.fill-row\@medium > .list__item { @include bp-min-width($bp-medium) { width: auto; } }
     &.fill-row\@medium-large > .list__item { @include bp-min-width($bp-medium-large) { width: auto; } }
     &.fill-row\@large > .list__item { @include bp-min-width($bp-large) { width: auto; } }
-
-    &.fill-row-equal > .list__item { flex: 1; width: auto; }
-    &.fill-row-equal\@tiny > .list__item { @include bp-min-width($bp-tiny) { flex: 1; width: auto; } }
-    &.fill-row-equal\@small > .list__item { @include bp-min-width($bp-small) { flex: 1; width: auto; } }
-    &.fill-row-equal\@medium > .list__item { @include bp-min-width($bp-medium) { flex: 1; width: auto; } }
-    &.fill-row-equal\@medium-large > .list__item { @include bp-min-width($bp-medium-large) { flex: 1; width: auto; } }
-    &.fill-row-equal\@large > .list__item { @include bp-min-width($bp-large) { flex: 1; width: auto; } }
-}
-
-.list--horizontal-wrap {
-    flex-flow: row wrap;
-}
-
-.list--align-items-end {
-    align-items: flex-end;
 }
 
 .list--double {

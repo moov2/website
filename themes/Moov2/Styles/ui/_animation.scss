@@ -134,6 +134,8 @@
     max-width: 75%;
     z-index: 1;
 
+    pointer-events: none;
+
     -webkit-animation-name: HelloGamesFreighter;
             animation-name: HelloGamesFreighter;
     -webkit-animation-duration: 10s;
@@ -153,6 +155,20 @@
     @include bp-min-width($bp-medium) {
         bottom:-30rem;
         left: 16rem;
+    }
+    @include bp-min-width($bp-medium-large) {
+        bottom:-28rem;
+        left: 38rem;
+    }
+    @include bp-min-width($bp-large) {
+        bottom:-25rem;
+        left: 50rem;
+    }
+    @include bp-min-width($bp-x-large) {
+        left: 60rem;
+    }
+    @include bp-min-width($bp-huge) {
+        left: 88%;
     }
 }
 

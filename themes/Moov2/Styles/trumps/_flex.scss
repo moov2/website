@@ -21,6 +21,7 @@
 .flex--align-start\@small { @include bp-min-width($bp-small) { align-items: flex-start; } }
 .flex--align-start\@medium { @include bp-min-width($bp-medium) { align-items: flex-start; } }
 .flex--align-start\@medium-large { @include bp-min-width($bp-medium-large) { align-items: flex-start; } }
+.flex--align-start\@large { @include bp-min-width($bp-large) { align-items: flex-start; } }
 
 .flex--align-end { align-items: flex-end; }
 .flex--align-end\@tiny { @include bp-min-width($bp-tiny) { align-items: flex-end; } }
@@ -39,18 +40,21 @@
 .flex--direction-column-rev\@small { @include bp-min-width($bp-small) { flex-direction: column-reverse; } }
 .flex--direction-column-rev\@medium { @include bp-min-width($bp-medium) { flex-direction: column-reverse; } }
 .flex--direction-column-rev\@medium-large { @include bp-min-width($bp-medium-large) { flex-direction: column-reverse; } }
+.flex--direction-column-rev\@large { @include bp-min-width($bp-large) { flex-direction: column-reverse; } }
 
 .flex--direction-row { display: flex; flex-direction: row; }
 .flex--direction-row\@tiny { @include bp-min-width($bp-tiny) { flex-direction: row; } }
 .flex--direction-row\@small { @include bp-min-width($bp-small) { flex-direction: row; } }
 .flex--direction-row\@medium { @include bp-min-width($bp-medium) { flex-direction: row; } }
 .flex--direction-row\@medium-large { @include bp-min-width($bp-medium-large) { flex-direction: row; } }
+.flex--direction-row\@large { @include bp-min-width($bp-large) { flex-direction: row; } }
 
 .flex--direction-row-rev { display: flex; flex-direction: row-reverse; }
 .flex--direction-row-rev\@tiny { @include bp-min-width($bp-tiny) { flex-direction: row-reverse; } }
 .flex--direction-row-rev\@small { @include bp-min-width($bp-small) { flex-direction: row-reverse; } }
 .flex--direction-row-rev\@medium { @include bp-min-width($bp-medium) { flex-direction: row-reverse; } }
 .flex--direction-row-rev\@medium-large { @include bp-min-width($bp-medium-large) { flex-direction: row-reverse; } }
+.flex--direction-row-rev\@large { @include bp-min-width($bp-large) { flex-direction: row-reverse; } }
 
 .flex--grow { flex: 1; }
 
