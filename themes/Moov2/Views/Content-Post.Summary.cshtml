@@ -15,6 +15,8 @@
     var tag = Tag(Model, "article");
     
     string thumbnailUrl = string.Empty;
+    string thumbnailAlt = string.Empty;
+    string postTitle = string.Empty;
     
     if (Model.ContentItem.ThumbnailPart != null) {
         ContentPart thumbnailPart = Model.ContentItem.ThumbnailPart as ContentPart;
@@ -24,36 +26,40 @@
                 
             if (thumbnailField != null) {
                 thumbnailUrl = (thumbnailField as MediaLibraryPickerField).FirstMediaUrl;
+                thumbnailAlt = (thumbnailField as MediaLibraryPickerField).MediaParts.FirstOrDefault().AlternateText;
             }
         }
     }
 
+    if (Model.ContentItem.TitlePart != null) {
+        postTitle = Model.ContentItem.TitlePart.Title;
+    }
+
 }
 @tag.StartElement
-    <div class="media media--align-top margin--bottom-none">
-        <div class="media__object">
+    <ul class="list flex flex--direction-column flex--direction-row@medium flex--align-center@medium">
+        <li class="list__item">
             @if (!string.IsNullOrEmpty(thumbnailUrl)) {
-            <img src="@thumbnailUrl" class="post__thumbnail" />
+            <img src="@thumbnailUrl" alt="@thumbnailAlt" />
             } else {
-            <div class="post__thumbnail post__thumbnail--empty"></div>
+            <img src="/Themes/Moov2/Content/blog-default-image.jpg" alt="Thumbnail for @postTitle blog post" class="box box--grey shadow--box-light" />
             }
-        </div>
+        </li>
         
-        <div class="media__body">
-            <header>
+        <li class="list__item flex--grow margin--left@medium">
+            @if (Model.Header != null) {
                 @Display(Model.Header)
-                @if (Model.Meta != null) {
-                    <div class="post__meta metadata">
-                        @Display(Model.Meta)
-                    </div>
-                }
-            </header>
-            @Display(Model.Content)
-            @if(Model.Footer != null) {
-                <footer>
-                    @Display(Model.Footer)
-                </footer>
             }
-        </div>
-    </div>
+
+            @if (Model.Meta != null) {
+                @Display(Model.Meta)
+            }
+
+            @Display(Model.Content)
+
+            @if(Model.Footer != null) {
+                @Display(Model.Footer)
+            }
+        </li>
+    </ul>
 @tag.EndElement

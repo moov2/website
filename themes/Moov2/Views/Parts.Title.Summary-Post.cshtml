@@ -2,4 +2,6 @@
     Orchard.ContentManagement.ContentItem contentItem = Model.ContentPart.ContentItem;
 }
 
-<a href="@Url.ItemDisplayUrl(contentItem)" class="link--blank"><h2 class="post__title">@Model.Title.ToString()</h2></a>
+<a href="@Url.ItemDisplayUrl(contentItem)" class="link--blank">
+    <h2 class="margin--bottom-small padding--top-base padding--top-none@medium">@Model.Title.ToString()</h2>
+</a>

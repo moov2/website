@@ -13,6 +13,10 @@
     <Place Fields_MediaLibraryPicker="-" />
   </Match>
 
+  <Match ContentType="Post" DisplayType="Summary">
+    <Place Parts_Layout_Summary="-"/>
+  </Match>
+
   <!-- Don't display page title on home page. -->
   <Match Path="/">
     <Place Parts_Title="-"/>

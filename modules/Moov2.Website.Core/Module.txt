@@ -6,6 +6,7 @@ Version: 1.0
 OrchardVersion: 1.10.1
 Description: Provides useful recipes for setup & content creation.
 Category: Moov2
+Dependencies: Orchard.MediaLibrary, Orchard.Taxonomies, Orchard.ContentPicker, Orchard.Fields
 Features:
     Moov2.Website.Core:
         Description: Provides useful recipes for setup & content creation.
