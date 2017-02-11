@@ -1,0 +1,13 @@
+﻿<Placement>      
+   <Match DisplayType="SummaryAdmin">
+     <Place Fields_MediaLibraryPicker_SummaryAdmin="-"/>
+     <Place Fields_TaxonomyField="-"/>
+     <Place Fields_ContentPicker_SummaryAdmin="-"/>
+     <Place Fields_Input="-"/>
+     <Place Fields_Numeric="-"/>
+     <Place Fields_Link="-"/>
+     <Place Fields_Enumeration="-"/>
+     <Place Fields_Boolean="-"/>
+     <Place Fields_DateTime="-"/>
+   </Match>            
+</Placement>
