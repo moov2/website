@@ -12,10 +12,15 @@
     background-color: $color-blue;
     color: white;
 }
-.bg--color-dark-grey {
-    background: $color-brand;
-}
+.bg--color-grey { background-color: $color-grey; }
+.bg--color-grey-dark { background-color: $color-grey-dark; }
+.bg--color-grey-darkest { background-color: $color-grey-darkest; }
+.bg--color-grey-light { background-color: $color-grey-light; }
+.bg--color-grey-lightest { background-color: $color-grey-lightest; }
 
+/**
+ * skewing backgrounds only works if the element it is applied to has a fixed height
+ */
 .bg--skew {
     position: relative;
 
@@ -37,6 +42,12 @@
     color: white;
 
     &:after { background-color: $color-blue; }
+}
+
+.bg--skew-color-brand {
+    color: white;
+
+    &:after { background-color: $color-brand; }
 }
 
 .bg--skew-color-purple {

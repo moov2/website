@@ -8,11 +8,16 @@
  * Utility classes for dictating margin or padding.
  */
 
+.margin--small { margin: $spacing-small; }
+.margin--base { margin: $spacing-base; }
+.margin--default { margin: $spacing-default; }
+
 .margin--bottom-small { @include rem(margin-bottom, $spacing-small); }
 .margin--bottom-default { @include rem(margin-bottom, $spacing-default); }
 .margin--bottom-large { @include rem(margin-bottom, $spacing-large); }
 .margin--bottom-gigantic { @include rem(margin-bottom, $spacing-gigantic)}
 .margin--bottom-gigantic\@medium { @include bp-min-width($bp-medium) { @include rem(margin-bottom, $spacing-gigantic); } }
+.margin--bottom-gigantic\@large { @include bp-min-width($bp-large) { @include rem(margin-bottom, $spacing-gigantic); } }
 .margin--bottom-none { margin-bottom: 0 !important; }
 .margin--bottom-none\@medium { @include bp-min-width($bp-medium) { margin-bottom: 0; } }
 .margin--bottom-none\@medium-large { @include bp-min-width($bp-medium-large) { margin-bottom: 0; } }
@@ -55,9 +60,11 @@
 
 .margin--top-large\@medium { @include bp-min-width($bp-medium) { @include rem(margin-top, $spacing-large); } }
 
+.padding--base { @include rem(padding, $spacing-base); }
 .padding--default\@medium { @include bp-min-width($bp-medium) { @include rem(padding, $spacing-default); } }
 .padding--large { @include rem(padding, $spacing-large); }
 .padding--gigantic { @include rem(padding, $spacing-gigantic); }
+.padding--none\@medium { @include bp-min-width($bp-medium) { padding: 0; } }
 .padding--none\@medium-large { @include bp-min-width($bp-medium-large) { padding: 0; } }
 
 .padding--bottom-gigantic { @include rem(padding-bottom, $spacing-gigantic); }
@@ -74,10 +81,13 @@
 .padding--left-small { @include rem(padding-left, $spacing-small); }
 .padding--left-large { @include rem(padding-left, $spacing-large); }
 .padding--left-large\@medium { @include bp-min-width($bp-medium) { @include rem(padding-left, $spacing-large); } }
+.padding--left-gigantic\@medium { @include bp-min-width($bp-medium) { @include rem(padding-left, $spacing-gigantic); } }
 
 .padding--right-none { padding-right: 0; }
 .padding--right-small { @include rem(padding-right, $spacing-small); }
 .padding--right-large { @include rem(padding-right, $spacing-large); }
+.padding--right-large\@medium { @include bp-min-width($bp-medium) { @include rem(padding-right, $spacing-large); } }
+.padding--right-gigantic\@medium { @include bp-min-width($bp-medium) { @include rem(padding-right, $spacing-gigantic); } }
 
 .padding--top-none\@medium { @include bp-min-width($bp-medium) { padding-top: 0; } }
 

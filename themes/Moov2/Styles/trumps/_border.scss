@@ -8,8 +8,13 @@
  * Utility classes for adding borders to elements.
  */
 
+.border--bottom { border-bottom: 1px solid; }
+.border--bottom-none\@medium { @include bp-min-width($bp-medium) { border-bottom: 0; } }
+
 .border--left { border-left: 1px solid; }
 .border--left\@medium { @include bp-min-width($bp-medium) { border-left: 1px solid } }
+
+.border--right\@medium { @include bp-min-width($bp-medium) { border-right: 1px solid } }
 
 .border--color-grey { border-color: $color-grey-light; }
 .border--color-white { border-color: $color-white; }

@@ -50,4 +50,20 @@ html {
 	max-width: $logo-technology-width;
 }
 
-.logo--client {}
+.logo--client-fixed {
+    @include rem(padding, $spacing-default $spacing-base);
+
+    width: 100%;
+
+    &:first-child { @include rem(padding-top, $spacing-large); }
+    &:last-child { @include rem(padding-bottom, $spacing-large); }
+
+    @media all and (min-width: $bp-medium) {
+        @include rem(margin, $spacing-default);
+        @include rem(min-height, 200px);
+        @include rem(width, 300px);
+
+        &:first-child { padding-top: 0; }
+        &:last-child { padding-bottom: 0; }
+    }
+}

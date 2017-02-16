@@ -115,6 +115,37 @@ section,
  * Sections for specific projects.
  */
 
+.section--about-us {
+    @include rem(height, 750px);
+    @include rem(margin-bottom, $spacing-gigantic * 3.4);
+    @include rem(margin-top, $spacing-gigantic * 3.4);
+
+    color: $color-white;
+
+    @media all and (min-width: $bp-v-tiny) {
+		@include rem(height, 670px);
+    }
+
+    @media all and (min-width: $bp-tiny) {
+		@include rem(height, 600px);
+    }
+
+    @media all and (min-width: $bp-small) {
+		@include rem(height, 440px);
+    }
+
+    @media all and (min-width: $bp-medium) {
+		@include rem(height, 540px);
+		@include rem(padding-bottom, $spacing-gigantic);
+		@include rem(padding-top, $spacing-gigantic);
+    }
+
+    @media all and (min-width: $bp-medium-large) {
+	    @include rem(margin-bottom, $spacing-gigantic * 4.4);
+	    @include rem(margin-top, $spacing-gigantic * 3.4);
+    }
+}
+
 .section--testimonials {
     @include rem(height, $spacing-large * 20);
     @include rem(margin-bottom, $spacing-gigantic * 3.4);
