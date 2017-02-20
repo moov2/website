@@ -34,12 +34,12 @@
 .text--centered { text-align: center; }
 .text--centered\@medium {
     @media all and (min-width: $bp-medium) {
-        text-align: centered;
+        text-align: center;
     }
 }
 .text--centered\@large {
     @media all and (min-width: $bp-large) {
-        text-align: centered;
+        text-align: center;
     }
 }
 .text--left { text-align: left; }
