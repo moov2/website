@@ -39,6 +39,13 @@ hr {
 		@include rem(padding-top, $spacing-gigantic * 2);
 	}
 
+	&-short {
+		@media all and (min-width: $bp-medium-large) {
+			@include rem(margin-bottom, $spacing-x-large * 2);
+			@include rem(padding-top, $spacing-x-large * 2);
+		}
+	}
+
 	&-large {
 		@media all and (min-width: $bp-medium-large) {
 			@include rem(margin-bottom, $spacing-gigantic * 3);
