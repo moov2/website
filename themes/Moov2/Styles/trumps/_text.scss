@@ -32,6 +32,11 @@
 .text--light { color: $font-color-light; }
 
 .text--centered { text-align: center; }
+.text--centered\@medium {
+    @media all and (min-width: $bp-medium) {
+        text-align: centered;
+    }
+}
 .text--left { text-align: left; }
 .text--left\@medium {
     @media all and (min-width: $bp-medium) {
