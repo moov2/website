@@ -51,7 +51,13 @@ a.link--blank {
 }
 
 .link--cta-large {
-	@include rem(padding, $spacing-base $spacing-default);
+	@include bp-min-width($bp-medium) {
+		@include rem(font-size, $font-size-default);
+		@include rem(padding, $spacing-base $spacing-default);
+	}
+}
+
+.link--cta-hero {
 }
 
 .link--border {

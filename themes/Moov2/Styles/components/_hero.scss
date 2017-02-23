@@ -9,100 +9,107 @@
  */
 
 .hero {
-    display: flex;
-    flex-direction: column;
+    min-height: 100vh;
     overflow: hidden;
     width: 100%;
 }
 
     .hero__text {
-        @include rem(padding-bottom, $spacing-default);
-        @include rem(padding-top, $spacing-default);
+        @include rem(margin-bottom, $spacing-base * 2);
 
-        background: $color-white;
+        color: $color-white;
 
-        @media all and (min-width: $bp-medium) {
-            @include rem(padding-top, $spacing-base * 4);
+        @include bp-min-width($bp-medium) {
+            @include rem(margin-bottom, $spacing-x-large);
+        }
 
-            padding-bottom: 0;
+        @include bp-min-width($bp-medium-large) {
+            @include rem(margin-bottom, $spacing-gigantic);
         }
 
         h1 {
-            @include rem(margin-bottom, $spacing-default);
+            @include rem(font-size, $font-size-large);
             @include rem(max-width, $spacing-x-large * 6);
 
             margin-left: auto;
             margin-right: auto;
 
             @media all and (min-width: $bp-medium) {
-                @include rem(font-size, $font-size-heading-mobile * 2);
+                @include rem(font-size, $font-size-heading-mobile);
                 @include rem(margin-bottom, $spacing-large);
+                @include rem(max-width, $spacing-x-large * 10);
+            }
+
+            @media all and (min-width: $bp-medium-large) {
+                @include rem(font-size, $font-size-heading-mobile * 1.5);
+                @include rem(margin-bottom, $spacing-default * 3);
                 @include rem(max-width, $spacing-gigantic * 10);
             }
         }
     }
 
-    /**
-     * 1. Element fills remaining space of parent.
-     */
+    .hero__brands {
+        @include rem(margin-bottom, $spacing-default);
+
+        width: 100%;
+
+        @include bp-min-width($bp-medium) {
+            @include rem(width, $spacing-gigantic * 10);
+        }
+
+        @include bp-min-width($bp-medium-large) {
+            @include rem(margin-bottom, $spacing-gigantic);
+        }
+    }
+
+    .hero__brands--microsoft {
+        max-width: 76px;
+
+        @include bp-min-width($bp-medium) {
+            max-width: 165px;
+        }
+    }
+
+    .hero__brands--hello {
+        max-width: 68px;
+
+        @include bp-min-width($bp-medium) {
+            max-width: 150px;
+        }
+    }
+
+    .hero__brands--supermassive {
+        max-width: 100px;
+
+        @include bp-min-width($bp-medium) {
+            max-width: 205px;
+        }
+    }
+
     .hero__images {
-        flex: 1 0 auto; /* 1. */
-        overflow: hidden;
-        position: relative;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+    }
 
-        &:before,
-        &:after {
+    .hero__images--microsoft,
+    .hero__images--supermassive {
+        height: 100%;
+        position: absolute;
+        width: 100%;
 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
-            @media all and (min-width: $bp-medium + 1) {
-                content: "";
-                height: 200px;
-                position: absolute;
-                top: -140px;
-                width: 50%;
-                z-index: 1;
+    .hero__images--microsoft {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Home/microsoft-studios-2100x1200-v4.jpg);
+    }
 
-                background: $color-white;
-            }
-        }
-
-        &:before {
-            left: 0;
-
-            transform: skewY(10deg);
-
-            @media all and (min-width: $bp-medium) {
-                transform: skewY(5deg);
-            }
-        }
-
-        &:after {
-            right: 0;
-
-            transform: skewY(-10deg);
-
-            @media all and (min-width: $bp-medium) {
-                transform: skewY(-5deg);
-            }
-        }
-
-        & .hero__images--desktop {
-            display: none;
-
-            @media all and (min-width: $bp-medium + 1) {
-                display: block;
-            }
-        }
-
-        img {
-            @media all and (min-width: $bp-medium + 1) {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: auto;
-            }
-        }
+    .hero__images--supermassive {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Home/supermassive-games-2100x1200-v4.jpg);
     }
 
     .hero__secondary {

@@ -66,6 +66,28 @@
     &:after { background-color: $color-teal; }
 }
 
+.bg--skew-home {
+    overflow: hidden;
+    position: absolute;
+
+    &:after {
+        @include rem(height, $spacing-x-large * 10);
+
+        bottom: -393px;
+        top: auto;
+
+        background-color: rgba(37,37,37,.4); /* MS */
+
+        @include bp-min-width($bp-medium) {
+            bottom: -337px;
+        }
+
+        @include bp-min-width($bp-medium-large) {
+            bottom: -268px;
+        }
+    }
+}
+
 .bg--skew-hello-games {
     color: white;
 

@@ -58,12 +58,12 @@ section,
  * 1. Both need flex in order to fill the height of their parent element.
  */
 .section--hero {
-    @include rem(padding-top, $header-height);
-
     display: flex; /* 1. */
 	min-height: 100vh;
 
-	& .section__content { display: flex; /* 1. */ }
+	& .section__content {
+        display: flex; /* 1. */
+    }
 }
 
 .section--heading {

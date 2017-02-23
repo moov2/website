@@ -14,8 +14,6 @@
 main {
 	@include rem(font-size, $font-size-default);
 
-	background-color: $color-white;
-
 	box-sizing: border-box;
 	flex: 1; /* 1. */
 	margin-left: auto;
