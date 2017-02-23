@@ -82,7 +82,7 @@
 .flex--justify-start\@medium { @include bp-min-width($bp-medium) { justify-content: flex-start; } }
 .flex--justify-start\@medium-large { @include bp-min-width($bp-medium-large) { justify-content: flex-start; } }
 
-.flex--justify-end { align-items: flex-end; }
+.flex--justify-end { justify-content: flex-end; }
 .flex--justify-end\@tiny { @include bp-min-width($bp-tiny) { justify-content: flex-end; } }
 .flex--justify-end\@small { @include bp-min-width($bp-small) { justify-content: flex-end; } }
 .flex--justify-end\@medium { @include bp-min-width($bp-medium) { justify-content: flex-end; } }
