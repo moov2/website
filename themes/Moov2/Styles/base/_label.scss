@@ -9,10 +9,17 @@
  */
 
 label {
+    @include rem(font-size, $font-size-small);
 	@include rem(margin-right, $spacing-base);
 
     display: block;
     width: 100%;
 
+    color: $color-grey;
 	font-weight: $font-weight-default;
+
+    &.forcheckbox {
+        display: inline-block;
+        width: auto;
+    }
 }

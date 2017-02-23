@@ -1,0 +1,47 @@
+@using Orchard.ContentManagement
+
+@{
+    var userCanRegister = WorkContext.CurrentSite.As<Orchard.Users.Models.RegistrationSettingsPart>().UsersCanRegister;
+    var enableLostPassword = WorkContext.CurrentSite.As<Orchard.Users.Models.RegistrationSettingsPart>().EnableLostPassword;
+
+    Html.AddPageClassNames(new string [] { "is-inverted-header" });
+
+    var isLoginError = Html.ValidationSummary(true, "Test") != null;
+    var backgroundCss = isLoginError ? "bg--skew-color-red" : "bg--skew-color-teal";
+}
+
+<div class="section section--heading align--vertical-middle bg--skew @backgroundCss margin--bottom-gigantic@large">
+    <div class="section__content">
+        <h1 class="margin--bottom-large text--line-height-compact text--centered@medium">@Html.TitleForPage((string)Model.Title)</h1>
+    </div>
+</div>
+
+<hr class="hr--spacer-short hr--transparent">
+
+<div class="section margin--bottom-gigantic@large">
+    <div class="section__content">
+        @using (Html.BeginFormAntiForgeryPost(Url.Action("LogOn", new { ReturnUrl = Request.QueryString["ReturnUrl"] }))) {
+        @Html.ValidationSummary(true, T("Login was unsuccessful, please correct the errors and try again.").ToString())
+
+        <fieldset class="margin--bottom-gigantic padding--bottom-gigantic">
+            <legend>@T("Account Information")</legend>
+            <ol class="list list--spacing-base">
+                <li class="list__item">
+                    <label for="username-email">@T("Username")</label>
+                    @Html.TextBox("userNameOrEmail", "", new { id = "username-email", autofocus = "autofocus" })
+                    @Html.ValidationMessage("userNameOrEmail", new { @class = "padding--top-small" })
+                </li>
+                <li class="list__item">
+                    <label for="password">@T("Password")</label>
+                    @Html.Password("password")
+                    @Html.ValidationMessage("password", new { @class = "padding--top-small" })
+                </li>
+                <li class="list__item">
+                    @Html.CheckBox("rememberMe", new { id = "remember-me" })<label class="forcheckbox" for="remember-me">@T("Remember Me")</label>
+                </li>
+            </ol>
+            <button class="link--cta link--color-blue" type="submit">@T("Sign In")</button>
+        </fieldset>
+        }
+    </div>
+</div>

@@ -16,6 +16,7 @@
     background-color: $color-blue;
     color: white;
 }
+
 .bg--color-grey { background-color: $color-grey; }
 .bg--color-grey-dark { background-color: $color-grey-dark; }
 .bg--color-grey-darkest { background-color: $color-grey-darkest; }
@@ -26,9 +27,13 @@
  * skewing backgrounds only works if the element it is applied to has a fixed height
  */
 .bg--skew {
+    color: white;
     position: relative;
 
-    .section__content { position: relative; z-index: 1; }
+    .section__content { 
+        position: relative; 
+        z-index: 1; 
+    }
 
     &:after {
         content: "";
@@ -42,29 +47,11 @@
     }
 }
 
-.bg--skew-color-blue {
-    color: white;
-
-    &:after { background-color: $color-blue; }
-}
-
-.bg--skew-color-brand {
-    color: white;
-
-    &:after { background-color: $color-brand; }
-}
-
-.bg--skew-color-purple {
-    color: white;
-
-    &:after { background-color: $color-purple; }
-}
-
-.bg--skew-color-teal {
-    color: white;
-
-    &:after { background-color: $color-teal; }
-}
+.bg--skew-color-blue:after { background-color: $color-blue; }
+.bg--skew-color-brand:after { background-color: $color-brand; }
+.bg--skew-color-purple:after { background-color: $color-purple; }
+.bg--skew-color-teal:after { background-color: $color-teal; }
+.bg--skew-color-red:after { background-color: $color-red; }
 
 .bg--skew-home {
     overflow: hidden;
