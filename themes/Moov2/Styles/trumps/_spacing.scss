@@ -96,6 +96,7 @@
 .padding--horizontal { @include rem(padding, 0 $spacing-default); }
 .padding--horizontal\@large { @include bp-min-width($bp-large) { @include rem(padding, 0 $spacing-default); } }
 .padding--horizontal-large { @include rem(padding, 0 $spacing-large); }
+.padding--horizontal-large\@large { @include bp-min-width($bp-large) { @include rem(padding, 0 $spacing-large); } }
 .padding--horizontal-large\@medium { @include bp-min-width($bp-medium) { @include rem(padding, 0 $spacing-large); } }
 .padding--horizontal-gigantic { @include rem(padding, 0 $spacing-gigantic); }
 .padding--horizontal-gigantic\@large {
