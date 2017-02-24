@@ -1,0 +1,3 @@
+[submodule "modules/Moov2.Orchard.Elements"]
+	path = modules/Moov2.Orchard.Elements
+	url = https://github.com/moov2/Moov2.Orchard.Elements
