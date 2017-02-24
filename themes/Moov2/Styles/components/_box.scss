@@ -15,11 +15,6 @@
 	position: relative;
 }
 
-.box--bordered { border: 1px solid $color-grey-light; }
-.box--bordered-light { border: 1px solid $color-grey-transparent; }
-
-.box--grey { background-color: $color-grey-light; }
-
 .box--logo {
 	text-align: center;
 
@@ -30,14 +25,3 @@
 }
 
 .box--padded { @include rem(padding, $spacing-default); }
-
-/* DELETE once media uploads are working */
-.box--image-holder {
-    height: 200px;
-    width: 100%;
-
-    @include bp-min-width($bp-medium) {
-        height: 225px;
-        width: 300px;
-    }
-}
