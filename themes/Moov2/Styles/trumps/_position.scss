@@ -1,0 +1,12 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $POSITION
+ * -----------------------------------------------------------------------------
+ */
+
+.position {
+    &--absolute { position: absolute; }
+    &--fixed { position: fixed; }
+    &--offscreen { transform: translateX(-5000px); }
+    &--relative { position: relative; }
+}
