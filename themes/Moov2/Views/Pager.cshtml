@@ -1,0 +1,69 @@
+@using System.Linq;
+
+@{
+    var totalPages = Math.Ceiling((double)Model.TotalItemCount / (double)Model.PageSize);
+
+    Model.HasPageInQueryString = false;
+    var queryString = ViewContext.HttpContext.Request.QueryString;
+
+    if (queryString != null)
+    {
+        var currentIndex = 0;
+        foreach (string key in queryString.Keys)
+        {
+            if (key == "page")
+            {
+                Model.HasPageInQueryString = true;
+                Model.PageIndex = currentIndex;
+                Model.QueryStringCount = (int)queryString.Keys.Count;
+                break;
+            }
+            currentIndex++;
+        }
+    }
+
+}
+
+@functions {
+    string ReplacePageQueryString(int page)
+    {
+        var url = Model.RootUrl ?? ViewContext.HttpContext.Request.Url.ToString();
+    var hash = string.Empty;
+    if(url.IndexOf("#") > 0) {
+        hash = url.Substring(url.IndexOf("#"));
+        url = url.Replace(hash, "");
+    }
+        if (url.IndexOf("page=") > 0)  {
+            if (Model.PageIndex == 0)
+            {
+                return url.Replace("?page=" + Model.Page, "?page=" + page) + hash;
+            }else{
+                return url.Replace("&page=" + Model.Page, "&page=" + page) + hash;
+            }
+        }
+        if (url.IndexOf("?") > 0)
+        {
+            return url + "&page=" + page + hash;
+        } else {
+            return url + "?page=" + page + hash;
+        }
+    }
+}
+
+<div class="pager @string.Join(" ", Model.Classes.ToArray())">
+    @if (totalPages > 0) {
+        if (Model.Page != 1)
+        {
+        <div class="pager__newer">
+            <a href="@ReplacePageQueryString(Model.Page - 1)">Newer</a>
+        </div>
+        }
+
+        <div class="pager__summary">@Model.Page of @totalPages</div>
+
+        if (Model.Page != totalPages)
+        {
+        <div class="pager__older"><a href="@ReplacePageQueryString(Model.Page + 1)">Older</a></div>
+        }
+    }
+</div>
