@@ -18,6 +18,8 @@
 
 .border--right\@medium { @include bp-min-width($bp-medium) { border-right: 1px solid } }
 
+.border--top { border-top: 1px solid; }
+
 .border--color-grey { border-color: $color-grey-light; }
 .border--color-grey-transparent { border-color: $color-grey-transparent; }
 .border--color-white { border-color: $color-white; }
