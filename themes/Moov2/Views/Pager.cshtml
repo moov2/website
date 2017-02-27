@@ -50,7 +50,7 @@
     }
 }
 
-<div class="pager flex flex--direction-row flex--justify-between @string.Join(" ", Model.Classes.ToArray())">
+<div class="pager padding--top-base flex flex--direction-row flex--justify-between border--top border--color-grey-transparent @string.Join(" ", Model.Classes.ToArray())">
     @if (totalPages > 0) {
         if (Model.Page != 1)
         {
