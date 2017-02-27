@@ -16,6 +16,9 @@
     @include svg-moov2-m();
     height: $logo-brand-height;
     width: $logo-brand-width-m;
+	line-height: 0; 
+	font-size: 0;
+	color: transparent;
 
     @media all and (min-width: $bp-v-tiny) {
         @include svg-moov2();
