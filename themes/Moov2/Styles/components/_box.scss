@@ -25,3 +25,9 @@
 }
 
 .box--padded { @include rem(padding, $spacing-default); }
+
+.box--thumbnail {
+    @include rem(max-width, 300px);
+
+    height: auto;
+}
