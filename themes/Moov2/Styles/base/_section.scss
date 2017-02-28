@@ -81,6 +81,35 @@ section,
 	}
 }
 
+.section--client-break {
+	@include rem(height, $spacing-x-large * 7);
+	@include rem(padding-top, $header-height);
+	@include rem(padding-bottom, $header-height);
+
+	@media all and (min-width: $bp-medium) {
+		@include rem(height, $spacing-x-large * 9.2);
+	}
+
+	&-dark {
+		position: relative;
+		z-index: 1;
+
+		.section__content {
+			position: relative;
+			z-index: 3;
+		}
+
+		&:before {
+			z-index: 2;
+			position: absolute;
+			display: block;
+			height: 100%;
+			width: 100%;
+			background-color: rgba($color-brand, 0.85);
+		}
+	}
+}
+
 /**
  * Sections for specific projects.
  */
