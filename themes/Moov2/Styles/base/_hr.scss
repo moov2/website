@@ -30,6 +30,16 @@ hr {
 	max-width: $spacing-large * 2;
 }
 
+.hr--small {
+	@include rem(padding-top, $spacing-default);
+	@include rem(margin-bottom, $spacing-default);
+
+	@media all and (min-width: $bp-medium-large) {
+		@include rem(padding-top, $spacing-large);
+		@include rem(margin-bottom, $spacing-large);
+	}
+}
+
 .hr--spacer {
 	@include rem(margin-bottom, $spacing-large);
 	@include rem(padding-top, $spacing-large);
