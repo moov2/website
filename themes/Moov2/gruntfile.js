@@ -123,6 +123,7 @@ module.exports = function(grunt) {
                         './Theme.png', 
                         './Theme.txt',
                         './Scripts/Web.config',
+                        './Scripts/vendor/picturefill.min.js',
                         './Scripts/vendor/prism.js',
                         './Styles/Web.config',
                         './Views/**/*',
