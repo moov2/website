@@ -74,7 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Recipes\azure.recipe.xml" />
     <Content Include="Recipes\content.recipe.xml" />
+    <Content Include="Recipes\features.azure.recipe.xml" />
     <Content Include="Recipes\features.recipe.xml" />
     <Content Include="Recipes\local.recipe.xml" />
     <Content Include="Web.config" />
