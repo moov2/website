@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Orchard>
+  <Recipe>
+    <Name>Azure</Name>
+    <Description>Sets up Moov2 website for running in an environment hosted on Azure.</Description>
+    <Author>Moov2</Author>
+    <WebSite>http://moov2.com</WebSite>
+    <Category>Default</Category>
+    <Tags>developer</Tags>
+    <Version>1.0</Version>
+    <IsSetupRecipe>true</IsSetupRecipe>
+  </Recipe>
+
+  <CurrentTheme id="Moov2" />
+
+  <Command>
+    recipes execute Moov2.Website.Core Features
+    recipes execute Moov2.Website.Core FeaturesAzure
+    recipes execute Moov2.Website.Core Content
+  </Command>
+</Orchard>

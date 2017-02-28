@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Orchard>
+  <Recipe>
+    <Name>FeaturesAzure</Name>
+    <Description>Enables modules used by Orchard when in an Azure environment.</Description>
+    <Author>Moov2</Author>
+    <WebSite>http://moov2.com</WebSite>
+    <Category>Content</Category>
+    <Tags>developer</Tags>
+    <Version>1.0</Version>
+    <IsSetupRecipe>false</IsSetupRecipe>
+  </Recipe>
+
+  <Feature enable="Orchard.Azure, Orchard.Azure.Media" />
+</Orchard>
