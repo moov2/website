@@ -14,11 +14,15 @@
     string siteName = Convert.ToString(WorkContext.CurrentSite.SiteName);
     IHtmlString cssClasses = @Html.ClassForPage();
     string themePath = WorkContext.CurrentTheme.Location + "/" + WorkContext.CurrentTheme.Id;
+    
+    //Disabled critical CSS / async loading of CSS until we've got the site initial
+    //a stable condition to make a call on what is critical.
+    //var hasCookie = WorkContext.HttpContext.Request.Cookies[cookieName] != null;
 
-    var hasCookie = WorkContext.HttpContext.Request.Cookies[cookieName] != null;
+    //if (!hasCookie)
+       // SetCookie(cookieName);
 
-    if (!hasCookie)
-        SetCookie(cookieName);
+    var hasCookie = true;
 }
 <!DOCTYPE html>
 <html lang="@WorkContext.CurrentCulture" class="no-js is-preload @cssClasses @(hasCookie ? "is-fonts-loaded" : "")">
