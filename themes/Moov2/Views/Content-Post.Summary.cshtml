@@ -42,10 +42,10 @@
             @if (!string.IsNullOrEmpty(thumbnailUrl)) {
             <img src="@thumbnailUrl" alt="@thumbnailAlt" />
             } else {
-            <img src="/Themes/Moov2/Content/blog-default-image.jpg" alt="Thumbnail for @postTitle blog post" class="box box--grey shadow--box-light" />
+            <img src="/Themes/Moov2/Content/blog-default-image.jpg" alt="Thumbnail for @postTitle blog post" class="box box--thumbnail bg--color-grey shadow--box-light" />
             }
         </li>
-        
+
         <li class="list__item flex--grow margin--left@medium">
             @if (Model.Header != null) {
                 @Display(Model.Header)
