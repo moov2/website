@@ -93,7 +93,7 @@
         z-index: -1;
     }
 
-    .hero__images--microsoft,
+    .hero__images--hello-games,
     .hero__images--supermassive {
         height: 100%;
         position: absolute;
@@ -104,12 +104,36 @@
         background-size: cover;
     }
 
-    .hero__images--microsoft {
-        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Home/microsoft-studios-2100x1200-v4.jpg);
+    .hero__images--hello-games {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Home/hello-games-414x736.jpg);
+
+        @media all and (min-width: $bp-medium) {
+            background-image: url(https://moov2websitedev.azureedge.net/media/Default/Home/hello-games-768x1024.jpg);
+        }
+
+        @media all and (min-width: $bp-medium-large) {
+            background-image: url(https://moov2websitedev.azureedge.net/media/Default/Home/hello-games-1280x730.jpg);
+        }
+
+        @media all and (min-width: $bp-large) {
+            background-image: url(https://moov2websitedev.azureedge.net/media/Default/Home/hello-games-2100x1200.jpg);
+        }
     }
 
     .hero__images--supermassive {
-        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Home/supermassive-games-2100x1200-v4.jpg);
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Home/supermassive-games-414x736.jpg);
+
+        @media all and (min-width: $bp-medium) {
+            background-image: url(https://moov2websitedev.azureedge.net/media/Default/Home/supermassive-games-768x1024.jpg);
+        }
+
+        @media all and (min-width: $bp-medium-large) {
+            background-image: url(https://moov2websitedev.azureedge.net/media/Default/Home/supermassive-games-1280x730.jpg);
+        }
+
+        @media all and (min-width: $bp-large) {
+            background-image: url(https://moov2websitedev.azureedge.net/media/Default/Home/supermassive-games-2100x1200-v4.jpg);
+        }
     }
 
     .hero__secondary {

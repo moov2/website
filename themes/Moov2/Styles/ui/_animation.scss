@@ -65,11 +65,11 @@
 }
 
 @keyframes HeroCTAFade {
-    0% { background: #40806a; }
-    40% { background: #40806a; }
-    50% { background: $color-hello-games; }
-    90% { background: $color-hello-games; }
-    100% { background: #40806a; }
+    0% { background: $color-hello-games; }
+    40% { background: $color-hello-games; }
+    50% { background: #40806a; }
+    90% { background: #40806a; }
+    100% { background: $color-hello-games; }
 }
 
 /*
