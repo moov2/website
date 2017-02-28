@@ -124,9 +124,12 @@
     color: $color-white;
 }
 
-.bg--supermassive {
-    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Temporary/1330854-beautiful-until-dawn-wallpaper.jpg);
-    background-position: 0 0;
-    background-size: cover;
-    color: $color-white;
+.bg--supermassive-games {
+    @include bp-min-width($bp-large) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Supermassive%20Games/bg-work-supermassive-games-2100x610.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: $color-white;
+    }
 }

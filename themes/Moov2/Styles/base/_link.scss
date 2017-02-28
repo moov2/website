@@ -50,6 +50,18 @@ a.link--blank {
 	}
 }
 
+.link--cta-white {
+	background: $color-white;
+	color: $color-brand;
+}
+
+.link--cta-white\@large {
+	@include bp-min-width($bp-large) {
+		background: $color-white;
+		color: $color-brand;
+	}
+}
+
 .link--cta-large {
 	@include bp-min-width($bp-medium) {
 		@include rem(font-size, $font-size-default);
