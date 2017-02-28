@@ -1,0 +1,16 @@
+@{
+    Html.AddPageClassNames(new string [] { "is-inverted-header" });
+}
+
+<section class="section section--heading section--height-full align--vertical-middle bg--color-purple">
+    <div class="padding--horizontal-large section__content">
+        <ul class="list flex flex--direction-column flex--direction-row@medium">
+            <li class="list__item margin--bottom-none">
+                <h1 class="text--uppercase text--line-height-compact padding--right-large">@Html.TitleForPage(T("Oops").ToString())</h1>
+            </li>
+            <li class="list__item margin--bottom-none padding--top-small">
+                <p class="border--left@medium border--color-white-transparent padding--left-large@medium text--line-height-loose">@T("It appears that the page you are looking for doesn't exist.") <a href="/" class="text--white">Click here to return home.</a></p>
+            </li>
+        </ul>
+    </div>
+</section>

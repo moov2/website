@@ -1,0 +1,18 @@
+@{
+    Html.AddPageClassNames(new string [] { "is-inverted-header" });
+}
+
+<section class="section section--heading section--height-full align--vertical-middle bg--color-purple">
+    <div class="padding--horizontal-large section__content">
+        <ul class="list flex flex--direction-column flex--direction-row@medium">
+            <li class="list__item margin--bottom-none">
+                <h1 class="text--uppercase text--line-height-compact padding--right-large">@Html.TitleForPage(T("Error").ToString())</h1>
+            </li>
+            <li class="list__item margin--bottom-none padding--top-small">
+                <p class="border--left@medium border--color-white-transparent padding--left-large@medium text--line-height-loose">
+                    An unhandled exception has occurred and the request was terminated. Please refresh the page. If the error persists, <a href="/" class="text--white">Click here go back</a>
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
