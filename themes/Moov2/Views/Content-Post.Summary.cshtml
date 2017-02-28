@@ -40,7 +40,7 @@
     <ul class="list flex flex--direction-column flex--direction-row@medium flex--align-center@medium">
         <li class="list__item">
             @if (!string.IsNullOrEmpty(thumbnailUrl)) {
-            <img src="@thumbnailUrl" alt="@thumbnailAlt" />
+            <img src="@thumbnailUrl" alt="@thumbnailAlt" class="box box--thumbnail bg--color-grey shadow--box-light" />
             } else {
             <img src="/Themes/Moov2/Content/blog-default-image.jpg" alt="Thumbnail for @postTitle blog post" class="box box--thumbnail bg--color-grey shadow--box-light" />
             }
