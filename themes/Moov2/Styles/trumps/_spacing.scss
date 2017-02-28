@@ -91,9 +91,8 @@
 .padding--top-gigantic\@medium { @include bp-min-width($bp-medium) { @include rem(padding-top, $spacing-gigantic); } }
 .padding--top-none\@medium { @include bp-min-width($bp-medium) { padding-top: 0; } }
 
-.padding--horizontal-none { padding-left: 0; padding-right: 0; }
-.padding--horizontal-none\@medium { @include bp-min-width($bp-medium) { padding-left: 0; padding-right: 0; } }
 .padding--horizontal { @include rem(padding, 0 $spacing-default); }
+.padding--horizontal\@medium { @include bp-min-width($bp-medium) { @include rem(padding, 0 $spacing-default); } }
 .padding--horizontal\@large { @include bp-min-width($bp-large) { @include rem(padding, 0 $spacing-default); } }
 .padding--horizontal-large { @include rem(padding, 0 $spacing-large); }
 .padding--horizontal-large\@large { @include bp-min-width($bp-large) { @include rem(padding, 0 $spacing-large); } }
@@ -105,6 +104,8 @@
         @include rem(padding-right, $spacing-gigantic);
     }
 }
+.padding--horizontal-none { padding-left: 0; padding-right: 0; }
+.padding--horizontal-none\@medium { @include bp-min-width($bp-medium) { padding-left: 0; padding-right: 0; } }
 
 .padding--vertical { @include rem(padding, $spacing-default 0); }
 .padding--vertical-large { @include rem(padding, $spacing-large 0); }
