@@ -139,6 +139,54 @@
     color: $color-white;
 }
 
+.bg--rje-cloud-1,
+.bg--rje-cloud-2,
+.bg--rje-cloud-3 {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.bg--rje-cloud-1 {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Rocket%20Jump%20Events/work-rocket-jump-cloud-1.png);
+    height: 120px;
+    left: -226px;
+    top: 20px;
+    width: 140px;
+
+    @include bp-min-width($bp-medium) {
+        top: 70px;
+    }
+}
+
+.bg--rje-cloud-2 {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Rocket%20Jump%20Events/work-rocket-jump-cloud-2.png);
+    height: 120px;
+    right: -225px;
+    top: 170px;
+    width: 120px;
+
+    @include bp-min-width($bp-medium) {
+        top: 225px;
+    }
+}
+
+.bg--rje-cloud-3 {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Rocket%20Jump%20Events/work-rocket-jump-cloud-3.png);
+    height: 100px;
+    left: -237px;
+    top: 100px;
+    width: 100px;
+
+    @include bp-min-width($bp-medium) {
+        top: 500px;
+    }
+}
+
 .bg--supermassive-games {
     @include bp-min-width($bp-large) {
         background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Supermassive%20Games/bg-work-supermassive-games-2100x610.jpg);

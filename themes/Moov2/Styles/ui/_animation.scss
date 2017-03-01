@@ -5,42 +5,13 @@
  */
 
 /*
- * Bounce
-*/
-
-@-webkit-keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
-    40% {-webkit-transform: translateY(-30px);}
-    60% {-webkit-transform: translateY(-15px);}
-}
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-    40% {transform: translateY(-30px);}
-    60% {transform: translateY(-15px);}
-}
-
-.animation--bounce {
-    -webkit-animation-name: bounce;
-            animation-name: bounce;
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-    -webkit-animation-iteration-count:infinite;
-            animation-iteration-count:infinite;
-}
-
-/*
  * Hero images on home page
 */
 
 .animation--hero-fade {
-    -webkit-animation-name: HeroFade;
-            animation-name: HeroFade;
-    -webkit-animation-duration: 12s;
-            animation-duration: 12s;
-    -webkit-animation-iteration-count:infinite;
-            animation-iteration-count:infinite;
+    animation-name: HeroFade;
+    animation-duration: 12s;
+    animation-iteration-count:infinite;
 }
 
 @keyframes HeroFade {
@@ -56,12 +27,9 @@
 */
 
 .animation--hero-cta-fade {
-    -webkit-animation-name: HeroCTAFade;
-            animation-name: HeroCTAFade;
-    -webkit-animation-duration: 12s;
-            animation-duration: 12s;
-    -webkit-animation-iteration-count:infinite;
-            animation-iteration-count:infinite;
+    animation-name: HeroCTAFade;
+    animation-duration: 12s;
+    animation-iteration-count:infinite;
 }
 
 @keyframes HeroCTAFade {
@@ -85,12 +53,9 @@
 
     pointer-events: none;
 
-    -webkit-animation-name: HelloGamesFreighter;
-            animation-name: HelloGamesFreighter;
-    -webkit-animation-duration: 10s;
-            animation-duration: 10s;
-    -webkit-animation-iteration-count:infinite;
-            animation-iteration-count:infinite;
+    animation-name: HelloGamesFreighter;
+    animation-duration: 10s;
+    animation-iteration-count:infinite;
 
     @include bp-min-width($bp-v-tiny) { bottom: -17rem; }
     @include bp-min-width($bp-tiny) {
@@ -125,6 +90,61 @@
     0% { transform:  translate(0px,-10px); }
     50% { transform:  translate(0px,0px); }
     100% { transform:  translate(0px,-10px); }
+}
+
+/*
+ * Rocket Jump Events clouds
+*/
+
+.animation--rje-cloud-1,
+.animation--rje-cloud-2,
+.animation--rje-cloud-3 {
+    animation-delay: 3s;
+    animation-fill-mode: both;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes RJECloud1 {
+    0% { left: -140px; }
+    100% { left: 100%; }
+}
+
+.animation--rje-cloud-1 {
+    animation-name: RJECloud1;
+    animation-duration: 30s;
+
+    @include bp-min-width($bp-medium) {
+        animation-duration: 80s;
+    }
+}
+
+@keyframes RJECloud2 {
+    0% { right: -120px; }
+    100% { right: 100%; }
+}
+
+.animation--rje-cloud-2 {
+    animation-name: RJECloud2;
+    animation-duration: 60s;
+
+    @include bp-min-width($bp-medium) {
+        animation-duration: 100s;
+    }
+}
+
+@keyframes RJECloud3 {
+    0% { left: -100px; }
+    100% { left: 100%; }
+}
+
+.animation--rje-cloud-3 {
+    animation-name: RJECloud3;
+    animation-duration: 80s;
+
+    @include bp-min-width($bp-medium) {
+        animation-duration: 120s;
+    }
 }
 
 /*
