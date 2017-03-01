@@ -136,10 +136,12 @@
 }
 
 .bg--rocket-jump {
-    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Temporary/section-bg-rocket-jump-1920x1080.jpg);
-    background-position: center;
-    background-size: cover;
-    color: $color-white;
+    @include bp-min-width($bp-large) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Rocket%20Jump%20Events/bg-work-rje-2100x610-v3.jpg);
+        background-position: center;
+        background-repeat: repeat-x;
+        background-size: contain;
+    }
 }
 
 .bg--rje-cloud-1,
@@ -147,7 +149,7 @@
 .bg--rje-cloud-3 {
     pointer-events: none;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
 
     background-position: center;
     background-repeat: no-repeat;
@@ -186,7 +188,7 @@
     width: 100px;
 
     @include bp-min-width($bp-medium) {
-        top: 500px;
+        top: 450px;
     }
 }
 

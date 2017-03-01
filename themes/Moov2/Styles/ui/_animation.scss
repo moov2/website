@@ -99,7 +99,6 @@
 .animation--rje-cloud-1,
 .animation--rje-cloud-2,
 .animation--rje-cloud-3 {
-    animation-delay: 3s;
     animation-fill-mode: both;
     animation-iteration-count:infinite;
     animation-timing-function: linear;
@@ -111,8 +110,9 @@
 }
 
 .animation--rje-cloud-1 {
-    animation-name: RJECloud1;
+    animation-delay: 3s;
     animation-duration: 30s;
+    animation-name: RJECloud1;
 
     @include bp-min-width($bp-medium) {
         animation-duration: 80s;
@@ -125,8 +125,9 @@
 }
 
 .animation--rje-cloud-2 {
-    animation-name: RJECloud2;
+    animation-delay: 9s;
     animation-duration: 60s;
+    animation-name: RJECloud2;
 
     @include bp-min-width($bp-medium) {
         animation-duration: 100s;
@@ -139,8 +140,9 @@
 }
 
 .animation--rje-cloud-3 {
-    animation-name: RJECloud3;
+    animation-delay: 12s;
     animation-duration: 80s;
+    animation-name: RJECloud3;
 
     @include bp-min-width($bp-medium) {
         animation-duration: 120s;
