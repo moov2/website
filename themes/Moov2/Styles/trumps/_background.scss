@@ -119,10 +119,13 @@
 }
 
 .bg--lol-compare {
-    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Temporary/bg_champion_annie_1920x1080.jpg);
-    background-position: top center;
-    background-size: cover;
-    color: $color-white;
+    @include bp-min-width($bp-large) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/LoL%20Compare/bg-work-lol-compare-2100x610.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: $color-white;
+    }
 }
 
 .bg--microsoft-studios {
