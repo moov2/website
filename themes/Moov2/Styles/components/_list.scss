@@ -42,6 +42,7 @@
     &.double\@small > .list__item { @include bp-min-width($bp-small) { width: 50%; } }
     &.double\@medium > .list__item { @include bp-min-width($bp-medium) { width: 50%; } }
     &.double\@medium-large > .list__item { @include bp-min-width($bp-medium-large) { width: 50%; } }
+    &.double\@large > .list__item { @include bp-min-width($bp-large) { width: 50%; } }
 
     &.triple > .list__item { width: 33.33%; }
     &.triple\@tiny > .list__item { @include bp-min-width($bp-tiny) { width: 33.33%; } }

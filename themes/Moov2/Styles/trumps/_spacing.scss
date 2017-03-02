@@ -15,6 +15,7 @@
 .margin--bottom-small { @include rem(margin-bottom, $spacing-small); }
 .margin--bottom-default { @include rem(margin-bottom, $spacing-default); }
 .margin--bottom-large { @include rem(margin-bottom, $spacing-large); }
+.margin--bottom-large\@large { @include bp-min-width($bp-large) { @include rem(margin-bottom, $spacing-large); } }
 .margin--bottom-gigantic { @include rem(margin-bottom, $spacing-gigantic)}
 .margin--bottom-gigantic\@medium { @include bp-min-width($bp-medium) { @include rem(margin-bottom, $spacing-gigantic); } }
 .margin--bottom-gigantic\@large { @include bp-min-width($bp-large) { @include rem(margin-bottom, $spacing-gigantic); } }

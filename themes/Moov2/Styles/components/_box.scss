@@ -16,12 +16,15 @@
 }
 
 .box--logo {
+	width: 100%;
+
 	text-align: center;
 
-	display: table-cell;
-	height: 250px;
-	vertical-align: middle;
-	width: 250px;
+	@include bp-min-width($bp-medium) {
+		@include rem(width, 250px);
+
+		text-align: right;
+	}
 }
 
 .box--padded { @include rem(padding, $spacing-default); }
