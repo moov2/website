@@ -190,6 +190,7 @@
 
     @include bp-min-width($bp-medium) {
         top: 450px;
+        z-index: 1;
     }
 }
 
