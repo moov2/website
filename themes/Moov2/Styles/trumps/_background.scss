@@ -186,6 +186,7 @@
     left: -237px;
     top: 100px;
     width: 100px;
+    z-index: -1;
 
     @include bp-min-width($bp-medium) {
         top: 450px;

@@ -10,8 +10,9 @@
 
 .avatar {
     display: block;
-    height: $avatar-dimensions;
-    width: $avatar-dimensions;
+    height: auto;
+    max-width: $avatar-dimensions;
+    min-width: $avatar-dimensions;
 
     border-radius: 50%;
 }

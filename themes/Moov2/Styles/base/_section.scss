@@ -146,7 +146,7 @@ section,
 }
 
 .section--testimonials {
-    @include rem(height, $spacing-large * 20);
+    @include rem(height, $spacing-x-large * 19);
     @include rem(margin-bottom, $spacing-gigantic * 3.4);
     @include rem(margin-top, $spacing-gigantic * 3.4);
 
