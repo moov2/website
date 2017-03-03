@@ -46,7 +46,7 @@
 
 .animation--freighter {
     position: absolute;
-    bottom: -15rem;
+    bottom: -8rem;
     left: 5rem;
     max-width: 75%;
     z-index: 1;
@@ -57,32 +57,37 @@
     animation-duration: 10s;
     animation-iteration-count:infinite;
 
-    @include bp-min-width($bp-v-tiny) { bottom: -17rem; }
     @include bp-min-width($bp-tiny) {
-        bottom: -20rem;
+        bottom: -10rem;
         left: 7rem;
     }
     @include bp-min-width($bp-small) {
-        bottom: -23rem;
-        left: 10rem;
+        bottom: -10rem;
+        left: 17%;
     }
     @include bp-min-width($bp-medium) {
-        bottom:-30rem;
-        left: 16rem;
-    }
-    @include bp-min-width($bp-medium-large) {
-        bottom:-28rem;
-        left: 38rem;
+        bottom: -12rem;
+        left: 50%;
+        margin-left: -245px;
     }
     @include bp-min-width($bp-large) {
-        bottom:-25rem;
-        left: 50rem;
+        bottom: 0rem;
+        left: auto;
+        margin-left: auto;
+        margin-right: -60rem;
+        max-width: 350px;
+        right: 50%;
     }
     @include bp-min-width($bp-x-large) {
-        left: 60rem;
+        margin-right: -63rem;
     }
     @include bp-min-width($bp-huge) {
-        left: 88%;
+        margin-right: -74rem;
+    }
+    @include bp-min-width($bp-huge + 350) {
+        bottom: -10rem;
+        margin-right: -89rem;
+        max-width: none;
     }
 }
 

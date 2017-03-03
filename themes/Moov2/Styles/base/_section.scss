@@ -64,7 +64,17 @@ section,
             width: 100%;
             z-index: -1;
 
-            .section__content__bg--skew {
+            .section--heading & {
+                height: 120%;
+                top: -10%;
+
+                @media all and (min-width: $bp-large) {
+                    height: 140%;
+                    top: -20%;
+                }
+            }
+
+            &--skew {
                 height: 140%;
                 left: 0;
                 position: absolute;
@@ -87,17 +97,22 @@ section,
 }
 
 .section--heading {
-	@include rem(height, $spacing-x-large * 7);
-	@include rem(margin-bottom, $spacing-gigantic * 3);
-	@include rem(padding-top, $header-height);
+	@include rem(padding-bottom, $spacing-large * 3);
+	@include rem(padding-top, $spacing-x-large * 3.4);
+
+    @media all and (min-width: $bp-v-tiny) {
+        @include rem(padding-bottom, $spacing-x-large * 3);
+        @include rem(padding-top, $spacing-x-large * 4);
+    }
+
+    @media all and (min-width: $bp-tiny) {
+        @include rem(padding-bottom, $spacing-x-large * 4);
+        @include rem(padding-top, $spacing-x-large * 5);
+    }
 
 	@media all and (min-width: $bp-medium) {
-		@include rem(height, $spacing-x-large * 9.2);
-		@include rem(margin-bottom, $spacing-gigantic * 4);
-	}
-
-	@media all and (min-width: $bp-large) {
-		@include rem(margin-bottom, $spacing-large);
+        @include rem(padding-bottom, $spacing-x-large * 3.8);
+        @include rem(padding-top, $spacing-x-large * 5);
 	}
 }
 
