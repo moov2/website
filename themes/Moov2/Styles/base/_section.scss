@@ -54,6 +54,26 @@ section,
 		.section--content-right & { margin-right: 0; }
 	}
 
+        .section__content__bg {
+            height: 100%;
+            left: 0;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            transform: skewY(-4deg);
+            width: 100%;
+            z-index: -1;
+
+            .section__content__bg--skew {
+                height: 140%;
+                left: 0;
+                position: absolute;
+                top: -20%;
+                transform: skewY(4deg);
+                width: 100%;
+            }
+        }
+
 /**
  * 1. Both need flex in order to fill the height of their parent element.
  */
