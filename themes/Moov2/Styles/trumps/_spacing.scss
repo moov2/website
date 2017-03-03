@@ -90,6 +90,7 @@
 .padding--top-large\@medium { @include bp-min-width($bp-medium) { @include rem(padding-top, $spacing-large); } }
 .padding--top-gigantic { @include rem(padding-top, $spacing-gigantic); }
 .padding--top-gigantic\@medium { @include bp-min-width($bp-medium) { @include rem(padding-top, $spacing-gigantic); } }
+.padding--top-gigantic\@large { @include bp-min-width($bp-large) { @include rem(padding-top, $spacing-gigantic); } }
 .padding--top-none\@medium { @include bp-min-width($bp-medium) { padding-top: 0; } }
 
 .padding--horizontal { @include rem(padding, 0 $spacing-default); }
