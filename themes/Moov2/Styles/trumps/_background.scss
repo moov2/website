@@ -122,10 +122,9 @@
  */
 
 .bg--hello-games {
-    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Temporary/wallup-104275.jpg);
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Hello%20Games/work-hello-games-2560x1160.jpg);
     background-position: center;
     background-size: cover;
-    color: $color-white;
 }
 
 .bg--lol-compare {
@@ -140,9 +139,8 @@
 
 .bg--microsoft-studios {
     background-image: url(https://moov2websitedev.azureedge.net/media/Default/Temporary/fable_legends_2-HD.jpg);
-    background-position: 0 0;
+    background-position: top center;
     background-size: cover;
-    color: $color-white;
 }
 
 .bg--rocket-jump {
@@ -202,6 +200,12 @@
         top: 450px;
         z-index: 1;
     }
+}
+
+.bg--rush-of-blood {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Supermassive%20Games/work-supermassive-games-2560x1440.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 .bg--supermassive-games {

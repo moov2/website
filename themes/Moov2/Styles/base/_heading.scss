@@ -42,7 +42,7 @@ h6 {
 }
 
 h1 {
-	@include rem(font-size, $font-size-heading-mobile);
+	@include rem(font-size, $spacing-base * 2);
 	@include rem(margin-bottom, $spacing-default);
 	@include rem(padding-left, $spacing-base);
 	@include rem(padding-right, $spacing-base);
@@ -50,6 +50,9 @@ h1 {
     font-weight: $font-weight-bold;
     line-height: 1.2;
 
+	@media all and (min-width: $bp-v-tiny) {
+		@include rem(font-size, $font-size-heading-mobile);
+	}
 	@media all and (min-width: $bp-medium) {
 		@include rem(font-size, $font-size-heading-mobile * 1.5);
 		@include rem(margin-bottom, $spacing-large);
