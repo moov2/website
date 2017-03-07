@@ -98,7 +98,7 @@
 }
 
 /*
- * Rocket Jump Events clouds
+ * Rocket Jump Events clouds (work page)
 */
 
 .animation--rje-cloud-1,
@@ -155,23 +155,78 @@
 }
 
 /*
- * Rocket Jump Events header
+ * Rocket Jump Events header (post)
 */
+
+@keyframes RocketMan {
+    0% { bottom: 230px; }
+    50% { bottom: 210px; }
+    100% { bottom: 230px; }
+}
+
+.animation--rje-man {
+    @include svg-rje-man($fillColor: $color-rje-light);
+
+    position: absolute;
+    height: 250px;
+    width: 100px;
+    bottom: 300px;
+    left: 50%;
+    z-index: 2;
+
+    animation: RocketMan 3s ease infinite;
+
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @media all and (min-width: $bp-medium) {
+        left: 75%;
+    }
+
+    @media all and (min-width: $bp-medium-large) {
+        height: 340px;
+        left: 67%;
+        width: 160px;
+    }
+}
 
 @keyframes RocketClouds {
     0% { background-position: 0 0; }
-    50% { background-position: -1126px 0; }
-    100% { background-position: -2252px 0; }
+    50% { background-position: -2600px 0; }
+    100% { background-position: -5200px 0; }
 }
 
 @keyframes RocketClouds2 {
-    0% { background-position: -500px 10px; }
-    50% { background-position: -1626px 10px; }
-    100% { background-position: -2752px 10px; }
+    0% { background-position: -500px 0; }
+    50% { background-position: -2000px 0; }
+    100% { background-position: -3500px 0; }
 }
 
-@keyframes RocketMan {
-    0% { bottom: -100px; }
-    50% { bottom: -180px; }
-    100% { bottom: -100px; }
+.animation--rje-cloud-4,
+.animation--rje-cloud-5 {
+    @include svg-rje-clouds($fillColor: $color-rje-lightest);
+
+    width: 100%;
+    height: 390px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+
+    animation: RocketClouds 40s linear infinite;
+
+    background-repeat: repeat-x;
+    background-size: 2600px 601px;
+}
+
+.animation--rje-cloud-5 {
+    @include svg-rje-clouds($fillColor: $color-rje-dark);
+
+    bottom: 140px;
+    height: 347px;
+    z-index: 1;
+
+    animation: RocketClouds2 60s linear infinite;
+    background-size: 1500px 347px;
+    opacity: 0.2;
 }
