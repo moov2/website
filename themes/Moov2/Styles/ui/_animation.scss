@@ -159,9 +159,9 @@
 */
 
 @keyframes RocketMan {
-    0% { bottom: 230px; }
-    50% { bottom: 210px; }
-    100% { bottom: 230px; }
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
 }
 
 .animation--rje-man {
@@ -170,8 +170,8 @@
     position: absolute;
     height: 250px;
     width: 100px;
-    bottom: 300px;
-    left: 50%;
+    bottom: 50px;
+    left: 45%;
     z-index: 2;
 
     animation: RocketMan 3s ease infinite;
@@ -179,11 +179,17 @@
     background-repeat: no-repeat;
     background-size: 100%;
 
+    @media all and (min-width: $bp-v-tiny) {
+        left: 35%;
+    }
+
     @media all and (min-width: $bp-medium) {
+        bottom: 80px;
         left: 75%;
     }
 
     @media all and (min-width: $bp-medium-large) {
+        bottom: 145px;
         height: 340px;
         left: 67%;
         width: 160px;
@@ -207,7 +213,7 @@
     @include svg-rje-clouds($fillColor: $color-rje-lightest);
 
     width: 100%;
-    height: 390px;
+    height: 260px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -217,16 +223,36 @@
 
     background-repeat: repeat-x;
     background-size: 2600px 601px;
+
+    @media all and (min-width: $bp-medium) {
+        height: 300px;
+    }
+
+    @media all and (min-width: $bp-medium-large) {
+        height: 320px;
+    }
+
+    @media all and (min-width: $bp-huge) {
+        height: 390px;
+    }
 }
 
 .animation--rje-cloud-5 {
     @include svg-rje-clouds($fillColor: $color-rje-dark);
 
-    bottom: 140px;
+    bottom: 0;
     height: 347px;
     z-index: 1;
 
     animation: RocketClouds2 60s linear infinite;
     background-size: 1500px 347px;
     opacity: 0.2;
+
+    @media all and (min-width: $bp-medium-large) {
+        height: 320px;
+    }
+
+    @media all and (min-width: $bp-huge) {
+        bottom: 140px;
+    }
 }
