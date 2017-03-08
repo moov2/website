@@ -123,9 +123,21 @@
  */
 
 .bg--hello-games {
-    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Hello%20Games/work-hello-games-2560x1160.jpg);
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Hello%20Games/work-hello-games-414x736.jpg);
     background-position: center;
     background-size: cover;
+
+    @include bp-min-width($bp-medium) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Hello%20Games/work-hello-games-768x1024.jpg);
+    }
+
+    @include bp-min-width($bp-large) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Hello%20Games/work-hello-games-1280x730.jpg);
+    }
+
+    @include bp-min-width($bp-huge) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Hello%20Games/work-hello-games-2560x1440.jpg);
+    }
 }
 
 .bg--lol-compare {
