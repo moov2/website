@@ -140,6 +140,24 @@
     }
 }
 
+.bg--league-of-legends {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/LoL%20Compare/work-league-of-legends-414x736.jpg);
+    background-position: center;
+    background-size: cover;
+
+    @include bp-min-width($bp-medium) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/LoL%20Compare/work-league-of-legends-768x1024.jpg);
+    }
+
+    @include bp-min-width($bp-large) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/LoL%20Compare/work-league-of-legends-1280x730.jpg);
+    }
+
+    @include bp-min-width($bp-huge) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/LoL%20Compare/work-league-of-legends-2560x1440.jpg);
+    }
+}
+
 .bg--lol-compare {
     @include bp-min-width($bp-large) {
         background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/LoL%20Compare/bg-work-lol-compare-2100x610.jpg);
