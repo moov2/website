@@ -30,7 +30,13 @@
 .box--padded { @include rem(padding, $spacing-default); }
 
 .box--thumbnail {
-    @include rem(max-width, 300px);
-
     height: auto;
+    max-width: 100%;
+    width: 100%;
+
+    @include bp-min-width($bp-medium) {
+    	@include rem(max-width, 300px);
+
+    	width: auto;
+    }
 }
