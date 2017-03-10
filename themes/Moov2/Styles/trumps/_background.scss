@@ -123,38 +123,38 @@
  */
 
 .bg--fable-legends {
-    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Microsoft%20Studios/work-fable-legends-414x736.jpg);
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Microsoft%20Studios/work-fable-legends-370x500.jpg);
     background-position: center;
     background-size: cover;
 
     @include bp-min-width($bp-medium) {
-        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Microsoft%20Studios/work-fable-legends-768x1024.jpg);
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Microsoft%20Studios/work-fable-legends-780x660.jpg);
     }
 
     @include bp-min-width($bp-large) {
-        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Microsoft%20Studios/work-fable-legends-1280x730.jpg);
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Microsoft%20Studios/work-fable-legends-1260x700.jpg);
     }
 
     @include bp-min-width($bp-huge) {
-        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Microsoft%20Studios/work-fable-legends-2560x1440.jpg);
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Microsoft%20Studios/work-fable-legends-2560x900.jpg);
     }
 }
 
 .bg--hello-games {
-    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Hello%20Games/work-hello-games-414x736.jpg);
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Hello%20Games/work-hello-games-370x500.jpg);
     background-position: center;
     background-size: cover;
 
     @include bp-min-width($bp-medium) {
-        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Hello%20Games/work-hello-games-768x1024.jpg);
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Hello%20Games/work-hello-games-780x660.jpg);
     }
 
     @include bp-min-width($bp-large) {
-        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Hello%20Games/work-hello-games-1280x730.jpg);
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Hello%20Games/work-hello-games-1260x700.jpg);
     }
 
     @include bp-min-width($bp-huge) {
-        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Hello%20Games/work-hello-games-2560x1440.jpg);
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Hello%20Games/work-hello-games-2560x900.jpg);
     }
 }
 
@@ -264,5 +264,23 @@
         background-repeat: no-repeat;
         background-size: contain;
         color: $color-white;
+    }
+}
+
+.bg--until-dawn {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/LoL%20Compare/work-supermassive-games-370x500.jpg);
+    background-position: center;
+    background-size: cover;
+
+    @include bp-min-width($bp-medium) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/LoL%20Compare/work-supermassive-games-780x660.jpg);
+    }
+
+    @include bp-min-width($bp-large) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/LoL%20Compare/work-supermassive-games-1260x700.jpg);
+    }
+
+    @include bp-min-width($bp-huge) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/LoL%20Compare/work-supermassive-games-2560x900.jpg);
     }
 }
