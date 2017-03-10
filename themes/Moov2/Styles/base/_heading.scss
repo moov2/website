@@ -69,10 +69,13 @@ h2 {
 
 	@include rem(padding-left, $spacing-base);
 	@include rem(padding-right, $spacing-base);
+	@include rem(padding-top, $spacing-large);
 
 	@media all and (min-width: $bp-medium) {
 		@include rem(font-size, $font-size-default * 2);
 	}
+
+	&:first-child { padding-top: none; }
 }
 
 h3 {
