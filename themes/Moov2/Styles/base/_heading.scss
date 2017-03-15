@@ -75,7 +75,7 @@ h2 {
 		@include rem(font-size, $font-size-default * 2);
 	}
 
-	&:first-child { padding-top: none; }
+	&:first-child { padding-top: none !important; }
 }
 
 h3 {
