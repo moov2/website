@@ -8,84 +8,6 @@
  * Promotes team related content.
  */
 
-
-.team {
-    position: relative;
-}
-
-    .team__content {
-        left: 0;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        width: 100%;
-
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
-
-        &:hover {
-            background: $color-primary;
-
-            opacity: 1;
-        }
-    }
-
-        .team__image,
-        .team__link {
-            display: block;
-        }
-
-    .team-member {
-        position: relative;
-        top: 0;
-        left: 0;
-
-        width: 20%;
-
-        @include rem(padding-left, $spacing-small);
-        @include rem(padding-right, $spacing-small);
-        @include rem(margin-bottom, $spacing-small);
-
-        hr {
-            opacity: 0.5;
-        }
-
-        h5 {
-            @include rem(margin-bottom, $spacing-default);
-        }
-
-        h4, hr {
-            @include rem(margin-bottom, $spacing-small);
-        }
-
-        img {
-            display: block;
-
-            height: auto;
-            margin: 0;
-            padding: 0;
-        }
-
-        .team-member__info {
-            position: relative;
-            top: 0;
-            left: 0;
-            flex: 1;
-
-            transition: 0.4s background-color ease;
-            text-align: left;
-
-            color: $color-white;
-            background-color: $color-brand;
-
-            @include rem(padding, $spacing-base);
-
-            &:hover {
-                background-color: lighten($color-brand, 5%);
-            }
-        }
-    }
-
 .team {
     display: flex;
     flex-flow: row wrap;
@@ -94,9 +16,11 @@
     color: white;
 }
 
-.team--member {
+.team__member {
     position: relative;
     width: 100%;
+
+    background-color: $color-brand;
 
     @media all and (min-width: $bp-medium) {
         width: 50%;
@@ -110,84 +34,38 @@
         width: 20%;
     }
 
-    &:hover {
-        .team--overlay { opacity: 1; }
-
-        .team--social,
-        .team--details {
-            opacity: 1;
-            transition: .5s ease;
-            transform: translateY(0px);
-        }
-
-        .team--details {
-            transition-delay: .2s;
-        }
-
-        .team--social {
-            transition: .4s ease;
-            transition-delay: .5s;
-        }
-    }
-
     img {
         display: block;
         width: 100%;
         height: auto;
     }
-}
 
-.team--social {
-    left: 2rem;
-    position: absolute;
-    top: 2rem;
-    z-index: 3;
-
-    line-height: 0;
-    font-size: 0;
-    color: transparent;
-
-    opacity: 1;
-
-    @media all and (min-width: $bp-large) {
-        opacity: 0;
-        transform: translateY(-6px);
-    }
-
-    a {
-        color: white;
-        text-decoration: none;
-    }
-
+    h3,
     p {
-        margin-top: 0;
+        bottom: 2rem;
+        left: 2rem;
+        position: absolute;
+        z-index: 2;
 
-        font-size: 0.8rem;
-    }
-}
+        color: $color-white;
+        opacity: 1;
+        pointer-events: none;
+        text-transform: uppercase;
 
-.team--details {
-    bottom: 2rem;
-    left: 2rem;
-    position: absolute;
-    z-index: 2;
-
-    opacity: 1;
-    pointer-events: none;
-    text-transform: uppercase;
-
-    @media all and (min-width: $bp-large) {
-        opacity: 0;
-        transform: translateY(10px);
+        @media all and (min-width: $bp-large) {
+            opacity: 0;
+            transform: translateY(10px);
+        }
     }
 
     h3 {
+        bottom: 2.2rem;
+        padding-left: 0;
+        padding-right: 0;
+
         font-size: $font-size-default;
         letter-spacing: 0.05rem;
         line-height: 1;
-        margin-bottom: 0.6rem;
-        padding-left: 0;
-        padding-right: 0;
     }
 
     p {
@@ -198,35 +76,56 @@
         letter-spacing: 0.05rem;
         line-height: 1;
     }
-}
 
-.team--overlay {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 1;
+    .icon--twitter {
+        @include svg-twitter-logo($color-white);
 
-    background: rgba(0,0,0,0.2);
-    opacity: 1;
-    transition: opacity .8s;
+        height: 20px;
+        left: 2rem;
+        position: absolute;
+        top: 2rem;
+        width: 20px;
+        z-index: 3;
 
-    @media all and (min-width: $bp-large) {
-        background: rgba(0,0,0,0.5);
-        opacity: 0;
+        background-repeat: no-repeat;
+        background-size: 20px 17px;
+        color: transparent;
+        font-size: 0;
+        line-height: 0;
+        opacity: 1;
+
+        @media all and (min-width: $bp-large) {
+            opacity: 0;
+            transform: translateY(-6px);
+        }
     }
-}
 
-.social--twitter {
-    height: 20px;
-    width: 20px;
-    line-height: 0;
-    font-size: 0;
-    color: transparent;
+    &:hover {
+        .icon--twitter,
+        h3,
+        p {
+            opacity: 1;
+            transition: .5s ease;
+            transform: translateY(0px);
+        }
 
-    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20273.4%20222.2%22%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bisolation%3Aisolate%3B%7D.cls-2%7Bfill%3A%23fff%3Bmix-blend-mode%3Amultiply%3B%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20class%3D%22cls-1%22%3E%3Cpath%20class%3D%22cls-2%22%20d%3D%22M273.4%2026.3a112.1%20112.1%200%200%201-32.2%208.8%2056.3%2056.3%200%200%200%2024.7-31%20112.3%20112.3%200%200%201-35.6%2013.6%2056.1%2056.1%200%200%200-95.6%2051.2A159.2%20159.2%200%200%201%2019%2010.3a56.2%2056.2%200%200%200%2017.4%2074.9%2055.9%2055.9%200%200%201-25.4-7v.7a56.1%2056.1%200%200%200%2045%2055%2056.2%2056.2%200%200%201-25.3%201%2056.1%2056.1%200%200%200%2052.4%2039%20112.5%20112.5%200%200%201-69.7%2024A114.2%20114.2%200%200%201%200%20197a158.8%20158.8%200%200%200%2086%2025.2c103.2%200%20159.6-85.5%20159.6-159.6q0-3.6-.2-7.3a114%20114%200%200%200%2028-29z%22%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: 20px 17px;
+        h3,
+        p {
+            transition-delay: .2s;
+        }
+
+        .icon--twitter {
+            transition: .4s ease;
+            transition-delay: .5s;
+        }
+
+        img {
+            opacity: .2;
+            transition: .5s ease;
+
+            @media all and (min-width: $bp-large) {
+                opacity: .5;
+            }
+        }
+    }
 }
