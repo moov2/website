@@ -38,6 +38,12 @@
         display: block;
         width: 100%;
         height: auto;
+
+        opacity: .8;
+
+        @media all and (min-width: $bp-large) {
+            opacity: 1;
+        }
     }
 
     h3,
