@@ -41,8 +41,37 @@
 }
 
 /*
- * Hello Games freighter
+ * Hello Games
 */
+
+.animation--bike {
+    left: 0;
+    position: absolute;
+    top: 0;
+    max-width: 320px;
+
+    animation-name: HelloGamesBike;
+    animation-duration: 5s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes HelloGamesBike {
+    0% { transform:  translate(0px,-10px); }
+    50% { transform:  translate(0px,-20px); }
+    100% { transform:  translate(0px,-10px); }
+}
+
+.animation--bike-shadow {
+    animation-name: HelloGamesBikeShadow;
+    animation-duration: 5s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes HelloGamesBikeShadow {
+    0% { opacity: 1; }
+    50% { opacity: .2; }
+    100% { opacity: 1; }
+}
 
 .animation--freighter {
     position: absolute;
