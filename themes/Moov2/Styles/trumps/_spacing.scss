@@ -59,6 +59,7 @@
 .margin--right-large\@medium { @include bp-min-width($bp-medium) { @include rem(margin-right, $spacing-large); } }
 .margin--right-large\@medium-large { @include bp-min-width($bp-medium-large) { @include rem(margin-right, $spacing-large); } }
 .margin--right-gigantic\@medium { @include bp-min-width($bp-medium) { @include rem(margin-right, $spacing-gigantic); } }
+.margin--right-gigantic\@medium-large { @include bp-min-width($bp-medium-large) { @include rem(margin-right, $spacing-gigantic); } }
 
 .margin--top-large\@medium { @include bp-min-width($bp-medium) { @include rem(margin-top, $spacing-large); } }
 
