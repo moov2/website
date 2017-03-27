@@ -56,7 +56,8 @@
 .flex--direction-row-rev\@medium-large { @include bp-min-width($bp-medium-large) { flex-direction: row-reverse; } }
 .flex--direction-row-rev\@large { @include bp-min-width($bp-large) { flex-direction: row-reverse; } }
 
-.flex--grow { flex: 1; }
+.flex--grow { flex: 1 0 auto; }
+.flex--grow-equal { flex: 1; }
 
 .flex--justify-around { justify-content: space-around; }
 .flex--justify-around\@tiny { @include bp-min-width($bp-tiny) { justify-content: space-around; } }
