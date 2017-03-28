@@ -74,11 +74,15 @@ section,
                 }
             }
 
+            .section--heading-video & {
+                top: -10%;
+            }
+
             &--skew {
                 height: 140%;
                 left: 0;
                 position: absolute;
-                top: -20%;
+                top: -10%;
                 transform: skewY(4deg);
                 width: 100%;
             }
@@ -114,6 +118,10 @@ section,
         @include rem(padding-bottom, $spacing-x-large * 3.8);
         @include rem(padding-top, $spacing-x-large * 5);
 	}
+}
+
+.section--heading-video {
+    height: 87vh;
 }
 
 .section--client-break {
