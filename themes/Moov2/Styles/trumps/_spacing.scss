@@ -117,6 +117,6 @@
 .padding--vertical\@medium { @include bp-min-width($bp-medium) { @include rem(padding-bottom, $spacing-default); @include rem(padding-top, $spacing-large); } }
 .padding--vertical-large { @include rem(padding-bottom, $spacing-large); @include rem(padding-top, $spacing-large); }
 .padding--vertical-large\@medium { @include bp-min-width($bp-medium) { @include rem(padding-bottom, $spacing-large); @include rem(padding-top, $spacing-large); } }
-.padding--vertical-gigantic { @include rem(padding-bottom, $spacing-gigantic); @include rem(padding-top, $spacing-large); }
-.padding--vertical-gigantic\@medium { @include bp-min-width($bp-medium) { @include rem(padding-bottom, $spacing-gigantic); @include rem(padding-top, $spacing-large); } }
+.padding--vertical-gigantic { @include rem(padding-bottom, $spacing-gigantic); @include rem(padding-top, $spacing-gigantic); }
+.padding--vertical-gigantic\@medium { @include bp-min-width($bp-medium) { @include rem(padding-bottom, $spacing-gigantic); @include rem(padding-top, $spacing-gigantic); } }
 .padding--vertical-none\@medium { @include bp-min-width($bp-medium) { padding-bottom: 0; padding-top: 0; } }
