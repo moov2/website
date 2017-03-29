@@ -76,13 +76,14 @@ section,
 
             .section--heading-video & {
                 top: -10%;
+                background: #000;
             }
 
             &--skew {
-                height: 140%;
+                height: 110%;
                 left: 0;
                 position: absolute;
-                top: -10%;
+                top: 0;
                 transform: skewY(4deg);
                 width: 100%;
             }
@@ -121,7 +122,15 @@ section,
 }
 
 .section--heading-video {
-    height: 87vh;
+    @include rem(height, 540px);
+
+    @media all and (min-width: $bp-v-tiny) {
+        @include rem(height, 620px);
+    }
+
+    @media all and (min-width: $bp-medium) {
+        height: 87vh;
+    }
 }
 
 .section--client-break {
