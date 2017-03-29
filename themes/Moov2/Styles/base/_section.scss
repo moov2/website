@@ -128,8 +128,32 @@ section,
         @include rem(height, 620px);
     }
 
+    @media all and (min-width: $bp-small) {
+        @include rem(height, 820px);
+    }
+
     @media all and (min-width: $bp-medium) {
-        height: 87vh;
+        @include rem(height, 890px);
+    }
+
+    @media all and (min-width: $bp-medium-large) {
+        @include rem(height, 720px);
+    }
+
+    @media all and (min-width: $bp-large) {
+        @include rem(height, 820px);
+    }
+
+    @media all and (min-width: $bp-x-large) {
+        @include rem(height, 860px);
+    }
+
+    @media all and (min-width: $bp-huge) {
+        @include rem(height, 950px);
+    }
+
+    @media all and (min-width: $bp-huge * 1.1 ) { /* 1815px */
+        @include rem(height, 1020px);
     }
 }
 

@@ -34,11 +34,36 @@
 		display: none;
 
 		@media all and (min-width: $bp-medium-large) {
+			@include rem(top, $spacing-default * 3);
+
+			display: block;
+			height: 120%;
+			left: -10%;
+			position: absolute;
+			width: 120%;
+		}
+
+		@media all and (min-width: $bp-large) {
+			@include rem(top, $spacing-default * 3);
+
+			display: block;
+			height: 110%;
+			left: -5%;
+			position: absolute;
+			width: 110%;
+		}
+
+		@media all and (min-width: $bp-huge) {
+			@include rem(top, $spacing-large * 2);
+
 			display: block;
 			height: 100%;
 			left: 0;
 			position: absolute;
-			top: 0;
 			width: 100%;
+		}
+
+		@media all and (min-width: $bp-huge * 1.3 ) { /* 2145px */
+			top: -6%;
 		}
 	}
