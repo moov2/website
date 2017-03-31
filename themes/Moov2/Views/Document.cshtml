@@ -14,7 +14,7 @@
     string siteName = Convert.ToString(WorkContext.CurrentSite.SiteName);
     IHtmlString cssClasses = @Html.ClassForPage();
     string themePath = WorkContext.CurrentTheme.Location + "/" + WorkContext.CurrentTheme.Id;
-    
+
     //Disabled critical CSS / async loading of CSS until we've got the site initial
     //a stable condition to make a call on what is critical.
     //var hasCookie = WorkContext.HttpContext.Request.Cookies[cookieName] != null;
@@ -39,6 +39,7 @@
         @if (hasCookie) {
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Hind:400,400i,700" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="@Url.Content(themePath + "/Styles/Site.css")">
+        <link rel="stylesheet" type="text/css" href="@Url.Content(themePath + "/Styles/a11y-en.css")">
 
         <script src="@Url.Content(themePath + "/Scripts/bundle.js")" async></script>
 
