@@ -22,6 +22,11 @@
 
 	flex: 1;
 
+	/* IE10+ CSS styles go here */
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		flex: 0 1 auto;
+    }
+
 	@media all and (min-width: $bp-v-tiny) {
 		flex: initial;
 		padding-left: 0;

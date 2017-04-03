@@ -15,7 +15,7 @@ main {
 	@include rem(font-size, $font-size-default);
 
 	box-sizing: border-box;
-	flex: 1; /* 1. */
+	flex: 1 auto; /* 1. */
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
