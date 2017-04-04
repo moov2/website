@@ -268,19 +268,19 @@
 }
 
 .bg--until-dawn {
-    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Supermassive%20Games/work-supermassive-games-370x500.jpg);
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Supermassive%20Games/work-supermassive-games-header-370x500.jpg);
     background-position: center;
     background-size: cover;
 
     @include bp-min-width($bp-medium) {
-        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Supermassive%20Games/work-supermassive-games-780x660.jpg);
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Supermassive%20Games/work-supermassive-games-header-780x660.jpg);
     }
 
     @include bp-min-width($bp-large) {
-        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Supermassive%20Games/work-supermassive-games-1260x700.jpg);
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Supermassive%20Games/work-supermassive-games-header-1260x700.jpg);
     }
 
     @include bp-min-width($bp-huge) {
-        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Supermassive%20Games/work-supermassive-games-2560x900.jpg);
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Supermassive%20Games/work-supermassive-games-header-2560x900.jpg);
     }
 }
