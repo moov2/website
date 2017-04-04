@@ -80,7 +80,7 @@ section,
             }
 
             &--skew {
-                height: 110%;
+                height: 115%;
                 left: 0;
                 position: absolute;
                 top: 0;
@@ -176,6 +176,8 @@ section,
 		}
 
 		&:before {
+			top: 0;
+			left: 0;
 			z-index: 2;
 			position: absolute;
 			display: block;
