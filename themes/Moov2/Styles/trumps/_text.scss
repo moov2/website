@@ -37,6 +37,11 @@
         text-align: center;
     }
 }
+.text--centered\@medium-large {
+    @media all and (min-width: $bp-medium-large) {
+        text-align: center;
+    }
+}
 .text--centered\@large {
     @media all and (min-width: $bp-large) {
         text-align: center;
@@ -45,6 +50,11 @@
 .text--left { text-align: left; }
 .text--left\@medium {
     @media all and (min-width: $bp-medium) {
+        text-align: left;
+    }
+}
+.text--left\@medium-large {
+    @media all and (min-width: $bp-medium-large) {
         text-align: left;
     }
 }

@@ -15,6 +15,7 @@
 
 .border--left { border-left: 1px solid; }
 .border--left\@medium { @include bp-min-width($bp-medium) { border-left: 1px solid } }
+.border--left\@medium-large { @include bp-min-width($bp-medium-large) { border-left: 1px solid } }
 
 .border--right\@medium { @include bp-min-width($bp-medium) { border-right: 1px solid } }
 

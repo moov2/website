@@ -20,7 +20,7 @@
 
 	text-align: center;
 
-	@include bp-min-width($bp-medium) {
+	@include bp-min-width($bp-medium-large) {
 		@include rem(width, 250px);
 
 		text-align: right;

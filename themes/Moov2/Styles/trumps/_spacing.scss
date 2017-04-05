@@ -49,6 +49,7 @@
 
 .margin--left\@medium { @include bp-min-width($bp-medium) { @include rem(margin-left, $spacing-default); } }
 .margin--left-large\@medium { @include bp-min-width($bp-medium) { @include rem(margin-left, $spacing-large); } }
+.margin--left-large\@medium-large { @include bp-min-width($bp-medium-large) { @include rem(margin-left, $spacing-large); } }
 .margin--left-gigantic\@medium { @include bp-min-width($bp-medium) { @include rem(margin-left, $spacing-gigantic); } }
 .margin--left-gigantic-neg\@medium { @include bp-min-width($bp-medium) { @include rem(margin-left, -$spacing-gigantic); } }
 .margin--left-gigantic-neg\@medium-large { @include bp-min-width($bp-medium-large) { @include rem(margin-left, -$spacing-gigantic); } }
@@ -78,6 +79,7 @@
 .padding--left-small { @include rem(padding-left, $spacing-small); }
 .padding--left-large { @include rem(padding-left, $spacing-large); }
 .padding--left-large\@medium { @include bp-min-width($bp-medium) { @include rem(padding-left, $spacing-large); } }
+.padding--left-large\@medium-large { @include bp-min-width($bp-medium-large) { @include rem(padding-left, $spacing-large); } }
 .padding--left-gigantic\@medium { @include bp-min-width($bp-medium) { @include rem(padding-left, $spacing-gigantic); } }
 
 .padding--right-none { padding-right: 0; }
