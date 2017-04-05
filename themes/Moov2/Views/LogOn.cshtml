@@ -7,16 +7,19 @@
     Html.AddPageClassNames(new string [] { "is-inverted-header" });
 
     var isLoginError = Html.ValidationSummary(true, "Test") != null;
-    var backgroundCss = isLoginError ? "bg--skew-color-red" : "bg--skew-color-teal";
+    var backgroundCss = isLoginError ? "bg--color-red" : "bg--color-blue";
 }
 
-<div class="section section--heading align--vertical-middle bg--skew @backgroundCss margin--bottom-gigantic@large">
+<div class="section section--heading flex flex--align-center margin--bottom-gigantic">
     <div class="section__content">
-        <h1 class="margin--bottom-large text--line-height-compact text--centered@medium">@Html.TitleForPage((string)Model.Title)</h1>
+        <h1 class="margin--bottom-none text--line-height-compact text--centered@medium text--white">@Html.TitleForPage((string)Model.Title)</h1>
+        <div class="section__content__bg">
+            <div class="section__content__bg--skew @backgroundCss"></div>
+        </div>
     </div>
 </div>
 
-<hr class="hr--spacer-short hr--transparent">
+<hr class="hr--spacer hr--spacer-short hr--transparent">
 
 <div class="section margin--bottom-gigantic@large">
     <div class="section__content">
