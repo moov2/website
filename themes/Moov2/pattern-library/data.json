@@ -1,0 +1,254 @@
+{
+    "project_logo": null,
+    "project_favicon": "favicon.ico",
+    "project_name": "Moov2 Website",
+    "project_url": "http://moov2.com",
+    "copyright_start_year": "2016",
+    "client_name": "Moov2",
+    "client_url": "http://moov2.com",
+    "creators": [
+        {
+            "name": null,
+            "url": null
+        }
+    ],
+    "theme": {
+        "border_color": "#E0E6ED",
+        "highlight_color": "#F9FAFC",
+        "brand_color": "#171c1e",
+        "background_color": "#FFFFFF",
+        "code_highlight_theme": "github",
+        "override_code_highlight_bg": "#F9FAFC",
+        "sample_dark_background": "#333333",
+        "show_project_name": true,
+        "show_version": true,
+        "max_width": null,
+        "titles": {
+            "library_title": "Pattern Library",
+            "pages_title": "Overview",
+            "components_title": "Components"
+        }
+    },
+    "assets": {
+        "css": [
+            "../styles/Site.css"
+        ],
+        "js": []
+    },
+    "font_libraries": {
+        "typekit_code": null,
+        "typography_web_fonts": null,
+        "google_web_fonts": null
+    },
+    "content": {
+        "show_first_page_on_load": true,
+        "title": "Overview",
+        "pages": [
+            {
+                "name": "introduction",
+                "title": "Introduction",
+                "file": "./pages/intro.md"
+            }
+        ]
+    },
+    "groups": [
+        {
+            "name": "branding",
+            "title": "Branding",
+            "components": [
+                {
+                    "group": "branding",
+                    "name": "colour-palette",
+                    "title": "Colour Palette",
+                    "type": "colors",
+                    "colors": [
+                        "#171c1e",
+                        "#CE245E",
+                        "#8c21f3",
+                        "#77E6FE",
+                        "#2196f3",
+                        "#c74a4a",
+                        "#c1c1c1",
+                        "#a8c8e2, #0a385f",
+                        "#9a9a9a, #353535",
+                        "#e4e4e4, #f4f4f4"
+                    ]
+                },
+                {
+                    "group": "branding",
+                    "name": "logo",
+                    "title": "Logo",
+                    "options": {
+                        "sample_dark_background": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Text",
+            "title": "Text",
+            "components": [
+                {
+                    "group": "Text",
+                    "name": "Headings",
+                    "title": "Headings",
+                    "options": {
+                        "sample_dark_background": false
+                    }
+                },
+                {
+                    "group": "Text",
+                    "name": "paragraph",
+                    "title": "Paragraph"
+                }
+            ]
+        },
+        {
+            "name": "lists",
+            "title": "Lists",
+            "components": [
+                {
+                    "group": "lists",
+                    "name": "default",
+                    "title": "Default",
+                    "width": "half",
+                    "options": {
+                        "sample_dark_background": false
+                    }
+                },
+                {
+                    "group": "lists",
+                    "name": "dotted",
+                    "title": "Dotted",
+                    "width": "half"
+                },
+                {
+                    "group": "lists",
+                    "name": "padded",
+                    "title": "Padded",
+                    "width": "half",
+                    "options": {
+                        "sample_dark_background": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "blockquote",
+            "title": "Blockquote",
+            "components": [
+                {
+                    "group": "blockquote",
+                    "name": "default",
+                    "title": "Default",
+                    "options": {
+                        "sample_dark_background": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "links",
+            "title": "Links",
+            "components": [
+                {
+                    "group": "links",
+                    "name": "default",
+                    "title": "Default",
+                    "options": {
+                        "sample_dark_background": false
+                    }
+                },
+                {
+                    "group": "links",
+                    "name": "blank",
+                    "title": "Blank",
+                    "options": {
+                        "disable_code_sample": true
+                    }
+                },
+                {
+                    "group": "links",
+                    "name": "border",
+                    "title": "Bordered Link",
+                    "width": "half",
+                    "options": {
+                        "sample_dark_background": false
+                    }
+                },
+                {
+                    "group": "links",
+                    "name": "cta",
+                    "title": "CTA",
+                    "width": "half",
+                    "options": {
+                        "sample_dark_background": false
+                    }
+                },
+                {
+                    "group": "links",
+                    "name": "cta-large",
+                    "title": "CTA Large",
+                    "width": "half",
+                    "options": {
+                        "sample_dark_background": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "button",
+            "title": "Button",
+            "components": [
+                {
+                    "group": "button",
+                    "name": "default",
+                    "title": "Default",
+                    "options": {
+                        "sample_dark_background": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "content-break",
+            "title": "Content Break",
+            "components": [
+                {
+                    "group": "content-break",
+                    "name": "horizontal-rule",
+                    "title": "Horizontal Rule",
+                    "options": {
+                        "sample_dark_background": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "embed",
+            "title": "Embed",
+            "components": [
+                {
+                    "group": "embed",
+                    "name": "youtube",
+                    "title": "YouTube"
+                }
+            ]
+        },
+        {
+            "name": "code",
+            "title": "Code",
+            "components": [
+                {
+                    "group": "code",
+                    "name": "default",
+                    "title": "Default",
+                    "options": {
+                        "sample_dark_background": false
+                    }
+                }
+            ]
+        }
+    ],
+    "version": "1.8.1"
+}
