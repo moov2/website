@@ -12,6 +12,7 @@ a {
 	color: $color-primary;
 	display: inline-block;
 	font-weight: $font-weight-default;
+	max-width: 100%;
 	text-decoration: none;
 
 	transition: color $animation-duration-default $animation-timing-default;
