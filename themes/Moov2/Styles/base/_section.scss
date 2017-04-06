@@ -75,15 +75,16 @@ section,
             }
 
             .section--heading-video & {
+                height: 100%;
                 top: -10%;
                 background: #000;
             }
 
             &--skew {
-                height: 115%;
+                height: 140%;
                 left: 0;
                 position: absolute;
-                top: 0;
+                top: -20%;
                 transform: skewY(4deg);
                 width: 100%;
             }
