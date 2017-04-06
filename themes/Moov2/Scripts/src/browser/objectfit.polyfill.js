@@ -18,7 +18,8 @@ module.exports = function () {
 
     $(selectors.join(',')).each(function () {
         var $container = $(this),
-            imgUrl = $container.find('img').prop('src');
+            $img = $container.find('img'),
+            imgUrl = $img.prop('src') || $img[0].currentSrc;
 
         if (imgUrl) {
             $container

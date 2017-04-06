@@ -12,7 +12,8 @@
     height: 100%; // the same width and height as for the <img>
     width: 100%;
 
-    img {
+    > img {
+        display: block;
         height: 100%;
         object-fit: cover;
         width: 100%;
@@ -20,12 +21,16 @@
 }
 
 .object-fit--picture {
-    &.compat-object-fit {
-        background-size: cover;
-        background-position: center center;
-    }
+    background-size: cover;
+    background-position: center center;
 
-    img { // hide image if object fit is not supported - opacity to 0 for the link area
-        opacity: 0;
+    img {
+        /**
+         * 1. Hide image if object fit is not supported - opacity to 0 for the
+         *    link area
+         */
+        .no-object-fit & {
+            opacity: 0; /* 1. */
+        }
     }
 }
