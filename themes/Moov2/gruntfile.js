@@ -13,23 +13,23 @@ module.exports = function(grunt) {
          * Directory containing JavaScript.
          */
         js: './Scripts',
-        
+
         /**
          * Directory containing Razor views.
          */
         views: './Views',
-        
+
         /**
          * Theme artifacts from the build process will be placed in this directory.
          */
         dist: './dist',
-        
+
         /**
-         * Unique randomly generated string used to bust caching of CSS & 
+         * Unique randomly generated string used to bust caching of CSS &
          * JavaScript assets.
          */
         hash: ((new Date()).valueOf().toString()) + (Math.floor((Math.random()*1000000)+1).toString()),
-        
+
         /**
          * Parameters used to upload asstes to blob storage and convert the theme
          * to utilise the CDN assets.
@@ -42,14 +42,14 @@ module.exports = function(grunt) {
             cache: 'public, max-age=31530000'
         }
     };
-    
+
     /**
      * Loads all grunt tasks.
      */
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
-        
+
         /**
          * ------
          * Configuration properties.
@@ -60,7 +60,7 @@ module.exports = function(grunt) {
          * Configuration values used to drive the build.
          */
         config: config,
-        
+
         /**
          * ------
          * Build tasks.
@@ -88,15 +88,15 @@ module.exports = function(grunt) {
                 ],
                 cwd: '<%= config.dist %>'
             }
-        }, 
-      
+        },
+
         /**
          * Deletes previous build arefacts
          */
         clean: {
             dist: ['<%= config.dist %>']
         },
-        
+
         /**
          * Tidies things up by removing empty directories from the distributable
          * directory.
@@ -105,37 +105,38 @@ module.exports = function(grunt) {
             options: { files: false },
             src: ['<%= config.dist %>/**/*']
         },
-        
+
         /**
          * Copies files.
          */
         copy: {
-            
+
             /**
-             * Copies files appropriate for a release version into the 
+             * Copies files appropriate for a release version into the
              * distributable directory.
              */
             dist: {
-                files: [{   
+                files: [{
                     expand: true,
                     src: [
                         './Placement.info',
-                        './Theme.png', 
+                        './Theme.png',
                         './Theme.txt',
                         './Scripts/Web.config',
+                        './Scripts/vendor/modernizr.min.js',
                         './Scripts/vendor/picturefill.min.js',
                         './Scripts/vendor/prism.js',
                         './Styles/Web.config',
                         './Views/**/*',
                         './Content/**/*',
                         './Styleguide/**/*'
-                    ], 
+                    ],
                     dest: '<%= config.dist %>' }
                 ]
             }
         },
 
-        
+
         /**
          * Compiles JS modules into a single file using browserify.
          * http://browserify.org/
@@ -145,7 +146,7 @@ module.exports = function(grunt) {
             options: {
                 browserifyOptions: {
                     paths: [
-                        './Scripts/src', 
+                        './Scripts/src',
                         './Scripts/tests/src'
                     ]
                 },
@@ -153,7 +154,7 @@ module.exports = function(grunt) {
                     'shoestring': './node_modules/shoestring/dist/shoestring.js'
                 }
             },
-            
+
             /**
              * Compiles top level app & test modules into single file.
              */
@@ -183,7 +184,7 @@ module.exports = function(grunt) {
                 jshintrc: true
             }
         },
-        
+
         /**
          * Runs the JavaScript test suite using mocha.
          * https://mochajs.org/
@@ -197,7 +198,7 @@ module.exports = function(grunt) {
                 }
             }
         },
-        
+
         /**
          * Compresses JavaScript to reduce the file size.
          * https://github.com/mishoo/UglifyJS
@@ -205,13 +206,13 @@ module.exports = function(grunt) {
          */
         uglify: {
             dist: {
-                files: { 
+                files: {
                     '<%= config.dist %>/Scripts/bundle-<%= config.hash %>.js': ['<%= config.js %>/bundle.js'],
-                    '<%= config.dist %>/Scripts/enhance.js': ['<%= config.js %>/enhance.js'] 
+                    '<%= config.dist %>/Scripts/enhance.js': ['<%= config.js %>/enhance.js']
                 }
             }
         },
-        
+
         /**
          * Performs tasks (e.g. optimisation) to CSS file compiled by CSS.
          * https://github.com/postcss/postcss
@@ -223,7 +224,7 @@ module.exports = function(grunt) {
             dev: { src: '<%= config.styles %>/*.css' },
             dist: { src: '<%= config.dist %>/Styles/*.css' }
         },
-        
+
         /**
          * Handles compiling Sass to CSS.
          * http://sass-lang.com/
@@ -255,7 +256,7 @@ module.exports = function(grunt) {
                 }
             }
         },
-        
+
         /**
          * Uses CSSO to further optimise the CSS file.
          * https://github.com/css/csso
@@ -280,13 +281,13 @@ module.exports = function(grunt) {
                 }
             }
         },
-        
+
         /**
          * Updates file contents.
          */
         'string-replace': {
             /**
-             * Updates the theme files to point to assets that have been uploaded to 
+             * Updates the theme files to point to assets that have been uploaded to
              * a CDN.
              */
             cdn: {
@@ -303,9 +304,9 @@ module.exports = function(grunt) {
                         pattern: '../Content/',
                         replacement: '<%= config.cdn.url %>/<%=config.cdn.container %>/Content/'
                     }]
-                }               
+                }
             },
-            
+
             /**
              * Updates the main document HTML to...
              * - Use cache busted assets
@@ -338,7 +339,7 @@ module.exports = function(grunt) {
                 }
             }
         },
-        
+
         /**
          * Watches for changes to source files that should trigger build tasks to
          * be executed.
@@ -351,7 +352,7 @@ module.exports = function(grunt) {
                 files: ['<%= config.styles %>/**/*.scss'],
                 tasks: ['styles']
             },
-            
+
             /**
              * Any changes to JS files should trigger compilation of JS.
              */
@@ -365,31 +366,31 @@ module.exports = function(grunt) {
 
     /**
      * ------
-     * Multiple tasks registered into a single task. These tasks should be run 
+     * Multiple tasks registered into a single task. These tasks should be run
      * via the `grunt` command.
      * ------
      */
-    
+
     /**
      * Uploads theme assets (CSS, JavaScript & Images) to Azure blob storage.
      */
     grunt.registerTask('upload-to-cdn', function () {
         /**
-         * Task requires various options to assist with uploading assets to 
-         * blob storage and updating theme files to point at assets stored 
+         * Task requires various options to assist with uploading assets to
+         * blob storage and updating theme files to point at assets stored
          * in the CDN.
          */
         if (!grunt.option('cdnUrl') || !grunt.option('container') || !grunt.option('accountName') || !grunt.option('accountKey')) {
             return;
         }
-        
+
         // upload assets to blob storage.
         grunt.task.run('azure-cdn-deploy');
-        
+
         // update theme files to point to CDN assets.
         grunt.task.run('string-replace:cdn');
     });
-    
+
     /**
      * Handles JavaScript related build tasks such as concatenation, compression
      * and linting.
@@ -397,7 +398,7 @@ module.exports = function(grunt) {
      */
     grunt.registerTask('js', ['browserify', 'jshint', 'mocha']);
     grunt.registerTask('js:dist', ['browserify', 'jshint', 'mocha', 'uglify']);
-    
+
     /**
      * Compiles Sass to CSS and then uses postcss to optimise and add vendor
      * prefixes.
@@ -405,7 +406,7 @@ module.exports = function(grunt) {
      */
     grunt.registerTask('styles', ['sass:dev', 'postcss:dev', 'csso:dev']);
     grunt.registerTask('styles:dist', ['sass:dist', 'postcss:dist', 'csso:dist']);
-    
+
     /**
      * Creates a distributable version of the theme, placing artefacts in the
      * configured distributable directory.
