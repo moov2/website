@@ -9,4 +9,6 @@
     &--fixed { position: fixed; }
     &--offscreen { transform: translateX(-5000px); }
     &--relative { position: relative; }
+
+    &--front { z-index: 100; }
 }
