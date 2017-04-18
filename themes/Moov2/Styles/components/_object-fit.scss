@@ -12,7 +12,7 @@
     height: 100%; // the same width and height as for the <img>
     width: 100%;
 
-    > img {
+    > img, > video {
         display: block;
         height: 100%;
         object-fit: cover;
