@@ -268,6 +268,37 @@
     }
 }
 
+
+.bg--abrsm {
+    @include bp-min-width($bp-large) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/ABRSM/bg-work-abrsm-2100x610.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: $color-white;
+    }
+}
+
+.bg--choirplayer {
+    @include bp-min-width($bp-large) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/ChoirPlayer/bg-work-choirplayer-2100x610.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: $color-white;
+    }
+}
+
+.bg--tomgates {
+    @include bp-min-width($bp-large) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/TomGates/bg-work-tomgates-2100x610.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: $color-white;
+    }
+}
+
 .bg--until-dawn {
     background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Supermassive%20Games/work-supermassive-games-header-370x500.jpg);
     background-position: center;
