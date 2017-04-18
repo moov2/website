@@ -4,3 +4,6 @@
 [submodule "modules/Moov2.Orchard.Ace"]
 	path = modules/Moov2.Orchard.Ace
 	url = https://github.com/moov2/Moov2.Orchard.Ace
+[submodule "modules/Moov2.Orchard.SEO"]
+	path = modules/Moov2.Orchard.SEO
+	url = git@github.com:moov2/Moov2.Orchard.SEO.git
