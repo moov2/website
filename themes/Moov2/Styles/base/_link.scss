@@ -46,20 +46,31 @@ a.link--blank {
 	font-weight: 400;
 	text-transform: uppercase;
 
+	transition: background 0.5s ease;
+
 	&:hover {
 		text-decoration: none;
+		background: lighten($color-brand, 5%);
 	}
 }
 
 .link--cta-white {
 	background: $color-white;
 	color: $color-brand;
+
+	&:hover {
+		background: darken($color-white, 10%);
+	}
 }
 
 .link--cta-white\@large {
 	@include bp-min-width($bp-large) {
 		background: $color-white;
 		color: $color-brand;
+
+		&:hover {
+			background: darken($color-white, 10%);
+		}
 	}
 }
 
@@ -81,6 +92,10 @@ a.link--blank {
 .link--color-blue {
 	background: $color-blue;
 	color: $color-white;
+
+	&:hover {
+		background: darken($color-blue, 10%);
+	}
 }
 
 .link--color-white {
