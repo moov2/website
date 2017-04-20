@@ -35,11 +35,12 @@ a.link--blank {
 
 .link--cta {
 	@include rem(font-size, $font-size-small);
-	@include rem(padding, $spacing-default / 2 $spacing-small * 2);
+	@include rem(padding, $spacing-default / 2 $spacing-base);
+	@include rem(padding-right, $spacing-base * 2);
 
 	display: inline-block;
 
-	background: $color-brand;
+	background: $color-primary;
 	border-radius: $spacing-base / 3;
 	color: $color-white;
 	font-family: $font-family-heading;
@@ -48,36 +49,26 @@ a.link--blank {
 
 	transition: background 0.5s ease;
 
-	&:hover {
-		text-decoration: none;
-		background: lighten($color-brand, 5%);
+	position: relative;
+
+	&:after {
+		position: absolute;
+		content: "➜";
+		@include rem(top, $spacing-small);
+		@include rem(right, $spacing-base/1.5);
+		transition: 0.5s all ease;
 	}
 }
-
-.link--cta-white {
-	background: $color-white;
-	color: $color-brand;
-
-	&:hover {
-		background: darken($color-white, 10%);
-	}
-}
-
-.link--cta-white\@large {
-	@include bp-min-width($bp-large) {
-		background: $color-white;
-		color: $color-brand;
-
-		&:hover {
-			background: darken($color-white, 10%);
-		}
-	}
-}
-
 .link--cta-large {
 	@include bp-min-width($bp-medium) {
 		@include rem(font-size, $font-size-default);
 		@include rem(padding, $spacing-base $spacing-default);
+		@include rem(padding-right, $spacing-large);
+
+		&:after {
+			@include rem(top, $spacing-base);
+			@include rem(right, $spacing-base);
+		}
 	}
 }
 
@@ -90,12 +81,8 @@ a.link--blank {
 }
 
 .link--color-blue {
-	background: $color-blue;
+	background: $color-primary;
 	color: $color-white;
-
-	&:hover {
-		background: darken($color-blue, 10%);
-	}
 }
 
 .link--color-white {
