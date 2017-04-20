@@ -41,8 +41,8 @@ hr {
 }
 
 .hr--spacer {
-	@include rem(margin-bottom, $spacing-large);
-	@include rem(padding-top, $spacing-large);
+	@include rem(margin-bottom, $spacing-x-large);
+	@include rem(padding-top, $spacing-x-large);
 
 	@media all and (min-width: $bp-medium-large) {
 		@include rem(margin-bottom, $spacing-gigantic);
