@@ -45,21 +45,21 @@ hr {
 	@include rem(padding-top, $spacing-large);
 
 	@media all and (min-width: $bp-medium-large) {
-		@include rem(margin-bottom, $spacing-gigantic * 2);
-		@include rem(padding-top, $spacing-gigantic * 2);
+		@include rem(margin-bottom, $spacing-gigantic);
+		@include rem(padding-top, $spacing-gigantic);
 	}
 
 	&-short {
 		@media all and (min-width: $bp-medium-large) {
-			@include rem(margin-bottom, $spacing-x-large * 2);
-			@include rem(padding-top, $spacing-x-large * 2);
+			@include rem(margin-bottom, $spacing-x-large);
+			@include rem(padding-top, $spacing-x-large);
 		}
 	}
 
 	&-large {
 		@media all and (min-width: $bp-medium-large) {
-			@include rem(margin-bottom, $spacing-gigantic * 3);
-			@include rem(padding-top, $spacing-gigantic * 3);
+			@include rem(margin-bottom, $spacing-gigantic * 2);
+			@include rem(padding-top, $spacing-gigantic * 2);
 		}
 	}
 }
