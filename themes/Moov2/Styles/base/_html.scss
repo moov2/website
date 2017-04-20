@@ -21,9 +21,11 @@ html {
     }
 
     /**
-     * 1. Disables transitions until page has fully loaded.
-     */
+     * Disables transitions until page has fully loaded.
+
     &.is-preload * {
-        transition: none !important; /* 1. */
+        transition: none !important;
     }
+
+    */
 }
