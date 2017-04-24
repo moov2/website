@@ -64,6 +64,11 @@
     }
 }
 .text--right { text-align: right; }
+.text--right\@medium {
+    @media all and (min-width: $bp-medium) {
+        text-align: right;
+    }
+}
 
 .text--large {
 	@include rem(font-size, $font-size-large);
