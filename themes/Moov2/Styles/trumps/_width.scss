@@ -6,6 +6,7 @@
 
 .width--one-third { width: 33%; }
 .width--half { width: 50%; }
+.width--half\@medium { @include bp-min-width($bp-medium) { width: 50%; } }
 .width--two-thirds { width: 66%; }
 .width--full { width: 100%;}
 
