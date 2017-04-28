@@ -57,6 +57,8 @@
 .flex--direction-row-rev\@large { @include bp-min-width($bp-large) { flex-direction: row-reverse; } }
 
 .flex--grow { flex: 1 0 auto; }
+.flex--grow\@huge { @include bp-min-width($bp-huge) { flex: 1 0 auto; } }
+
 .flex--grow-equal { flex: 1; }
 
 .flex--justify-around { justify-content: space-around; }
