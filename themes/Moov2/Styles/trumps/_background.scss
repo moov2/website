@@ -114,6 +114,12 @@
  * Image backgrounds
  */
 
+.bg--graph-paper {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/bg-graph-paper-26x26.jpg);
+    background-position: center;
+    background-repeat: repeat;
+}
+
 .bg--starfield {
     background-image: url(https://moov2websitedev.azureedge.net/media/Default/Temporary/starfield.jpg);
     background-position: center;
@@ -279,6 +285,18 @@
         background-size: contain;
         color: $color-white;
     }
+}
+
+.bg--supermassive-games-rob {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Supermassive%20Games/bg-supermassive-games-rob-2100x980.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.bg--supermassive-games-skull {
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Supermassive%20Games/bg-supermassive-games-skull-2100x1348.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 
