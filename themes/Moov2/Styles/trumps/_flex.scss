@@ -48,6 +48,8 @@
 .flex--direction-row\@medium { @include bp-min-width($bp-medium) { flex-direction: row; } }
 .flex--direction-row\@medium-large { @include bp-min-width($bp-medium-large) { flex-direction: row; } }
 .flex--direction-row\@large { @include bp-min-width($bp-large) { flex-direction: row; } }
+.flex--direction-row\@x-large { @include bp-min-width($bp-x-large) { flex-direction: row; } }
+.flex--direction-row\@huge { @include bp-min-width($bp-huge) { flex-direction: row; } }
 
 .flex--direction-row-rev { display: flex; flex-direction: row-reverse; }
 .flex--direction-row-rev\@tiny { @include bp-min-width($bp-tiny) { flex-direction: row-reverse; } }
