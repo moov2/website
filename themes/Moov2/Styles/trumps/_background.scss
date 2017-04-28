@@ -306,7 +306,7 @@
     @include bp-min-width($bp-large) {
         background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/HEAT/bg-work-heat-2100x610.png);
         background-position: center;
-        background-repeat: no-repeat;
+        background-repeat: repeat-x;
         background-size: contain;
         color: $color-white;
     }
