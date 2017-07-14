@@ -14,9 +14,13 @@ In order to install Grunt you'll need to have Node.JS installed to give you acce
 
 `npm install -g grunt-cli`
 
-### NodeJS
+### NodeJS.
 
 As mentioned above, Grunt is used heavily in this project therefore Node.JS is required. The version of Grunt this project is using is compatible with stable Node.js versions >= `0.8.0`. To install Node.JS [visit the homepage](https://nodejs.org/), which will display options to install (recommend "Stable").
+
+### Yarn
+
+[Yarn](https://yarnpkg.com/) is a package manager that superceeds NPM providing faster performance. Yarn has a fairly simple [installation](https://yarnpkg.com/en/docs/install) process. This dependency is not a requirement, you can continue to use `npm`, however the shortcut batch files within the project all reference Yarn.
 
 ### Orchard Development Environment
 
@@ -24,12 +28,27 @@ Orchard is built on the ASP.NET MVC platform therefore an environment for develo
 
 ## Getting Started
 
-This project acts as a scaffold providing useful shortcuts for developing and deploying with Orchard. The first step is to use the source files of this project as the starting point for your Orchard project. You can either run the commands below in the command line (provided you have [Git](https://git-scm.com/) installed) or [download the project files](https://github.com/moov2/orchard-development/archive/master.zip).
+The first step is to obtain the source files from this repository by cloning this project, below is an example of the command for Git.
 
-    git clone git://github.com/moov2/orchard-development.git example
-    rm -rf example/.git
+    git clone git://github.com/moov2/website.git website
     
-Once the source files are on your machine your project has started and you're in a position to run the setup. The setup will download Orchard source files for the configured version and setup custom modules, themes & overrides. Run the setup by executing `npm install` in the command line, alternatively you can double click `setup.cmd` shortcut. Once the setup has complete, a local version of Orchard can be found in `local/1.9.2` (when configured Orchard version is `1.9.2`).
+Once you've got the source files on your local machine, you'll need to obtain various git sub modules that are used for custom Orchard modules. Below is the command that will pull down all git sub modules in the project.
+
+    git submodule update --init --recursive
+
+Now you've obtained all the project files it's time to get Orchard setup. Open a command prompt, ensuring to "Run as administrator", in the root of the project and run the command below. This will firstly download all the dependencies for the setup command, then run `grunt setup`, which will download a fresh copy of Orchard (saved to the`/local` directory) and configure our custom modules, themes and overrides. There is a useful batch file, `setup.cmd` in the root of the project that acts as a shortcut for this set up step.
+
+    npm install
+
+*If you have yarn installed then feel free to use `yarn install` instead of `npm install`.*
+
+The custom theme within `themes/Moov2` also requires a build step in order to retrieve third part dependencies and compile front end assets. Navigate to this folder and run the command below.
+
+    npm run develop
+
+Once complete, it will continue to watch theme files for changes in order to trigger compilation of the front end assets.
+
+You're now in a position to get Orchard up and running. Open `/local/1.10.1/src/Orchard.sln` using Visual Studio, then build the solution. It would be a wide idea to change the port that your local environment will use to run the site, to do this right click `Orchard.Web`, go to `Properties` then with `Web` change the `Project Url` and click "Create Virtual Directory". Run the website, once loaded you should be presented with a familiar Orchard setup screen. When setting up Orchard, make sure you select the **Local Development** recipe. This recipe will enable various features and also create various content items that should be enough to get up and running. This will not necessarily replect the content that is on the development/[live](http://moov2.com). To get a replica of the content on those environment, you'll need to log in to the appropriate environment and run an export, then run an import on your local environment using the export file.
 
 ## Project Structure
 
