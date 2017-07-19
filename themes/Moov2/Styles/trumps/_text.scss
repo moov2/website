@@ -92,3 +92,14 @@
 .text--uppercase { text-transform: uppercase; }
 
 .text--size-none { font-size: 0; }
+
+.text--breadcrumb {
+    @include rem(padding, $spacing-small $spacing-base);
+    @include rem(border-radius, $spacing-default / 2);
+
+    display: inline-block;
+    width: auto;
+
+    background: $color-grey-lightest;
+    color: $color-grey-darkest;
+}
