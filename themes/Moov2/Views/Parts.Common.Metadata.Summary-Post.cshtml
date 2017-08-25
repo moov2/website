@@ -8,14 +8,14 @@
 		return date.ToString("dd.MM.yy");
     }
 	
-	string FormatUsername(string username) {
-		if (string.IsNullOrEmpty(username)) {
+	string FormatUsername(dynamic owner) {
+		if (owner == null || string.IsNullOrEmpty(owner.UserName)) {
 			return string.Empty;
 		}
 		
-		return char.ToUpper(username[0]) + username.Substring(1);
+		return char.ToUpper(owner.UserName[0]) + owner.UserName.Substring(1);
 	}
 }
 
 
-<p class="text--small text--grey">@FormatDate(Model.ContentPart.CreatedUtc) | @FormatUsername(Model.ContentPart.Owner.UserName)</p>
+<p class="text--small text--grey">@FormatDate(Model.ContentPart.CreatedUtc) | @FormatUsername(Model.ContentPart.Owner)</p>
