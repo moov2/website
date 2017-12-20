@@ -19,7 +19,7 @@
     "grunt-csso": "0.8.0",
     "grunt-mocha": "0.4.13",
     "grunt-postcss": "0.6.0",
-    "grunt-sass": "1.1.0",
+    "grunt-sass": "2.0.0",
     "grunt-string-replace": "1.2.0",
     "load-grunt-tasks": "3.3.0",
     "mocha": "2.3.3",
@@ -30,6 +30,7 @@
   },
   "scripts": {
     "dist": "yarn install & grunt dist",
-    "develop": "yarn install & grunt"
+    "develop": "yarn install & grunt",
+    "postinstall": "npm rebuild node-sass"
   }
 }

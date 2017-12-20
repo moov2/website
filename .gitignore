@@ -21,3 +21,6 @@ modules/**/[Oo]bj/
 
 # user specific files.
 *.csproj.user
+
+# misc files
+package-lock.json

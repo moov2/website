@@ -15,10 +15,6 @@ form {
     @include rem(padding-left, $spacing-base);
     @include rem(padding-right, $spacing-base);
 
-    @include bp-min-width($bp-medium) {
-        @include rem(min-width, $spacing-base * 35);
-    }
-
     & input[type=email],
     & input[type=password],
     & input[type=tel],
