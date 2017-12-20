@@ -1,0 +1,15 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $CONTACTFORM
+ * -----------------------------------------------------------------------------
+ */
+ 
+/**
+ * Styles the contact form
+ */
+
+ .contact-form {
+    @include bp-min-width($bp-medium) {
+        @include rem(min-width, $spacing-base * 35);
+    }
+ }
