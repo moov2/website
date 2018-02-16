@@ -160,6 +160,38 @@
     background-size: cover;
 }
 
+.bg--guip {
+    @include bp-min-width($bp-large) {
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Game%20UI%20Patterns/bg-work-gameuipatterns-2100x610.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: $color-white;
+    }
+}
+
+.bg--guip-tile {
+    @include bp-min-width($bp-large) {
+        background-color: #0957ae;
+        background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Game%20UI%20Patterns/repeating-pattern-fade.png);
+        background-position: center;
+        background-repeat: repeat;
+        background-size: contain;
+        color: $color-white;
+    }
+}
+
+.bg--guip-blueprint {
+    background-color: #0957ae;
+    background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Game%20UI%20Patterns/blueprint-bg-tile.png);
+    background-repeat: repeat;
+
+    svg {
+        height: auto;
+        width: 100%;
+    }
+}
+
 .bg--hello-games {
     background-image: url(https://moov2websitedev.azureedge.net/media/Default/Work/Hello%20Games/work-hello-games-370x500.jpg);
     background-position: center;
