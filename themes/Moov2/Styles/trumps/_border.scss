@@ -25,3 +25,7 @@
 .border--color-grey-transparent { border-color: $color-grey-transparent; }
 .border--color-white { border-color: $color-white; }
 .border--color-white-transparent { border-color: rgba($color-white, .2); }
+
+.border-radius--default {
+    border-radius: $spacing-base / 3;
+}
