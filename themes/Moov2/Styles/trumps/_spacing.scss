@@ -71,6 +71,7 @@
 .padding--default { @include rem(padding, $spacing-default); }
 .padding--default\@medium { @include bp-min-width($bp-medium) { @include rem(padding, $spacing-default); } }
 .padding--large { @include rem(padding, $spacing-large); }
+.padding--large\@large { @include bp-min-width($bp-large) { @include rem(padding, $spacing-large); } }
 .padding--gigantic { @include rem(padding, $spacing-gigantic); }
 .padding--none\@medium { @include bp-min-width($bp-medium) { padding: 0; } }
 .padding--none\@medium-large { @include bp-min-width($bp-medium-large) { padding: 0; } }
