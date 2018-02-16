@@ -285,3 +285,25 @@
         bottom: 140px;
     }
 }
+
+/*
+ * Game UI Patterns example
+ */
+
+.animation--guip {
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-name: guipBlueprint;
+}
+
+@keyframes guipBlueprint {
+    0%   { transform: translateX(0); }
+    30%   { transform: translateX(50px); }
+    70%   { transform: translateX(-50px); }
+    100% { transform: translateX(0); }
+}
+
+.fill--white {
+    fill: #fff;
+}
+
