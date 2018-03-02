@@ -9,4 +9,4 @@
 	url = https://github.com/moov2/Moov2.Orchard.SEO
 [submodule "modules/Moov2.Orchard.Editor"]
 	path = modules/Moov2.Orchard.Editor
-	url = git@github.com:moov2/Moov2.Orchard.Editor.git
+	url = https://github.com/moov2/Moov2.Orchard.Editor
