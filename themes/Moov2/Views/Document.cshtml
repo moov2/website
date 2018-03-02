@@ -32,6 +32,8 @@
 
         @Display(Model.Head)
 
+        <title>@Html.Title(title, siteName)</title> 
+
         <link rel="icon" href="@Url.Content(themePath + "/Content/favicon.ico")">
 
         @if (hasCookie) {

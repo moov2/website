@@ -21,6 +21,5 @@
   <Match DisplayType="Detail">
     <Place Fields_Common_Text="-" />
     <Place Parts_Common_Metadata="-"/>
-    <Place Parts_Title="-"/>
   </Match>
 </Placement>
