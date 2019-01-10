@@ -108,17 +108,17 @@ section,
 
     @media all and (min-width: $bp-v-tiny) {
         @include rem(padding-bottom, $spacing-x-large * 3);
-        @include rem(padding-top, $spacing-x-large * 4);
+        @include rem(padding-top, $spacing-x-large * 9);
     }
 
     @media all and (min-width: $bp-tiny) {
         @include rem(padding-bottom, $spacing-x-large * 4);
-        @include rem(padding-top, $spacing-x-large * 5);
+        @include rem(padding-top, $spacing-x-large * 7);
     }
 
 	@media all and (min-width: $bp-medium) {
         @include rem(padding-bottom, $spacing-x-large * 3.8);
-        @include rem(padding-top, $spacing-x-large * 5);
+        @include rem(padding-top, $spacing-x-large * 6);
 	}
 }
 
@@ -278,3 +278,48 @@ section,
 }
 
 .section--height-full { height: 100vh; }
+
+
+.header--banner {
+	@include rem(padding, $spacing-default);
+	background: #ff137c;
+
+	@media all and (min-width: $bp-medium) {
+		@include rem(padding, $spacing-large);
+	}
+
+	.header--banner-content {
+		max-width: 900px;
+		margin: 0 auto;
+
+		@media all and (min-width: $bp-medium) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	.logo-etch-group {
+		max-width: 80px;
+		display: inline-block;
+		vertical-align: middle;
+		@include rem(padding-right, $spacing-default);
+		@include rem(padding-bottom, $spacing-base);
+
+		@media all and (min-width: $bp-medium) {
+			@include rem(padding-bottom, 0);
+		}
+	}
+
+	p {
+		display: inline-block;
+		color: #fff;
+		padding: 0;
+		vertical-align: middle;
+
+		a {
+			color: #eee;
+			text-decoration: underline;
+		}
+	}
+}

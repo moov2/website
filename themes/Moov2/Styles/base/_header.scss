@@ -9,11 +9,14 @@
  */
 
 header {
-	@include rem(font-size, $font-size-default);
-	@include rem(padding-bottom, $spacing-default);
-	@include rem(padding-left, $spacing-base);
-	@include rem(padding-right, $spacing-base);
-	@include rem(padding-top, $spacing-default);
+
+	.main--nav {
+		@include rem(font-size, $font-size-default);
+		@include rem(padding-bottom, $spacing-default);
+		@include rem(padding-left, $spacing-base);
+		@include rem(padding-right, $spacing-base);
+		@include rem(padding-top, $spacing-default);
+	}
 
 	background-color: $color-white;
 
@@ -24,8 +27,10 @@ header {
 	width: 100%;
 
 	@media all and (min-width: $bp-medium) {
-		@include rem(padding-left, $spacing-large);
-		@include rem(padding-right, $spacing-large);
+		.main--nav {
+			@include rem(padding-left, $spacing-large);
+			@include rem(padding-right, $spacing-large);
+		}
 	}
 
 	body > & {
