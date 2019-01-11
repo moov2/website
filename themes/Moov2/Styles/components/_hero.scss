@@ -25,6 +25,7 @@
 
         @include bp-min-width($bp-medium-large) {
             @include rem(margin-bottom, $spacing-gigantic);
+            margin-top: 20%;
         }
 
         h1 {
