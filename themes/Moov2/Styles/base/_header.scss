@@ -40,7 +40,16 @@ header {
 		z-index: 10;
 
 		background: none;
-		/*border-bottom: 1px solid $color-grey-lightest;*/
+
+		/* The following can be removed if the ETCH Play announcement is removed. This code pushes the header down underneath the announcement. */
+
+		top: 184px;
+
+		@media all and (min-width: 333px) { top: 162px; }
+		@media all and (min-width: 387px) { top: 140px; }
+		@media all and (min-width: 459px) { top: 118px; }
+		@media all and (min-width: 598px) { top: 96px; }
+		@media all and (min-width: 936px) { top: 78px; }
 	}
 
 	/**
