@@ -78,6 +78,11 @@ a.link--blank {
 	border: 3px solid;
 }
 
+.link--color-primary {
+	background: $color-etch-brand;
+	color: $color-white;
+}
+
 .link--color-blue {
 	background: $color-blue;
 	color: $color-white;
