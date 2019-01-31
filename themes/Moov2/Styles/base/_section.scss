@@ -279,46 +279,40 @@ section,
 
 .section--height-full { height: 100vh; }
 
+.section--announcement {
+	@include rem(padding-bottom, $spacing-base);
+	@include rem(padding-top, $spacing-base);
 
-.header--banner {
-	@include rem(padding, $spacing-default);
-	background: #ff137c;
+	background-color: darken($color-etch-brand, 5%);
 
 	@media all and (min-width: $bp-medium) {
-		@include rem(padding, $spacing-large);
 	}
 
-	.header--banner-content {
-		max-width: 900px;
-		margin: 0 auto;
+	.section__content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 940px;
 
 		@media all and (min-width: $bp-medium) {
-			display: flex;
-			align-items: center;
-			justify-content: center;
 		}
 	}
 
-	.logo-etch-group {
-		max-width: 80px;
-		display: inline-block;
-		vertical-align: middle;
-		@include rem(padding-right, $spacing-default);
-		@include rem(padding-bottom, $spacing-base);
+	.logo--etch-group {
+		display: none;
 
 		@media all and (min-width: $bp-medium) {
-			@include rem(padding-bottom, 0);
+			display: block;
+			@include rem(margin-left, $spacing-base);
 		}
 	}
 
 	p {
-		display: inline-block;
-		color: #fff;
-		padding: 0;
-		vertical-align: middle;
+		color: $color-white;
+		font-size: $font-size-small;
 
 		a {
-			color: #eee;
+			color: $color-white;
 			text-decoration: underline;
 		}
 	}
