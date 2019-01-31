@@ -27,6 +27,8 @@ $animation-brand-duration: 12s;
  * Colour palette.
  */
 
+$color-etch-brand: #de2284;
+
 $color-brand: #171c1e;
 $color-blue: #218ada;
 $color-grey: #c1c1c1;
@@ -39,9 +41,9 @@ $color-orange: #da6721;
 $color-white: #fff;
 $color-white-transparent: rgba(255, 255, 255, 0.2);
 $color-pink: #bb4c72;
-$color-primary: #448eca;
-$color-primary-light: #a8c8e2;
-$color-primary-dark: #0a385f;
+$color-primary: $color-etch-brand;
+$color-primary-light: lighten($color-etch-brand, 10%);
+$color-primary-dark: darken($color-etch-brand, 10%);
 $color-purple: #8127ca;
 $color-red: #da2121; /* also form required colour */
 $color-teal: #27bd92;
@@ -174,9 +176,15 @@ $header-height: 71px;
  * Logo settings.
  */
 
-$logo-brand-height: 30px;
+$logo-brand-height: 55px;
+$logo-brand-height-m: 35px;
 $logo-brand-width: 95px;
-$logo-brand-width-m: 37px;
+$logo-brand-width-m: 60px;
+
+$logo-brand-group-height: 53px;
+$logo-brand-group-height-m: 53px;
+$logo-brand-group-width: 57px;
+$logo-brand-group-width-m: 57px;
 
 $logo-technology-height: 40px;
 $logo-technology-width: 40px;
