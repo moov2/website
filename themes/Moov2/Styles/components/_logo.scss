@@ -56,7 +56,7 @@
 
 .logo--etch-play {
     display: block;
-    @include svg-etch-play($color-white);
+    @include svg-etch-play();
     height: $logo-brand-height-m;
     width: $logo-brand-width-m;
 
@@ -96,7 +96,7 @@ html {
 }
 
 .logo--etch-play-grey {
-    @include svg-etch-play($color-grey-dark);
+    @include svg-etch-play-white($color-grey-dark);
 }
 
 .logo--moov2-grey {
