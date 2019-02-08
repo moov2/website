@@ -283,7 +283,7 @@ section,
 	@include rem(padding-bottom, $spacing-base);
 	@include rem(padding-top, $spacing-base);
 
-	background-color: darken($color-etch-brand, 5%);
+	background-color: darken($color-etch-brand-secondary, 4%);
 
 	@media all and (min-width: $bp-medium) {
 	}
