@@ -156,7 +156,7 @@ module.exports = function(grunt) {
              */
             overridesEnvironment: {
                 files: [
-                    { expand: true, cwd: '<%= deployment.overrides %>', src: ['**'], dest: '<%= config.paths.orchardBuildArtifacts %>' }
+                    { dot: true, expand: true, cwd: '<%= deployment.overrides %>', src: ['**'], dest: '<%= config.paths.orchardBuildArtifacts %>' }
                 ]
             }
         },
