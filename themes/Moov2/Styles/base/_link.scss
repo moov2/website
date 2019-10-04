@@ -22,6 +22,15 @@ a {
 	&:hover {
 		text-decoration: underline;
 	}
+	
+	.section--heading &{
+		color:white;
+		text-decoration:underline;
+		
+		&:hover{
+			text-decoration:none;
+		}
+	}
 }
 
 /**
